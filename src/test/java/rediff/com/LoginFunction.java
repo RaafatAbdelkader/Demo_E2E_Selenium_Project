@@ -20,6 +20,18 @@ public class LoginFunction extends TestBase {
         driver.navigate().to("https://facebook.com");
     }
     @Test(groups = "Smoke")
+    public void test8() {
+        driver.navigate().to("https://facebook.com");
+    }
+    @Test(groups = "Smoke")
+    public void test9() {
+        driver.navigate().to("https://facebook.com");
+    }
+    @Test(groups = "Smoke")
+    public void test10() {
+        driver.navigate().to("https://facebook.com");
+    }
+    @Test(groups = "Smoke")
     public void test89() {
         driver.navigate().to("https://facebook.com");
     }
