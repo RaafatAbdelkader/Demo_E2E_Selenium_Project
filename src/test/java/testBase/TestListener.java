@@ -33,7 +33,6 @@ public class TestListener implements ITestListener {
         ITestListener.super.onTestSuccess(result);
         exTest.get().log(Status.PASS,"Test passed");
     }
-
     @Override
     public void onTestFailure(ITestResult result) {
         ITestListener.super.onTestFailure(result);
