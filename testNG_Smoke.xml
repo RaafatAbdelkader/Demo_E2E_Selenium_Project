@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Ske" parallel="classes" thread-count="5">
+    <test name="Smoke">
+        <groups>
+            <run>
+                <include name="Smoke"></include>
+            </run>
+        </groups>
+        <packages>
+            <package name="rediff.com"></package>
+        </packages>
+    </test>
+
+</suite>
