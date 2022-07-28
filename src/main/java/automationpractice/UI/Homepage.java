@@ -1,4 +1,4 @@
-package automationpractice;
+package automationpractice.UI;
 
 import base.GenMethods;
 import org.openqa.selenium.By;

@@ -1,7 +1,7 @@
 package base;
 import java.sql.*;
 
-public class DBConnector {
+public class DBReader {
     private PropReader propReader=new PropReader();
     private String db_username=propReader.getProp("db_username");
     private String db_psw=propReader.getProp("db_psw");

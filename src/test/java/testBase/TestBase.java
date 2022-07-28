@@ -1,11 +1,13 @@
 package testBase;
-import automationpractice.Homepage;
-import base.DBConnector;
+import automationpractice.UI.Homepage;
+import base.DBReader;
 import base.GenMethods;
 import base.PropReader;
-import base.TDataReader;
+import base.JsonReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.minidev.json.parser.ParseException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,11 +16,9 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.*;
-import rediff.com.HomePage;
-import rediff.com.LoginPage;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
@@ -27,20 +27,20 @@ import java.util.List;
 public class TestBase{
     public WebDriver driver ;
     public  GenMethods gm;
-    public  HomePage homePage;
     public  Homepage home;
-    public  LoginPage loginPage;
-    public  TDataReader tDataReader;
+    public JsonReader jsonReader;
     public  PropReader reader = new PropReader();
-    public DBConnector db=new DBConnector();
+    public DBReader db=new DBReader();
     public TestBase() throws IOException {
 
     }
-    public String url=reader.getUrl();
+
+    String browserName= reader.getBrowserName();
+    public static Logger log = LogManager.getLogger(TestBase.class.getName());
 
     @BeforeClass(alwaysRun = true)
     public void before() throws IOException {
-        switch (reader.getBrowserName()) {
+        switch (browserName) {
             case "firefox": {
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions=new FirefoxOptions();
@@ -69,11 +69,9 @@ public class TestBase{
                 break;
             }
         }
-        homePage =new HomePage(driver);
-        loginPage =new LoginPage(driver);
         gm = new GenMethods(driver);
         home =new Homepage(driver);
-        tDataReader= new TDataReader();
+        jsonReader = new JsonReader();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
@@ -83,30 +81,30 @@ public class TestBase{
        driver.quit();
     }
 
-    //-------------from json file------------
+    //-------------Data driven from json file------------
     private List<String> valuesToReturn= Arrays.stream(new String[]{"username","password","status"}).toList();
     @DataProvider
     protected Object[][] allUsers() throws FileNotFoundException, ParseException {
-        return TDataReader.getAllUsersData(valuesToReturn);
+        return JsonReader.getAllUsersData(valuesToReturn);
     }
     @DataProvider
     public Object[][] validLoginData() throws FileNotFoundException, ParseException {
-        return  TDataReader.getDataUsingStatus(valuesToReturn,"valid");
+        return  JsonReader.getDataUsingStatus(valuesToReturn,"valid");
     }
     @DataProvider
     public Object[][] invalidLoginData() throws FileNotFoundException, ParseException {
-        return  TDataReader.getDataUsingStatus(valuesToReturn,"invalid");
+        return  JsonReader.getDataUsingStatus(valuesToReturn,"invalid");
     }
 
     //-------------from Database ------------
-    @DataProvider
-    public Object[][] validDataFromDB() throws SQLException {
-            return  db.getLoginData(true,1);
-    }
-    @DataProvider
-    public Object[][] invalidDataFromDB() throws SQLException {
-        return  db.getLoginData(false,4);
-    }
+//    @DataProvider
+//    public Object[][] validDataFromDB() throws SQLException {
+//            return  db.getLoginData(true,1);
+//    }
+//    @DataProvider
+//    public Object[][] invalidDataFromDB() throws SQLException {
+//        return  db.getLoginData(false,4);
+//    }
 
 
 
@@ -117,7 +115,7 @@ public class TestBase{
 
 
 
-//334 done
+//336 done
 
 //29 devtools still not seen
 //35 git seen

@@ -12,10 +12,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TDataReader{
+public class JsonReader {
+    private static PropReader propReader=new PropReader();
     private static JSONParser jsonParser=new JSONParser();
     private static JSONObject jsonObject=new JSONObject();
-    private static String jsonPath="src/test/resources/testData/users.json";
+    private static String jsonPath= propReader.getProp("JsonFilePath");
 
     public static Object[][] getAllUsersData(List<String> keys) throws FileNotFoundException, ParseException {
         FileReader file =new FileReader(jsonPath);

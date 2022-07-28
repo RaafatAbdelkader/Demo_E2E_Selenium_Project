@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropReader {
-    private String filePath = "src/main/resources/data.properties";
-    private FileInputStream fs;
-    private Properties prop = new Properties();
+    private  String filePath = "src/main/resources/data.properties";
+    private  FileInputStream fs;
+    private  Properties prop = new Properties();
 
     public String getUrl() throws IOException {
         return getProp("URL");
@@ -21,10 +21,10 @@ public class PropReader {
         return  Boolean.parseBoolean(getProp("headless"));
     }
     public String getServerIP() {
-        return  getProp("Hub_IP");
+        return  getProp("Grid_Hub_IP");
     }
 
-    public String getProp(String key) {
+    public  String getProp(String key) {
         try {
             fs = new FileInputStream(filePath);
             prop.load(fs);
