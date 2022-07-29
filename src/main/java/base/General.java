@@ -26,8 +26,8 @@ public class GenMethods {
         return path;
     }
 
-    public void waitToBeClickable(WebElement el, int x){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(x));
+    public void waitToBeClickable(WebElement el, int limit){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(limit));
         wait.until(ExpectedConditions.elementToBeClickable(el));
     }
 
