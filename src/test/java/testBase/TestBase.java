@@ -108,7 +108,7 @@ public class TestBase{
         return  JsonReader.getDataUsingStatus(valuesToReturn,"invalid");
     }
     //---Data driven from Excel file---
-    public Map<String,String> data=excelReader.getData("UserX");
+    public Map<String,String> data=excelReader.getData("UserY");
 
     //---Data driven from Database ---
 //    @DataProvider

@@ -1,0 +1,10 @@
+2022-07-29 20:12:55.459 [main] INFO  testBase.TestBase - URL opened
+2022-07-29 20:12:58.666 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-29 20:12:58.703 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-29 20:13:02.938 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-29 20:13:04.595 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-29 20:17:36.617 [main] INFO  testBase.TestBase - URL opened
+2022-07-29 20:17:43.763 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-29 20:17:43.808 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-29 20:17:47.841 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-29 20:17:48.895 [main] INFO  testBase.TestBase - entered personal data 

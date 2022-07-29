@@ -18,6 +18,26 @@ public class SignupPage {
     private By days= By.id("days");
     private By months= By.id("months");
     private By years= By.id("years");
+    private By newsletter=By.id("newsletter");
+    private By specialOffers=By.id("optin");
+
+    private By adressFirstname=  By.xpath("//p[@class='required form-group']/child::input[@id='firstname']");
+    private By adressLastname=  By.xpath("//p[@class='required form-group']/child::input[@id='lastname']");
+
+    private By adress=By.id("address1");
+    private By city=By.id("city");
+    private By company=By.id("company");
+    private By state=By.id("id_state"); //select
+
+    private By postcode=By.id("postalcode");
+    private By country=By.id("id_country");
+    private By additionalInfo=By.id("other");
+
+    private By phone=By.id("phone");
+    private By mobilePhone=By.id("phone_mobile");
+    private By addressAlias=By.id("alias");
+    private By submitAccount=By.id("submitAccount");
+
 
     public SignupPage(WebDriver driver) {
         this.driver = driver;

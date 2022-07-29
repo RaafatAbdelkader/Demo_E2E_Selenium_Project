@@ -1,12 +1,10 @@
-package automationPractice.UI;
+package automationPracticeTest.UI;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import testBase.TestBase;
 
 import java.io.IOException;
-import java.util.Random;
 
 public class LoginFeature extends TestBase {
     String url=reader.getUrl();
@@ -14,7 +12,7 @@ public class LoginFeature extends TestBase {
 
     }
 
-    @Test
+    @Test(description = "verifies user is able to create with valid data")
     public void createAccount() {
         driver.get(url);
         log.info("URL opened");
@@ -28,14 +26,16 @@ public class LoginFeature extends TestBase {
         general.waitToBeClickable(signupPage.getSubHeadingMsg(),5);
         Assert.assertEquals(signupPage.getSubHeadingMsg().getText(),"YOUR PERSONAL INFORMATION","can't navigate to signup page");
         log.info("navigated to signupPage");
-        signupPage.getGenderRadio(data.get("Gender")).click();
+        signupPage.getGenderRadio(data.get("Gender*")).click();
         signupPage.getFirstName().sendKeys(data.get("Firstname*"));
         signupPage.getLastName().sendKeys(data.get("Lastname*"));
         String placeholder_Email =signupPage.getEmail().getAttribute("value");
         Assert.assertEquals(placeholder_Email,newEmail,"Placeholder email does not match the new email entered");
         signupPage.getPassword().sendKeys(data.get("Password*"));
+        //System.out.println();
         signupPage.selectDate(data.get("DateOfBirth*"));
         log.info("entered personal data ");
+
     }
 
 
