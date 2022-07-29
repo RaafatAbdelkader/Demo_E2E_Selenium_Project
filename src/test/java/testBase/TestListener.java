@@ -1,17 +1,14 @@
 package testBase;
 
 import base.ExtentReporterNG;
-import base.GenMethods;
+import base.General;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
-import java.io.IOException;
 
 public class TestListener implements ITestListener {
     ExtentReports extentReports= ExtentReporterNG.config();
@@ -40,7 +37,7 @@ public class TestListener implements ITestListener {
         exTest.get().fail(result.getThrowable());
         try {
             driver=(WebDriver)result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
-            GenMethods gm =new GenMethods(driver);
+            General gm =new General(driver);
             String scrPath= gm.getScreenshot(result.getName());
             exTest.get().addScreenCaptureFromPath(scrPath,result.getMethod().getMethodName());
             System.out.println(scrPath);

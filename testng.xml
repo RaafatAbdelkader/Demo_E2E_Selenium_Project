@@ -5,14 +5,8 @@
         <listener class-name="testBase.TestListener"></listener>
     </listeners>
     <test name="Regression">
-        <groups>
-            <run>
-                <exclude name="absolete"></exclude>
-            </run>
-        </groups>
-        <packages>
-            <package name="rediff.com"></package>
-        </packages>
+        <classes>
+            <class name="automationPractice.UI.LoginFeature"></class>
+        </classes>
     </test>
-
 </suite>

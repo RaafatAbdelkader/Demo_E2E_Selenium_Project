@@ -1,9 +1,9 @@
 package testBase;
+import automationpractice.UI.Header;
 import automationpractice.UI.Homepage;
-import base.DBReader;
-import base.GenMethods;
-import base.PropReader;
-import base.JsonReader;
+import automationpractice.UI.LoginPage;
+import automationpractice.UI.SignupPage;
+import base.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.minidev.json.parser.ParseException;
 import org.apache.logging.log4j.LogManager;
@@ -22,15 +22,22 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 
 public class TestBase{
     public WebDriver driver ;
-    public  GenMethods gm;
-    public  Homepage home;
-    public JsonReader jsonReader;
-    public  PropReader reader = new PropReader();
+    public JsonReader jsonReader=new JsonReader();
+    public PropReader reader = new PropReader();
+    public ExcelReader excelReader= new ExcelReader();
     public DBReader db=new DBReader();
+    public General general;
+    public Homepage home;
+    public LoginPage loginPage;
+    public Homepage homepage;
+    public SignupPage signupPage;
+    public Header header;
+
     public TestBase() throws IOException {
 
     }
@@ -69,9 +76,14 @@ public class TestBase{
                 break;
             }
         }
-        gm = new GenMethods(driver);
+        general = new General(driver);
         home =new Homepage(driver);
-        jsonReader = new JsonReader();
+        loginPage=new LoginPage(driver);
+        homepage=new Homepage(driver);
+
+        header=new Header(driver);
+        signupPage=new SignupPage(driver);
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
@@ -81,7 +93,7 @@ public class TestBase{
        driver.quit();
     }
 
-    //-------------Data driven from json file------------
+    //---Data driven from json file--
     private List<String> valuesToReturn= Arrays.stream(new String[]{"username","password","status"}).toList();
     @DataProvider
     protected Object[][] allUsers() throws FileNotFoundException, ParseException {
@@ -95,8 +107,10 @@ public class TestBase{
     public Object[][] invalidLoginData() throws FileNotFoundException, ParseException {
         return  JsonReader.getDataUsingStatus(valuesToReturn,"invalid");
     }
+    //---Data driven from Excel file---
+    public Map<String,String> data=excelReader.getData("UserX");
 
-    //-------------from Database ------------
+    //---Data driven from Database ---
 //    @DataProvider
 //    public Object[][] validDataFromDB() throws SQLException {
 //            return  db.getLoginData(true,1);
@@ -106,12 +120,25 @@ public class TestBase{
 //        return  db.getLoginData(false,4);
 //    }
 
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

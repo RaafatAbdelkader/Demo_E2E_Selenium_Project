@@ -8,7 +8,7 @@
             </run>
         </groups>
         <packages>
-            <package name="rediff.com"></package>
+            <package name="automationPractice.UI"></package>
         </packages>
     </test>
 

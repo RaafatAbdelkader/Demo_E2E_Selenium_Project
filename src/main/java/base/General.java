@@ -12,9 +12,9 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-public class GenMethods {
+public class General {
     public WebDriver driver;
-    public GenMethods(WebDriver driver) {
+    public General(WebDriver driver) {
         this.driver = driver;
     }
 

@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import testBase.TestBase;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class LoginFeature extends TestBase {
     String url=reader.getUrl();
@@ -13,9 +14,29 @@ public class LoginFeature extends TestBase {
 
     }
 
-
-
-
+    @Test
+    public void createAccount() {
+        driver.get(url);
+        log.info("URL opened");
+        header.navigateToLoginPage().click();
+        Assert.assertEquals(loginPage.getHeadingMsg().getText(),"AUTHENTICATION","can't navigate to login page");
+        log.info("navigated to LoginPage");
+        String newEmail=loginPage.getNewRandomEmail();
+        loginPage.createAccount_NewEmail().sendKeys(newEmail);
+        log.info("entered a new email to create an account ");
+        loginPage.submit_createAccount().click();
+        general.waitToBeClickable(signupPage.getSubHeadingMsg(),5);
+        Assert.assertEquals(signupPage.getSubHeadingMsg().getText(),"YOUR PERSONAL INFORMATION","can't navigate to signup page");
+        log.info("navigated to signupPage");
+        signupPage.getGenderRadio(data.get("Gender")).click();
+        signupPage.getFirstName().sendKeys(data.get("Firstname*"));
+        signupPage.getLastName().sendKeys(data.get("Lastname*"));
+        String placeholder_Email =signupPage.getEmail().getAttribute("value");
+        Assert.assertEquals(placeholder_Email,newEmail,"Placeholder email does not match the new email entered");
+        signupPage.getPassword().sendKeys(data.get("Password*"));
+        signupPage.selectDate(data.get("DateOfBirth*"));
+        log.info("entered personal data ");
+    }
 
 
 
@@ -41,16 +62,5 @@ public class LoginFeature extends TestBase {
 
 
 
-//    @Test(dataProvider="invalidDataFromDB")
-//    public void test1(String username, String psw,String status) {
-//        driver.get(url);
-//        loginPage.username().sendKeys(username);
-//        loginPage.password().sendKeys(psw);
-//        loginPage.submit().click();
-//        if (status.equalsIgnoreCase("valid")){
-//            //assertion of the following page
-//        }else {
-//            Assert.assertEquals(loginPage.getAlertMsg(),"Invalid email or password.","alert message not found");
-//        }
-
+//
 }
