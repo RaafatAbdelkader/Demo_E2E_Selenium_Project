@@ -10,6 +10,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class JsonReader {
@@ -48,7 +49,6 @@ public class JsonReader {
             loginData[i]=filteredData.get(i).stream().toArray();
         }
        return loginData;
-
     }
 
 }

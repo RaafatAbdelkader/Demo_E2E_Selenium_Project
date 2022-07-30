@@ -13,7 +13,7 @@ public class SignupPage {
     private By gender_radio_female=  By.xpath("//input[@id='id_gender2']");
     private By firstname=  By.id("customer_firstname");
     private By lastname=  By.id("customer_lastname");
-    private By email=  By.id("email");
+    private By email=  By.xpath("//div[@class='account_creation'] //input[@id='email']");
     private By psw=  By.id("passwd");
     private By days= By.id("days");
     private By months= By.id("months");
@@ -34,12 +34,15 @@ public class SignupPage {
     private By mobilePhone=By.id("phone_mobile");
     private By addressAlias=By.id("alias");
     private By submitAccount=By.id("submitAccount");
-
+    private By create_account_error=By.xpath("//div[contains(@class,'alert')]");
     public SignupPage(WebDriver driver) {
         this.driver = driver;
     }
     public WebElement getSubHeadingMsg() {
         return driver.findElement(subHeadingMsg);
+    }
+    public WebElement getCreateAccountErrorMSG() {
+        return driver.findElement(create_account_error);
     }
     public WebElement getGenderRadio(String gender){
         if (gender.equalsIgnoreCase("male"))
@@ -63,15 +66,15 @@ public class SignupPage {
     public WebElement getPassword() {
         return driver.findElement(psw);
     }
-    //the date should be provided in this Format:"dd-mm-yyyy"
+    //the date should be provided in this Format:"dd/mm/yyyy"
     public void selectDate(String date) {
-        String[]dateValues=date.split("-");
-        for (int i = 0; i < 3; i++) {
-            WebElement  element = null;
+        String[]dateValues=date.split("/");
+        for (int i = 0; i < dateValues.length; i++) {
+            WebElement  element;
             if (i==0)
                 element = driver.findElement(days);
             else if (i==1)
-                element = driver.findElement(months);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            element = driver.findElement(months);
             else
                 element= driver.findElement(years);
             Select select =new Select(element);

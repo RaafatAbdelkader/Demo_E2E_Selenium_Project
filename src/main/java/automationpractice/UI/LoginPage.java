@@ -16,6 +16,7 @@ public class LoginPage {
     private By loginEmail =By.id("email");
     private By loginPsw =By.id("passwd");
     private By submit_login=By.id("SubmitLogin");
+    private By create_account_error=By.id("create_account_error");
 
 
     public LoginPage( WebDriver driver){
@@ -45,5 +46,9 @@ public class LoginPage {
     public WebElement getSubmitLogin() {
         return driver.findElement(submit_login);
     }
+    public WebElement getCreateAccountErrorMSG() {
+        return driver.findElement(create_account_error);
+    }
+
 
 }

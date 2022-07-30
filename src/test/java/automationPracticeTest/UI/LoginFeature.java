@@ -1,8 +1,11 @@
 package automationPracticeTest.UI;
+import base.JsonReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import testBase.TestBase;
 import java.io.IOException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
 
 public class LoginFeature extends TestBase {
     String url=propReader.getUrl();
@@ -11,7 +14,7 @@ public class LoginFeature extends TestBase {
     String registeredPassword=null;
     public LoginFeature() throws IOException {
     }
-    @Test(description = "to verify the ability of account creation with valid data")
+    @Test(description = "As an user I should be able to create an account using valid data", groups = "Smoke")
     public void createAccount() {
         driver.get(url);
         log.info("URL opened");
@@ -54,7 +57,6 @@ public class LoginFeature extends TestBase {
             signupPage.getMobilePhone().sendKeys(data.get("MobilePhone*"));
         else
             signupPage.getPhone().sendKeys(data.get("HomePhone"));
-
         log.info("entered address and contact data");
         signupPage.getSubmitAccount().click();
         general.waitToBeClickable(myAccountPage.getPage_heading_msg(),5);
@@ -66,8 +68,8 @@ public class LoginFeature extends TestBase {
         registeredEmail=newEmail;
         registeredPassword=psw;
     }
-    @Test(dependsOnMethods = "createAccount",description = "Verify user is able to login with Login data created")
-    public void loginWithValidData(){
+    @Test(dependsOnMethods = "createAccount",description = "The user is able to log in with Login data created", groups = "Smoke")
+    public void loginWithRegisteredData(){
         driver.get(url);
         log.info("URL opened");
         header.navigateToLoginPage().click();
@@ -84,5 +86,40 @@ public class LoginFeature extends TestBase {
                 "Welcome to your account. Here you can manage all of your personal information and orders.",
                 "Failed to login with valid data");
         log.info("user logged in successfully");
+    }
+    @Test(dependsOnMethods = "createAccount",description = "An user should not be able to create an account using an email already registered before")
+    public void accountCreationUsingRegisteredEmail(){
+        driver.get(url);
+        log.info("URL opened");
+        header.navigateToLoginPage().click();
+        log.info("navigated to LoginPage");
+        loginPage.createAccount_NewEmail().sendKeys(registeredEmail);
+        log.info("Entered a registered email");
+        loginPage.submit_createAccount().click();
+        log.info("submitted account creation");
+        general.waitToBeClickable(loginPage.getCreateAccountErrorMSG(),5);
+        Assert.assertEquals(loginPage.getCreateAccountErrorMSG().getText(),
+               "An account using this email address has already been registered. Please enter a valid password or request a new one.",
+                "user should not be able to create an account using an email already registered before");
+        log.info("Error message displayed");
+        loginPage.createAccount_NewEmail().clear();
+        loginPage.createAccount_NewEmail().sendKeys(loginPage.getNewRandomEmail());
+        log.info("entered an new random email");
+        loginPage.submit_createAccount().click();
+        log.info("submitted account creation");
+        signupPage.getEmail().clear();
+        signupPage.getEmail().sendKeys(registeredEmail);
+        log.info("change the default email value to a registered email after navigating to signup page");
+        signupPage.getSubmitAccount().click();
+        log.info("submitted account creation");
+        Assert.assertTrue(signupPage.getCreateAccountErrorMSG().getText()
+                .contains("An account using this email address has already been registered."),
+                "user should not be able to change the default email value to a registered email after navigating to signup page");
+        log.info("Error message displayed");
+    }
+
+    @Test(description = "As an user I should not be able to create an account using invalid PersonalData")
+    public void accountCreationUsingInvalidPersonalData(){
+        System.out.println("Danke");
     }
 }

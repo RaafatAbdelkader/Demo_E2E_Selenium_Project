@@ -24,7 +24,6 @@ import java.util.Map;
 
 public class TestBase{
     public WebDriver driver ;
-    public JsonReader jsonReader=new JsonReader();
     public PropReader propReader = new PropReader();
     public ExcelReader excelReader= new ExcelReader();
     public DBReader db=new DBReader();
@@ -79,14 +78,13 @@ public class TestBase{
         myAccountPage=new MyAccountPage(driver);
         header=new Header(driver);
         signupPage=new SignupPage(driver);
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
 
     @AfterClass(alwaysRun = true)
     public void postConditions() {
-      // driver.quit();
+     driver.quit();
     }
 
     //---Data driven from json file--
