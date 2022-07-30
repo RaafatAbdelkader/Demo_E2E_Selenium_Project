@@ -13,6 +13,10 @@ public class LoginPage {
     private By headingMsg =By.className("page-heading");
     private By submit_createAccount =By.id("SubmitCreate");
 
+    private By loginEmail =By.id("email");
+    private By loginPsw =By.id("passwd");
+    private By submit_login=By.id("SubmitLogin");
+
 
     public LoginPage( WebDriver driver){
          this.driver=driver;
@@ -31,6 +35,15 @@ public class LoginPage {
     }
     public WebElement submit_createAccount(){
        return driver.findElement(submit_createAccount);
+    }
+    public WebElement getLoginEmail() {
+        return driver.findElement(loginEmail);
+    }
+    public WebElement getLoginPsw() {
+        return driver.findElement(loginPsw);
+    }
+    public WebElement getSubmitLogin() {
+        return driver.findElement(submit_login);
     }
 
 }

@@ -1,8 +1,5 @@
 package testBase;
-import automationpractice.UI.Header;
-import automationpractice.UI.Homepage;
-import automationpractice.UI.LoginPage;
-import automationpractice.UI.SignupPage;
+import automationpractice.UI.*;
 import base.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.minidev.json.parser.ParseException;
@@ -28,7 +25,7 @@ import java.util.Map;
 public class TestBase{
     public WebDriver driver ;
     public JsonReader jsonReader=new JsonReader();
-    public PropReader reader = new PropReader();
+    public PropReader propReader = new PropReader();
     public ExcelReader excelReader= new ExcelReader();
     public DBReader db=new DBReader();
     public General general;
@@ -36,22 +33,21 @@ public class TestBase{
     public LoginPage loginPage;
     public Homepage homepage;
     public SignupPage signupPage;
+    public MyAccountPage myAccountPage;
     public Header header;
-
     public TestBase() throws IOException {
-
     }
 
-    String browserName= reader.getBrowserName();
+    String browserName= propReader.getBrowserName();
     public static Logger log = LogManager.getLogger(TestBase.class.getName());
 
     @BeforeClass(alwaysRun = true)
-    public void before() throws IOException {
+    public void before()  {
         switch (browserName) {
             case "firefox": {
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions=new FirefoxOptions();
-                if(reader.getHeadlessMode()){
+                if(propReader.getHeadlessMode()){
                     firefoxOptions.addArguments("headless");
                 }
                 driver = new FirefoxDriver(firefoxOptions);
@@ -60,7 +56,7 @@ public class TestBase{
             case "edge": {
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions edgeOptions=new EdgeOptions();
-                if(reader.getHeadlessMode()){
+                if(propReader.getHeadlessMode()){
                     edgeOptions.addArguments("headless");
                 }
                 driver = new EdgeDriver(edgeOptions);
@@ -69,7 +65,7 @@ public class TestBase{
             default: {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions=new ChromeOptions();
-                if(reader.getHeadlessMode()){
+                if(propReader.getHeadlessMode()){
                     chromeOptions.addArguments("headless");
                 }
                 driver = new ChromeDriver(chromeOptions);
@@ -80,7 +76,7 @@ public class TestBase{
         home =new Homepage(driver);
         loginPage=new LoginPage(driver);
         homepage=new Homepage(driver);
-
+        myAccountPage=new MyAccountPage(driver);
         header=new Header(driver);
         signupPage=new SignupPage(driver);
 
@@ -90,7 +86,7 @@ public class TestBase{
 
     @AfterClass(alwaysRun = true)
     public void postConditions() {
-       driver.quit();
+      // driver.quit();
     }
 
     //---Data driven from json file--
@@ -108,7 +104,7 @@ public class TestBase{
         return  JsonReader.getDataUsingStatus(valuesToReturn,"invalid");
     }
     //---Data driven from Excel file---
-    public Map<String,String> data=excelReader.getData("UserY");
+    public Map<String,String> data=excelReader.getData("UserX");
 
     //---Data driven from Database ---
 //    @DataProvider

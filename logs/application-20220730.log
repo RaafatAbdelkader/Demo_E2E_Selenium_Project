@@ -1,0 +1,70 @@
+2022-07-30 01:15:50.791 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 01:15:55.538 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 01:15:55.628 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 01:15:57.970 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 01:15:59.519 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 02:37:37.990 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 02:37:43.108 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 02:37:43.175 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 02:37:45.399 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 02:37:46.959 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 02:39:38.098 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 02:39:40.294 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 02:39:40.346 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 02:39:42.214 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 02:39:43.770 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 02:52:41.629 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 02:52:44.132 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 02:52:44.221 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 02:52:46.135 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 02:52:47.740 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 02:55:08.475 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 02:55:10.664 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 02:55:10.795 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 02:55:12.519 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 02:55:14.127 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 02:55:15.345 [main] INFO  testBase.TestBase - entered address and contact data
+2022-07-30 02:55:15.345 [main] INFO  testBase.TestBase - Account created successfully
+2022-07-30 03:17:19.481 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 03:17:21.678 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 03:17:21.724 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 03:17:23.288 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 03:17:24.388 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 03:17:25.341 [main] INFO  testBase.TestBase - entered address and contact data
+2022-07-30 03:17:27.355 [main] INFO  testBase.TestBase - Account created successfully
+2022-07-30 03:57:11.793 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 03:57:13.684 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 03:57:13.741 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 03:57:15.315 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 03:57:16.458 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 03:57:17.354 [main] INFO  testBase.TestBase - entered address and contact data
+2022-07-30 03:57:20.118 [main] INFO  testBase.TestBase - Account created successfully
+2022-07-30 04:00:17.436 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 04:00:19.122 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 04:00:19.171 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 04:00:20.609 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 04:00:21.800 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 04:00:22.693 [main] INFO  testBase.TestBase - entered address and contact data
+2022-07-30 04:00:26.958 [main] INFO  testBase.TestBase - Account created successfully
+2022-07-30 04:09:36.969 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 04:09:38.949 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 04:09:38.985 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 04:09:40.929 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 04:09:42.001 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 04:09:42.898 [main] INFO  testBase.TestBase - entered address and contact data
+2022-07-30 04:09:44.859 [main] INFO  testBase.TestBase - Account created successfully
+2022-07-30 04:09:46.786 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 04:20:46.796 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 04:33:41.159 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 04:33:44.063 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-30 04:33:44.103 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-30 04:33:45.741 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 04:33:46.819 [main] INFO  testBase.TestBase - entered personal data 
+2022-07-30 04:33:47.769 [main] INFO  testBase.TestBase - entered address and contact data
+2022-07-30 04:33:50.626 [main] INFO  testBase.TestBase - Account created successfully
+2022-07-30 04:33:52.568 [main] INFO  testBase.TestBase - URL opened
+2022-07-30 04:33:56.266 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-07-30 04:33:56.327 [main] INFO  testBase.TestBase - entered an email
+2022-07-30 04:33:56.360 [main] INFO  testBase.TestBase - entered an Password
+2022-07-30 04:33:57.985 [main] INFO  testBase.TestBase - Clicked on submit
+2022-07-30 04:33:58.049 [main] INFO  testBase.TestBase - user logged in successfully
