@@ -5,12 +5,14 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.util.NumberToTextConverter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
 
 public class ExcelReader {
     PropReader propReader =new PropReader();
@@ -64,5 +66,28 @@ public class ExcelReader {
     }
 
 
-
+    public Object[][] getInvalidPersonalData() throws IOException {
+        sheetName="invalidPersonalData";
+        FileInputStream fis=new FileInputStream(file);
+        XSSFWorkbook workbook =new XSSFWorkbook(fis);
+        XSSFSheet sheet = workbook.getSheet(sheetName);
+        int rowsNum=sheet.getLastRowNum();
+        int columnNum=sheet.getRow(sheet.getFirstRowNum()).getLastCellNum()-1;
+        Object[][] data= new Object[rowsNum][columnNum];
+        for (int i = 0;i<rowsNum; i++) {
+            Row row= sheet.getRow(i+1);
+            for (int j = 0; j <columnNum; j++) {
+                Cell cell= row.getCell(j+1);
+                if (cell.getCellType()==CellType.BLANK)
+                    data[i][j]="";
+                else if (cell.getCellType()==CellType.STRING)
+                        data[i][j]=cell.getStringCellValue();
+                else if (cell.getCellType()== CellType.NUMERIC)
+                        data[i][j]=NumberToTextConverter.toText(cell.getNumericCellValue());
+                else
+                    data[i][j]=null;
+            }
+        }
+        return data;
+    }
 }

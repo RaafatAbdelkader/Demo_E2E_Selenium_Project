@@ -1,0 +1,224 @@
+2022-07-31 11:56:57.149 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 11:57:00.675 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 11:57:46.104 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 11:57:49.049 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 12:29:27.616 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 12:29:29.661 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 12:29:31.962 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 15:14:32.327 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 15:14:36.360 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 15:14:40.524 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 15:14:41.679 [main] INFO  testBase.TestBase - entered invalid personal data from Excel
+2022-07-31 15:14:48.856 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 15:14:50.689 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 15:14:53.303 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 15:14:54.834 [main] INFO  testBase.TestBase - entered invalid personal data from Excel
+2022-07-31 15:14:58.073 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 15:14:59.990 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 15:15:01.808 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 15:15:02.977 [main] INFO  testBase.TestBase - entered invalid personal data from Excel
+2022-07-31 15:19:37.810 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 15:19:39.882 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 15:19:41.794 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 15:19:43.302 [main] INFO  testBase.TestBase - entered invalid personal data from Excel
+2022-07-31 15:19:46.189 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 15:19:47.814 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 15:19:49.299 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 15:19:50.771 [main] INFO  testBase.TestBase - entered invalid personal data from Excel
+2022-07-31 15:19:57.343 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 15:20:01.203 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 15:20:02.685 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 15:20:03.948 [main] INFO  testBase.TestBase - entered invalid personal data from Excel
+2022-07-31 16:35:43.616 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 16:35:49.896 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 16:35:52.429 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 16:36:00.656 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 16:36:03.985 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 16:36:05.747 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 16:36:07.688 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 16:36:11.991 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 16:36:13.927 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 16:36:15.632 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 16:36:17.631 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 16:36:22.306 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 16:36:24.341 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 16:36:25.994 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:08:31.700 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:08:34.559 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:08:36.569 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:08:37.853 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:08:39.334 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-07-31 17:08:41.456 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:08:43.655 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:08:45.867 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:08:47.848 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:08:49.841 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-07-31 17:08:51.915 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:08:55.236 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:08:57.002 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:08:58.913 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:09:00.501 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-07-31 17:09:02.951 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:09:04.994 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:09:06.823 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:11:24.531 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:11:27.573 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:11:29.638 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:11:30.977 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:11:32.829 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-07-31 17:11:35.608 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:11:37.934 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:11:39.556 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:11:41.497 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:11:43.116 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-07-31 17:11:45.010 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:11:48.673 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:11:50.770 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:11:52.702 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:11:54.998 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-07-31 17:11:58.626 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:12:03.690 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:12:06.037 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:12:07.842 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:12:09.292 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-07-31 17:52:16.131 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:52:18.933 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:52:20.528 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:52:21.837 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:52:25.779 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:52:27.488 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:52:30.681 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:52:32.545 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:52:38.556 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:52:40.668 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:52:43.794 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:52:45.858 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 17:52:50.526 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 17:52:53.307 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 17:52:56.404 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 17:52:58.276 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:01:31.968 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 18:01:34.841 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:01:37.538 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:01:38.847 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:01:42.184 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 18:01:44.443 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:01:45.992 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:01:47.839 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:01:51.219 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 18:01:53.791 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:01:55.795 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:01:57.825 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:02:01.892 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 18:02:04.628 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:02:06.498 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:02:08.304 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:05:21.874 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-07-31 18:05:23.794 [TestNG-test=Regression-2] INFO  testBase.TestBase - URL opened
+2022-07-31 18:05:26.746 [TestNG-test=Regression-1] INFO  testBase.TestBase - navigated to LoginPage
+2022-07-31 18:05:27.029 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered a new email to create an account 
+2022-07-31 18:05:29.585 [TestNG-test=Regression-2] INFO  testBase.TestBase - URL opened
+2022-07-31 18:05:43.311 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:05:45.676 [TestNG-test=Regression-2] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:05:47.552 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:05:53.228 [TestNG-test=Regression-2] INFO  testBase.TestBase - URL opened
+2022-07-31 18:05:55.604 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:05:57.537 [TestNG-test=Regression-2] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:05:59.511 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:06:03.149 [TestNG-test=Regression-2] INFO  testBase.TestBase - URL opened
+2022-07-31 18:06:05.407 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:06:07.240 [TestNG-test=Regression-2] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:06:09.029 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:10:41.795 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 18:10:44.356 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:10:48.028 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:10:49.341 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:10:53.430 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 18:10:55.979 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:11:00.448 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:11:02.461 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:11:07.484 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 18:11:09.902 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 18:11:13.435 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 18:11:16.094 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 18:11:21.585 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:20:40.514 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:20:43.112 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:20:47.416 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:20:48.658 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:20:53.316 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:20:56.769 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:20:58.876 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:21:00.835 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:21:05.793 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:21:08.027 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:21:09.734 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:21:11.678 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:21:15.591 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:21:17.625 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:21:19.329 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:21:21.201 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:22:42.285 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:22:45.960 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:22:49.226 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:22:50.520 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:22:57.155 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:23:00.253 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:23:04.516 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:23:06.490 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:23:10.374 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:23:13.347 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:23:16.459 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:23:18.489 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:23:23.775 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:23:27.726 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:23:29.784 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:23:31.674 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:24:34.891 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:24:37.368 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:24:39.167 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:24:40.417 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:24:43.761 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:24:45.923 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:24:47.643 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:24:49.543 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:24:53.776 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:24:55.514 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:24:57.077 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:24:59.086 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:25:03.666 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:25:06.036 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:25:07.630 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:25:09.430 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:28:59.906 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:29:03.073 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:29:05.979 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:29:07.308 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:29:12.320 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:29:15.755 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:29:17.522 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:29:19.462 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:29:23.286 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:29:27.103 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:29:30.215 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:29:32.076 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:29:36.185 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:29:38.754 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:29:41.057 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:29:42.877 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:32:04.092 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:32:08.001 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:32:09.697 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:32:10.982 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:32:15.577 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:32:17.556 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:32:19.293 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:32:21.666 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:32:26.273 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:32:28.314 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:32:31.588 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:32:34.062 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-07-31 22:32:40.160 [main] INFO  testBase.TestBase - URL opened
+2022-07-31 22:32:42.134 [main] INFO  testBase.TestBase - entered an new random email
+2022-07-31 22:32:45.473 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-07-31 22:32:47.360 [main] INFO  testBase.TestBase - entered invalid personal data

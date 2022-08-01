@@ -33,6 +33,7 @@ public class TestBase{
     public Homepage homepage;
     public SignupPage signupPage;
     public MyAccountPage myAccountPage;
+    public Footer footer;
     public Header header;
     public TestBase() throws IOException {
     }
@@ -77,6 +78,7 @@ public class TestBase{
         homepage=new Homepage(driver);
         myAccountPage=new MyAccountPage(driver);
         header=new Header(driver);
+        footer=new Footer(driver);
         signupPage=new SignupPage(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
@@ -87,7 +89,7 @@ public class TestBase{
      driver.quit();
     }
 
-    //---Data driven from json file--
+    //---Data driven  from json file--
     private List<String> valuesToReturn= Arrays.stream(new String[]{"username","password","status"}).toList();
     @DataProvider
     protected Object[][] allUsers() throws FileNotFoundException, ParseException {
@@ -101,8 +103,13 @@ public class TestBase{
     public Object[][] invalidLoginData() throws FileNotFoundException, ParseException {
         return  JsonReader.getDataUsingStatus(valuesToReturn,"invalid");
     }
-    //---Data driven from Excel file---
+
+    //---Data driven dynamically from Excel file---
     public Map<String,String> data=excelReader.getData("UserX");
+    @DataProvider
+    public Object[][] getInvalidPersonalData() throws IOException {
+        return excelReader.getInvalidPersonalData();
+    }
 
     //---Data driven from Database ---
 //    @DataProvider

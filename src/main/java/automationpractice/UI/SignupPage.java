@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 public class SignupPage {
     WebDriver driver;
     private By subHeadingMsg =By.xpath("//label[contains(text(),'Title')]/parent:: div/preceding-sibling:: h3[@class='page-subheading']");
-    private By gender_radio_male= By.xpath("//input[@id='id_gender1']");
-    private By gender_radio_female=  By.xpath("//input[@id='id_gender2']");
+    private By gender_radio_male= By.xpath("//input[@id='id_gender1']/parent::span");
+    private By gender_radio_female=  By.xpath("//input[@id='id_gender2']/parent::span");
     private By firstname=  By.id("customer_firstname");
     private By lastname=  By.id("customer_lastname");
     private By email=  By.xpath("//div[@class='account_creation'] //input[@id='email']");
@@ -136,6 +136,11 @@ public class SignupPage {
     public WebElement getSubmitAccount() {
         return driver.findElement(submitAccount);
     }
-
+    public boolean genderIsChecked(String gender){
+        if (gender.equalsIgnoreCase("male"))
+            return driver.findElement(gender_radio_male).getCssValue("class").contains("checked");
+        else
+            return driver.findElement(gender_radio_female).getCssValue("class").contains("checked");
+    }
 
 }

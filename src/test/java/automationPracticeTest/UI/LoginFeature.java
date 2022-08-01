@@ -14,6 +14,7 @@ public class LoginFeature extends TestBase {
     String registeredPassword=null;
     public LoginFeature() throws IOException {
     }
+
     @Test(description = "As an user I should be able to create an account using valid data", groups = "Smoke")
     public void createAccount() {
         driver.get(url);
@@ -27,8 +28,10 @@ public class LoginFeature extends TestBase {
         loginPage.submit_createAccount().click();
         general.waitToBeClickable(signupPage.getSubHeadingMsg(),5);
         Assert.assertEquals(signupPage.getSubHeadingMsg().getText(),
-                "YOUR PERSONAL INFORMATION","can't navigate to signup page");
+                "YOUR PERSONAL INFORMATION","did not navigate to signup page");
         log.info("navigated to signupPage");
+        Assert.assertFalse(signupPage.genderIsChecked("male"),"gender should be unchecked by default");
+        Assert.assertFalse(signupPage.genderIsChecked("female"),"gender should be unchecked by default");
         signupPage.getGenderRadio(data.get("Gender*")).click();
         signupPage.getFirstName().sendKeys(data.get("Firstname*"));
         signupPage.getLastName().sendKeys(data.get("Lastname*"));
@@ -68,6 +71,7 @@ public class LoginFeature extends TestBase {
         registeredEmail=newEmail;
         registeredPassword=psw;
     }
+
     @Test(dependsOnMethods = "createAccount",description = "The user is able to log in with Login data created", groups = "Smoke")
     public void loginWithRegisteredData(){
         driver.get(url);
@@ -87,6 +91,7 @@ public class LoginFeature extends TestBase {
                 "Failed to login with valid data");
         log.info("user logged in successfully");
     }
+
     @Test(dependsOnMethods = "createAccount",description = "An user should not be able to create an account using an email already registered before")
     public void accountCreationUsingRegisteredEmail(){
         driver.get(url);
@@ -118,8 +123,59 @@ public class LoginFeature extends TestBase {
         log.info("Error message displayed");
     }
 
-    @Test(description = "As an user I should not be able to create an account using invalid PersonalData")
-    public void accountCreationUsingInvalidPersonalData(){
-        System.out.println("Danke");
+    @Test(dataProvider = "getInvalidPersonalData",description = "As an user I should not be able to create an account using invalid PersonalData")
+    public void verifyAccountCreationUsingInvalidPersonalData(
+                            String firstname,String firstname_errorMSG, String lastname,String lastname_errorMSG,
+                            String email,String email_errorMSG,String psw,String psw_errorMSG,String dateOfBirth,
+                            String dateOfBirth_errorMsg){
+        driver.get(url);
+        log.info("URL opened");
+        header.navigateToLoginPage().click();
+        loginPage.createAccount_NewEmail().sendKeys(loginPage.getNewRandomEmail());
+        log.info("entered an new random email");
+        loginPage.submit_createAccount().click();
+        general.waitToBeClickable(signupPage.getSubHeadingMsg(),5);
+        Assert.assertEquals(signupPage.getSubHeadingMsg().getText(),
+                "YOUR PERSONAL INFORMATION","did not navigate to signup page");
+        log.info("Navigated to signup page");
+        signupPage.getEmail().clear();
+        signupPage.getGenderRadio("male").click();
+        signupPage.getGenderRadio("female").click();
+        Assert.assertFalse(signupPage.genderIsChecked("male"),
+                "the user should not be able to select both of gender types at same time");
+        signupPage.getFirstName().sendKeys(firstname);
+        signupPage.getLastName().sendKeys(lastname);
+        signupPage.getEmail().sendKeys(email);
+        signupPage.getPassword().sendKeys(psw);
+        signupPage.selectDate(dateOfBirth);
+        log.info("entered invalid personal data");
+        signupPage.getSubmitAccount().click();
+        String actualErrorMSG=signupPage.getCreateAccountErrorMSG().getText();
+        String assertionMSG="The following error message: -M- is not contained in the following actual message:"+actualErrorMSG;
+        Assert.assertTrue(actualErrorMSG.contains(firstname_errorMSG),
+                assertionMSG.replace("-M-",firstname_errorMSG));
+        Assert.assertTrue(actualErrorMSG.contains(lastname_errorMSG),
+                assertionMSG.replace("-M-",lastname_errorMSG));
+        Assert.assertTrue(actualErrorMSG.contains(email_errorMSG),
+                assertionMSG.replace("-M-",email_errorMSG));
+        Assert.assertTrue(actualErrorMSG.contains(psw_errorMSG),
+                assertionMSG.replace("-M-",psw_errorMSG));
+        Assert.assertTrue(actualErrorMSG.contains(dateOfBirth_errorMsg),
+                assertionMSG.replace("-M-",dateOfBirth_errorMsg));
+        log.info("all expected messages have been verified");
+    }
+    @Test
+    public void loginVerification(){
+
+    }
+
+    @Test
+    public void newTab(){
+
+    }
+
+    @Test
+    public void verifyFooterLinks(){
+
     }
 }
