@@ -2,7 +2,7 @@
 Dieses Code-Beispiel habe ich von A bis Z erstellt, um meine Programmierfähigkeiten  mit Java, OOP,  Selenium 3&4 , Maven, Object Based Model , TestNG, TestData-Handling (From DB, Json, Excel) zu zeigen.
 
 #info_1
-you can run the TCs in a headless mode if you change it to true in property file :src/main/resources/data.properties
+you can run the TCs in a headless mode if you change it to true in properties file :src/main/resources/data.properties
 #info_2
 Test data have been handled in different ways only to present my technical skills
 #info_3
