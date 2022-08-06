@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropReader {
-    private  String filePath = "src/main/resources/data.properties";
+    private  String filePath = "src/main/resources/environment.properties";
     private  FileInputStream fs;
     private  Properties prop = new Properties();
 

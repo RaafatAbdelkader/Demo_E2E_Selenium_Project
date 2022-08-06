@@ -7,10 +7,7 @@ import net.minidev.json.parser.ParseException;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class JsonReader {
@@ -50,5 +47,6 @@ public class JsonReader {
         }
        return loginData;
     }
+
 
 }

@@ -16,7 +16,7 @@ public class LoginPage {
     private By loginEmail =By.id("email");
     private By loginPsw =By.id("passwd");
     private By submit_login=By.id("SubmitLogin");
-    private By create_account_error=By.id("create_account_error");
+    private By errorMsg=By.xpath("//div[contains(@class,'alert')]");
 
 
     public LoginPage( WebDriver driver){
@@ -46,8 +46,14 @@ public class LoginPage {
     public WebElement getSubmitLogin() {
         return driver.findElement(submit_login);
     }
-    public WebElement getCreateAccountErrorMSG() {
-        return driver.findElement(create_account_error);
+    public WebElement getErrorMsg() {
+        return driver.findElement(errorMsg);
+    }
+
+    public void login(String username,String psw){
+        getLoginEmail().sendKeys(username);
+        getLoginPsw().sendKeys(psw);
+        getSubmitLogin().click();
     }
 
 

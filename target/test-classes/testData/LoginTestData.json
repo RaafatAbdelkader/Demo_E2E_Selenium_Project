@@ -1,0 +1,44 @@
+{
+  "user_1": {
+    "username": "test8888@gmail.com",
+    "password": "A1hS#!25",
+    "status": "valid",
+    "expectedMSG": "Welcome to your account. Here you can manage all of your personal information and orders."
+  },
+  "user_2": {
+    "username": "Araafat.abdo@gmail.com",
+    "password": "$!@)(#%@@",
+    "status": "invalid",
+    "expectedMSG": "Authentication failed."
+  },
+  "user_3": {
+    "username": "nasr@gmail.com",
+    "password": "99999999999999999999999999999999999999",
+    "status": "invalid",
+    "expectedMSG": "Authentication failed."
+  },
+  "user_4": {
+    "username": "moagmail.com",
+    "password": "guyg54@d",
+    "status": "invalid",
+    "expectedMSG": "Invalid email address."
+  },
+  "user_5": {
+    "username": "test8888@gmail.com",
+    "password": "",
+    "status": "invalid",
+    "expectedMSG": "Password is required."
+  },
+  "user_6": {
+    "username": "",
+    "password": "A1hS#!25",
+    "status": "invalid",
+    "expectedMSG": "An email address required."
+  },
+  "user_7": {
+    "username": "",
+    "password": "",
+    "status": "invalid",
+    "expectedMSG": "An email address required."
+  }
+}

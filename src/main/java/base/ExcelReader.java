@@ -20,7 +20,7 @@ public class ExcelReader {
     String sheetName="register";
 
 
-    public  Map<String,String> getData(String username) throws IOException {
+    public  Map<String,String> getRegisterTestData(String username) throws IOException {
         Map<String,String>data=new HashMap<>();
         FileInputStream fis=new FileInputStream(file);
         XSSFWorkbook workbook =new XSSFWorkbook(fis);
@@ -75,9 +75,9 @@ public class ExcelReader {
         int columnNum=sheet.getRow(sheet.getFirstRowNum()).getLastCellNum()-1;
         Object[][] data= new Object[rowsNum][columnNum];
         for (int i = 0;i<rowsNum; i++) {
-            Row row= sheet.getRow(i+1);
+            Row row= sheet.getRow(i+1);                                              //+1 to skip the first row
             for (int j = 0; j <columnNum; j++) {
-                Cell cell= row.getCell(j+1);
+                Cell cell= row.getCell(j+1);                                        //+1 to skip the first column
                 if (cell.getCellType()==CellType.BLANK)
                     data[i][j]="";
                 else if (cell.getCellType()==CellType.STRING)

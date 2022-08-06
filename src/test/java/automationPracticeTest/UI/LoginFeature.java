@@ -1,19 +1,18 @@
 package automationPracticeTest.UI;
-import base.JsonReader;
+import net.minidev.json.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import testBase.TestBase;
 import java.io.IOException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
 
 public class LoginFeature extends TestBase {
-    String url=propReader.getUrl();
     String newEmail= null;
     String registeredEmail=null;
     String registeredPassword=null;
-    public LoginFeature() throws IOException {
+
+    public LoginFeature() throws IOException, ParseException {
     }
+
 
     @Test(description = "As an user I should be able to create an account using valid data", groups = "Smoke")
     public void createAccount() {
@@ -32,34 +31,34 @@ public class LoginFeature extends TestBase {
         log.info("navigated to signupPage");
         Assert.assertFalse(signupPage.genderIsChecked("male"),"gender should be unchecked by default");
         Assert.assertFalse(signupPage.genderIsChecked("female"),"gender should be unchecked by default");
-        signupPage.getGenderRadio(data.get("Gender*")).click();
-        signupPage.getFirstName().sendKeys(data.get("Firstname*"));
-        signupPage.getLastName().sendKeys(data.get("Lastname*"));
+        signupPage.getGenderRadio(getRegisterTestData.get("Gender*")).click();
+        signupPage.getFirstName().sendKeys(getRegisterTestData.get("Firstname*"));
+        signupPage.getLastName().sendKeys(getRegisterTestData.get("Lastname*"));
         String placeholder_Email =signupPage.getEmail().getAttribute("value");
         Assert.assertEquals(placeholder_Email,newEmail,
                 "Placeholder email does not match the new email entered");
-        String psw=data.get("Password*");
+        String psw= getRegisterTestData.get("Password*");
         signupPage.getPassword().sendKeys(psw);
-        signupPage.selectDate(data.get("DateOfBirth*"));
+        signupPage.selectDate(getRegisterTestData.get("DateOfBirth*"));
         log.info("entered personal data ");
         signupPage.getNewsletter().click();
         signupPage.getSpecialOffers().click();
         String placeholder_AddressFirstname= signupPage.getAddressFirstname().getAttribute("value");
-        Assert.assertEquals(placeholder_AddressFirstname,data.get("Firstname*"),"Wrong Placeholder");
+        Assert.assertEquals(placeholder_AddressFirstname, getRegisterTestData.get("Firstname*"),"Wrong Placeholder");
         String placeholder_AddressLastname= signupPage.getAddressLastname().getAttribute("value");
-        Assert.assertEquals(placeholder_AddressLastname,data.get("Lastname*"),"Wrong Placeholder");
-        if (data.get("Company")!=null)
-            signupPage.getCompany().sendKeys(data.get("Company"));
-        signupPage.getAddress().sendKeys(data.get("Address*"));
-        signupPage.getCity().sendKeys(data.get("City*"));
-        signupPage.selectState(data.get("State*"));
-        signupPage.getPostcode().sendKeys(data.get("ZipCode*"));
-        Assert.assertEquals(signupPage.getDefaultSelectedCountry().getText(),data.get("Country*"),
+        Assert.assertEquals(placeholder_AddressLastname, getRegisterTestData.get("Lastname*"),"Wrong Placeholder");
+        if (getRegisterTestData.get("Company")!=null)
+            signupPage.getCompany().sendKeys(getRegisterTestData.get("Company"));
+        signupPage.getAddress().sendKeys(getRegisterTestData.get("Address*"));
+        signupPage.getCity().sendKeys(getRegisterTestData.get("City*"));
+        signupPage.selectState(getRegisterTestData.get("State*"));
+        signupPage.getPostcode().sendKeys(getRegisterTestData.get("ZipCode*"));
+        Assert.assertEquals(signupPage.getDefaultSelectedCountry().getText(), getRegisterTestData.get("Country*"),
                 "the country selected by default does not match the requirement");
-        if (data.get("MobilePhone*")!=null)
-            signupPage.getMobilePhone().sendKeys(data.get("MobilePhone*"));
+        if (getRegisterTestData.get("MobilePhone*")!=null)
+            signupPage.getMobilePhone().sendKeys(getRegisterTestData.get("MobilePhone*"));
         else
-            signupPage.getPhone().sendKeys(data.get("HomePhone"));
+            signupPage.getPhone().sendKeys(getRegisterTestData.get("HomePhone"));
         log.info("entered address and contact data");
         signupPage.getSubmitAccount().click();
         general.waitToBeClickable(myAccountPage.getPage_heading_msg(),5);
@@ -73,7 +72,7 @@ public class LoginFeature extends TestBase {
     }
 
     @Test(dependsOnMethods = "createAccount",description = "The user is able to log in with Login data created", groups = "Smoke")
-    public void loginWithRegisteredData(){
+    public void loginWithDataCreated(){
         driver.get(url);
         log.info("URL opened");
         header.navigateToLoginPage().click();
@@ -102,8 +101,8 @@ public class LoginFeature extends TestBase {
         log.info("Entered a registered email");
         loginPage.submit_createAccount().click();
         log.info("submitted account creation");
-        general.waitToBeClickable(loginPage.getCreateAccountErrorMSG(),5);
-        Assert.assertEquals(loginPage.getCreateAccountErrorMSG().getText(),
+        general.waitToBeClickable(loginPage.getErrorMsg(),5);
+        Assert.assertEquals(loginPage.getErrorMsg().getText(),
                "An account using this email address has already been registered. Please enter a valid password or request a new one.",
                 "user should not be able to create an account using an email already registered before");
         log.info("Error message displayed");
@@ -164,9 +163,30 @@ public class LoginFeature extends TestBase {
                 assertionMSG.replace("-M-",dateOfBirth_errorMsg));
         log.info("all expected messages have been verified");
     }
-    @Test
-    public void loginVerification(){
 
+    @Test(dataProvider = "getAllTestUsers")
+    public void loginVerification(String username,String password,String status, String expectedMSG){
+        driver.get(url);
+        log.info("URL opened");
+        header.navigateToLoginPage().click();
+        log.info("navigated to login page");
+        loginPage.getLoginEmail().sendKeys(username);
+        log.info("entered an username");
+        loginPage.getLoginPsw().sendKeys(password);
+        log.info("entered a password");
+        loginPage.getSubmitLogin().click();
+        log.info("submitted login");
+        if (status.equalsIgnoreCase("valid")) {
+            general.waitToBeClickable(myAccountPage.getPage_heading_msg(),5);
+            Assert.assertEquals(myAccountPage.getPage_heading_msg().getText(),
+                    expectedMSG, "Not able to login" );
+            log.info("logged in successfully with valid data");
+        }else {
+            general.waitToBeClickable(loginPage.getErrorMsg(),5);
+            Assert.assertTrue(loginPage.getErrorMsg().getText().contains(expectedMSG),
+                    "Message verification failed. expected:"+expectedMSG+" but found: "+ loginPage.getErrorMsg());
+            log.info("can not log in using invalid data");
+        }
     }
 
     @Test
@@ -174,8 +194,4 @@ public class LoginFeature extends TestBase {
 
     }
 
-    @Test
-    public void verifyFooterLinks(){
-
-    }
 }

@@ -1,0 +1,117 @@
+2022-08-01 14:57:08.511 [main] INFO  testBase.TestBase - URL opened
+2022-08-01 14:57:11.350 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-08-01 14:57:11.396 [main] INFO  testBase.TestBase - entered a new email to create an account 
+2022-08-01 14:57:13.789 [main] INFO  testBase.TestBase - navigated to signupPage
+2022-08-01 14:57:15.495 [main] INFO  testBase.TestBase - entered personal data 
+2022-08-01 14:57:16.452 [main] INFO  testBase.TestBase - entered address and contact data
+2022-08-01 14:57:18.484 [main] INFO  testBase.TestBase - Account created successfully
+2022-08-01 14:57:21.169 [main] INFO  testBase.TestBase - URL opened
+2022-08-01 14:57:26.070 [main] INFO  testBase.TestBase - navigated to LoginPage
+2022-08-01 14:57:26.106 [main] INFO  testBase.TestBase - Entered a registered email
+2022-08-01 14:57:26.348 [main] INFO  testBase.TestBase - submitted account creation
+2022-08-01 14:57:27.984 [main] INFO  testBase.TestBase - Error message displayed
+2022-08-01 14:57:28.038 [main] INFO  testBase.TestBase - entered an new random email
+2022-08-01 14:57:28.287 [main] INFO  testBase.TestBase - submitted account creation
+2022-08-01 14:57:29.742 [main] INFO  testBase.TestBase - change the default email value to a registered email after navigating to signup page
+2022-08-01 14:57:30.328 [main] INFO  testBase.TestBase - submitted account creation
+2022-08-01 14:57:31.364 [main] INFO  testBase.TestBase - Error message displayed
+2022-08-01 14:59:41.785 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 14:59:45.261 [TestNG-test=Regression-1] INFO  testBase.TestBase - navigated to LoginPage
+2022-08-01 14:59:45.310 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered a new email to create an account 
+2022-08-01 14:59:47.420 [TestNG-test=Regression-1] INFO  testBase.TestBase - navigated to signupPage
+2022-08-01 14:59:49.068 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered personal data 
+2022-08-01 14:59:49.994 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered address and contact data
+2022-08-01 14:59:53.772 [TestNG-test=Regression-1] INFO  testBase.TestBase - Account created successfully
+2022-08-01 14:59:58.990 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:00:09.201 [TestNG-test=Regression-1] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:00:11.858 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered an username
+2022-08-01 15:00:11.899 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered a password
+2022-08-01 15:00:17.193 [TestNG-test=Regression-1] INFO  testBase.TestBase - submitted login
+2022-08-01 15:00:21.871 [TestNG-test=Regression-1] INFO  testBase.TestBase - logged in successfully with valid data
+2022-08-01 15:00:35.788 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:01:00.074 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:01:20.657 [TestNG-test=Regression-1] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:01:47.722 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:01:52.999 [TestNG-test=Regression-1] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:02:21.379 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:02:26.650 [TestNG-test=Regression-1] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:02:53.627 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:02:58.898 [TestNG-test=Regression-1] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:03:04.211 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered an username
+2022-08-01 15:03:04.244 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered a password
+2022-08-01 15:03:09.395 [TestNG-test=Regression-1] INFO  testBase.TestBase - submitted login
+2022-08-01 15:03:09.441 [TestNG-test=Regression-1] INFO  testBase.TestBase - can not log in using invalid data
+2022-08-01 15:03:13.378 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:03:18.650 [TestNG-test=Regression-1] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:03:23.479 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered an username
+2022-08-01 15:03:23.501 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered a password
+2022-08-01 15:03:28.514 [TestNG-test=Regression-1] INFO  testBase.TestBase - submitted login
+2022-08-01 15:03:28.567 [TestNG-test=Regression-1] INFO  testBase.TestBase - can not log in using invalid data
+2022-08-01 15:03:44.741 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:03:58.953 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered an new random email
+2022-08-01 15:04:06.852 [TestNG-test=Regression-1] INFO  testBase.TestBase - Navigated to signup page
+2022-08-01 15:04:07.690 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered invalid personal data
+2022-08-01 15:04:20.986 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:04:32.058 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered an new random email
+2022-08-01 15:04:40.556 [TestNG-test=Regression-1] INFO  testBase.TestBase - Navigated to signup page
+2022-08-01 15:04:41.950 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered invalid personal data
+2022-08-01 15:05:02.575 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:05:16.821 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered an new random email
+2022-08-01 15:05:21.136 [TestNG-test=Regression-1] INFO  testBase.TestBase - Navigated to signup page
+2022-08-01 15:05:22.282 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered invalid personal data
+2022-08-01 15:05:43.384 [TestNG-test=Regression-1] INFO  testBase.TestBase - URL opened
+2022-08-01 15:05:49.280 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered an new random email
+2022-08-01 15:05:51.083 [TestNG-test=Regression-1] INFO  testBase.TestBase - Navigated to signup page
+2022-08-01 15:05:52.698 [TestNG-test=Regression-1] INFO  testBase.TestBase - entered invalid personal data
+2022-08-01 15:06:01.852 [TestNG-test=Regression-2] INFO  testBase.TestBase - URL opened
+2022-08-01 15:06:07.628 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to LoginPage
+2022-08-01 15:06:08.214 [TestNG-test=Regression-2] INFO  testBase.TestBase - Entered a registered email
+2022-08-01 15:06:08.948 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted account creation
+2022-08-01 15:06:13.776 [TestNG-test=Regression-2] INFO  testBase.TestBase - Error message displayed
+2022-08-01 15:06:13.825 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an new random email
+2022-08-01 15:06:14.564 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted account creation
+2022-08-01 15:06:19.002 [TestNG-test=Regression-2] INFO  testBase.TestBase - change the default email value to a registered email after navigating to signup page
+2022-08-01 15:06:20.039 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted account creation
+2022-08-01 15:06:21.457 [TestNG-test=Regression-2] INFO  testBase.TestBase - Error message displayed
+2022-08-01 15:06:25.303 [TestNG-test=Regression-2] INFO  testBase.TestBase - URL opened
+2022-08-01 15:06:31.101 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:06:33.020 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an email
+2022-08-01 15:06:33.037 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an Password
+2022-08-01 15:06:38.335 [TestNG-test=Regression-2] INFO  testBase.TestBase - Clicked on submit
+2022-08-01 15:06:45.246 [TestNG-test=Regression-2] INFO  testBase.TestBase - user logged in successfully
+2022-08-01 15:07:40.052 [main] INFO  testBase.TestBase - URL opened
+2022-08-01 15:07:44.040 [main] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:07:44.098 [main] INFO  testBase.TestBase - entered an username
+2022-08-01 15:07:44.126 [main] INFO  testBase.TestBase - entered a password
+2022-08-01 15:07:47.113 [main] INFO  testBase.TestBase - submitted login
+2022-08-01 15:07:47.186 [main] INFO  testBase.TestBase - can not log in using invalid data
+2022-08-01 15:07:51.913 [main] INFO  testBase.TestBase - URL opened
+2022-08-01 15:07:57.213 [main] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:07:57.712 [main] INFO  testBase.TestBase - entered an username
+2022-08-01 15:07:57.762 [main] INFO  testBase.TestBase - entered a password
+2022-08-01 15:07:59.225 [main] INFO  testBase.TestBase - submitted login
+2022-08-01 15:07:59.276 [main] INFO  testBase.TestBase - can not log in using invalid data
+2022-08-01 15:08:01.325 [main] INFO  testBase.TestBase - URL opened
+2022-08-01 15:08:03.442 [main] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:08:03.468 [main] INFO  testBase.TestBase - entered an username
+2022-08-01 15:08:03.493 [main] INFO  testBase.TestBase - entered a password
+2022-08-01 15:08:04.820 [main] INFO  testBase.TestBase - submitted login
+2022-08-01 15:08:04.876 [main] INFO  testBase.TestBase - can not log in using invalid data
+2022-08-01 15:08:07.722 [main] INFO  testBase.TestBase - URL opened
+2022-08-01 15:08:09.676 [main] INFO  testBase.TestBase - navigated to login page
+2022-08-01 15:08:09.708 [main] INFO  testBase.TestBase - entered an username
+2022-08-01 15:08:09.733 [main] INFO  testBase.TestBase - entered a password
+2022-08-01 15:08:11.431 [main] INFO  testBase.TestBase - submitted login
+2022-08-01 15:08:11.487 [main] INFO  testBase.TestBase - can not log in using invalid data
+2022-08-01 15:08:13.331 [main] INFO  testBase.TestBase - URL opened
+2022-08-01 15:08:15.098 [main] INFO  testBase.TestBase - entered an new random email
+2022-08-01 15:08:17.888 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-08-01 15:08:19.568 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-08-01 15:08:24.481 [main] INFO  testBase.TestBase - URL opened
+2022-08-01 15:08:27.928 [main] INFO  testBase.TestBase - entered an new random email
+2022-08-01 15:08:29.521 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-08-01 15:08:31.210 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-08-01 15:08:37.546 [main] INFO  testBase.TestBase - URL opened
+2022-08-01 15:08:39.936 [main] INFO  testBase.TestBase - entered an new random email
+2022-08-01 15:08:41.587 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-08-01 15:08:43.204 [main] INFO  testBase.TestBase - entered invalid personal data
