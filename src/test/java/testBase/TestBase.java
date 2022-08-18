@@ -1,11 +1,10 @@
 package testBase;
-import automationpractice.UI.*;
+import automationpractice.FE.*;
 import base.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.minidev.json.parser.ParseException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -19,7 +18,6 @@ import org.testng.annotations.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,13 +28,9 @@ public class TestBase{
     public PropReader propReader = new PropReader();
     public ExcelReader excelReader= new ExcelReader();
     public DBReader db=new DBReader();
-    public General general;
+    public ProjectActions projectActions;
     public Homepage home;
-    public LoginPage loginPage;
     public Homepage homepage;
-    public SignupPage signupPage;
-    public MyAccountPage myAccountPage;
-    public Footer footer;
     public Header header;
     public Actions actions;
     public String url=propReader.getUrl();
@@ -77,17 +71,15 @@ public class TestBase{
                 break;
             }
         }
-        general = new General(driver);
+        projectActions = new ProjectActions(driver);
         home =new Homepage(driver);
-        loginPage=new LoginPage(driver);
         homepage=new Homepage(driver);
-        myAccountPage=new MyAccountPage(driver);
         header=new Header(driver);
-        footer=new Footer(driver);
-        signupPage=new SignupPage(driver);
         actions=new Actions(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
+        driver.get(url);
+        log.info("URL opened");
     }
 
     @AfterClass(alwaysRun = true)

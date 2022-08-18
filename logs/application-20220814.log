@@ -1,0 +1,35 @@
+2022-08-14 02:50:40.417 [main] INFO  testBase.TestBase - URL opened
+2022-08-14 02:50:50.457 [main] INFO  testBase.TestBase - Navigated to LoginPage
+2022-08-14 02:51:10.347 [main] INFO  testBase.TestBase - logged in using: test8888@gmail.com
+2022-08-14 02:51:22.937 [main] INFO  testBase.TestBase - navigated to summer dresses page
+2022-08-14 02:51:23.261 [main] INFO  testBase.TestBase - Products sorted by Price Asc.
+2022-08-14 02:53:31.079 [main] INFO  testBase.TestBase - URL opened
+2022-08-14 02:53:54.431 [main] INFO  testBase.TestBase - Navigated to LoginPage
+2022-08-14 02:54:07.969 [main] INFO  testBase.TestBase - logged in using: test8888@gmail.com
+2022-08-14 02:54:15.391 [main] INFO  testBase.TestBase - navigated to summer dresses page
+2022-08-14 02:54:15.682 [main] INFO  testBase.TestBase - Products sorted by Price Asc.
+2022-08-14 02:54:17.893 [main] INFO  testBase.TestBase - Products sorted by Price desc.
+2022-08-14 03:45:51.022 [main] INFO  testBase.TestBase - URL opened
+2022-08-14 03:45:54.466 [main] INFO  testBase.TestBase - Navigated to LoginPage
+2022-08-14 03:45:57.055 [main] INFO  testBase.TestBase - logged in using: test8888@gmail.com
+2022-08-14 03:46:00.490 [main] INFO  testBase.TestBase - navigated to summer dresses page
+2022-08-14 03:46:00.900 [main] INFO  testBase.TestBase - Products sorted by Price Asc.
+2022-08-14 03:46:11.383 [main] INFO  testBase.TestBase - Products sorted by Price desc.
+2022-08-14 03:51:04.851 [main] INFO  testBase.TestBase - URL opened
+2022-08-14 03:51:07.047 [main] INFO  testBase.TestBase - Navigated to LoginPage
+2022-08-14 03:51:09.800 [main] INFO  testBase.TestBase - logged in using: test8888@gmail.com
+2022-08-14 03:51:14.570 [main] INFO  testBase.TestBase - navigated to summer dresses page
+2022-08-14 03:51:15.008 [main] INFO  testBase.TestBase - Products sorted by Price Asc.
+2022-08-14 03:51:25.463 [main] INFO  testBase.TestBase - Products sorted by Price desc.
+2022-08-14 03:55:00.507 [main] INFO  testBase.TestBase - URL opened
+2022-08-14 03:55:02.893 [main] INFO  testBase.TestBase - Navigated to LoginPage
+2022-08-14 03:55:06.766 [main] INFO  testBase.TestBase - logged in using: test8888@gmail.com
+2022-08-14 03:55:09.632 [main] INFO  testBase.TestBase - navigated to summer dresses page
+2022-08-14 03:55:09.722 [main] INFO  testBase.TestBase - Products sorted by Price Asc.
+2022-08-14 03:55:20.338 [main] INFO  testBase.TestBase - Products sorted by Price desc.
+2022-08-14 05:46:01.116 [main] INFO  testBase.TestBase - URL opened
+2022-08-14 05:46:03.472 [main] INFO  testBase.TestBase - Navigated to LoginPage
+2022-08-14 05:46:05.878 [main] INFO  testBase.TestBase - logged in using: test8888@gmail.com
+2022-08-14 05:46:08.693 [main] INFO  testBase.TestBase - navigated to summer dresses page
+2022-08-14 05:46:09.111 [main] INFO  testBase.TestBase - Products sorted by Price Asc.
+2022-08-14 05:46:19.610 [main] INFO  testBase.TestBase - Products sorted by Price desc.

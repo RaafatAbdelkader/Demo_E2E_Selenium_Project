@@ -1,7 +1,7 @@
 package testBase;
 
 import base.ExtentReporterNG;
-import base.General;
+import base.ProjectActions;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -37,14 +37,13 @@ public class TestListener implements ITestListener {
         exTest.get().fail(result.getThrowable());
         try {
             driver=(WebDriver)result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
-            General gm =new General(driver);
+            ProjectActions gm =new ProjectActions(driver);
             String scrPath= gm.getScreenshot(result.getName());
             exTest.get().addScreenCaptureFromPath(scrPath,result.getMethod().getMethodName());
             System.out.println(scrPath);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Override

@@ -6,7 +6,7 @@
     </listeners>
     <test name="Regression">
         <packages>
-            <package name="automationPracticeTest.UI"></package>
+            <package name="automationPracticeTest.FE"></package>
         </packages>
     </test>
 </suite>
