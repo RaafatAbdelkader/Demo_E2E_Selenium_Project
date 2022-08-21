@@ -1,0 +1,14 @@
+automationpractice\FE\MyAccountPage.class
+automationpractice\FE\Homepage.class
+base\ProjectActions.class
+base\ExcelReader.class
+base\PropReader.class
+automationpractice\FE\SignupPage.class
+base\JsonReader.class
+automationpractice\FE\LoginPage.class
+base\DBReader.class
+automationpractice\FE\Footer.class
+automationpractice\FE\ProductViewPage.class
+automationpractice\FE\SummerDressesPage.class
+base\ExtentReporterNG.class
+automationpractice\FE\Header.class

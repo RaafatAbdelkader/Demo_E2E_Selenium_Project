@@ -15,13 +15,12 @@ public class LoginFeature extends TestBase {
     LoginPage loginPage;
     SignupPage signupPage;
     MyAccountPage myAccountPage;
-    public LoginFeature() throws IOException, ParseException {
+    public LoginFeature() throws IOException {
     }
 
 
     @Test(description = "As an user I should be able to create an account using valid data", groups = "Smoke")
     public void createAccount() {
-        log.info("URL opened");
         loginPage=header.navigateToLoginPage();
         newEmail= loginPage.getNewRandomEmail();
         Assert.assertEquals(loginPage.getHeadingMsg().getText(),"AUTHENTICATION","can't navigate to login page");
@@ -125,7 +124,7 @@ public class LoginFeature extends TestBase {
     }
 
     @Test(dataProvider = "getInvalidPersonalData",description = "As an user I should not be able to create an account using invalid PersonalData")
-    public void verifyAccountCreationUsingInvalidPersonalData(
+    public void accountCreationUsingInvalidPersonalData(
                             String firstname,String firstname_errorMSG, String lastname,String lastname_errorMSG,
                             String email,String email_errorMSG,String psw,String psw_errorMSG,String dateOfBirth,
                             String dateOfBirth_errorMsg){
@@ -165,7 +164,7 @@ public class LoginFeature extends TestBase {
     }
 
     @Test(dataProvider = "getAllTestUsers")
-    public void loginVerification(String username,String password,String status, String expectedMSG){
+    public void loginValidation(String username,String password,String status, String expectedMSG){
         loginPage=header.navigateToLoginPage();
         log.info("navigated to login page");
         loginPage.getLoginEmail().sendKeys(username);

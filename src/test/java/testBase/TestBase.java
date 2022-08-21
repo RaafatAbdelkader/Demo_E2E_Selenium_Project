@@ -29,14 +29,12 @@ public class TestBase{
     public ExcelReader excelReader= new ExcelReader();
     public DBReader db=new DBReader();
     public ProjectActions projectActions;
-    public Homepage home;
     public Homepage homepage;
     public Header header;
     public Actions actions;
     public String url=propReader.getUrl();
-    public TestBase() throws IOException, ParseException {
+    public TestBase() throws IOException {
     }
-
     String browserName= propReader.getBrowserName();
     public static Logger log = LogManager.getLogger(TestBase.class.getName());
 
@@ -72,14 +70,12 @@ public class TestBase{
             }
         }
         projectActions = new ProjectActions(driver);
-        home =new Homepage(driver);
         homepage=new Homepage(driver);
         header=new Header(driver);
         actions=new Actions(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get(url);
-        log.info("URL opened");
     }
 
     @AfterClass(alwaysRun = true)

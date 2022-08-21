@@ -20,7 +20,6 @@ public class ProductPurchase extends TestBase {
     public ProductPurchase() throws IOException, ParseException {
     }
 
-
     @Test(description = "verify an user can sort by price", groups = "Smoke")
     public void validationOfProductSorting(){
         loginPage=header.navigateToLoginPage();

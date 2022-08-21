@@ -84,8 +84,8 @@ public class SummerDressesPage {
         return priceList;
     }
 
-    public void waitToBeSorted(int timeLimitAsSec){
-       WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(timeLimitAsSec));
+    public void waitToBeSorted(int timeLimitInSec){
+       WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(timeLimitInSec));
        wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingIcon));
     }
     public WebElement getProductItem(String name){
