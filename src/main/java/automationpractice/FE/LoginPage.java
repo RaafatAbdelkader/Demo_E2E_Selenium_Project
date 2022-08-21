@@ -1,5 +1,6 @@
 package automationpractice.FE;
 
+import base.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,19 +8,20 @@ import org.openqa.selenium.WebElement;
 import java.util.Random;
 
 public class LoginPage {
-     WebDriver driver;
+    private WebDriver driver;
+    private ProjectActions projectActions;
+
     private By createAccount_NewEmail =By.id("email_create");
     private By headingMsg =By.className("page-heading");
     private By submit_createAccount =By.id("SubmitCreate");
-
     private By loginEmail =By.id("email");
     private By loginPsw =By.id("passwd");
     private By submit_login=By.id("SubmitLogin");
     private By errorMsg=By.xpath("//div[contains(@class,'alert')]");
 
-
     public LoginPage( WebDriver driver){
          this.driver=driver;
+        projectActions=new ProjectActions(driver);
      }
 
     public String getNewRandomEmail(){
@@ -27,33 +29,35 @@ public class LoginPage {
         Random r=new Random();
         return newEmail.replace("X",String.valueOf(r.nextInt(1000,100000)));
     }
-    public WebElement createAccount_NewEmail(){
-        return driver.findElement(createAccount_NewEmail);
+    public void createAccount_enterNewEmail(String newEmail){
+        WebElement el=driver.findElement(createAccount_NewEmail);
+        el.clear();
+        el.sendKeys(newEmail);
      }
-    public WebElement getHeadingMsg() {
-        return driver.findElement(headingMsg);
+    public String getHeadingMsg() {
+        return driver.findElement(headingMsg).getText();
     }
     public SignupPage navigateToSignupPage(){
        driver.findElement(submit_createAccount).click();
        return new SignupPage(driver);
     }
-    public WebElement getLoginEmail() {
-        return driver.findElement(loginEmail);
+    public void enterLoginUsername(String username) {
+        driver.findElement(loginEmail).sendKeys(username);
     }
-    public WebElement getLoginPsw() {
-        return driver.findElement(loginPsw);
+    public void enterLoginPassword(String password) {
+        driver.findElement(loginPsw).sendKeys(password);
     }
-    public WebElement getSubmitLogin() {
-        return driver.findElement(submit_login);
+    public void submitLogin() {
+       driver.findElement(submit_login).click();
     }
-    public WebElement getErrorMsg() {
-        return driver.findElement(errorMsg);
+    public String getErrorMsg() {
+        projectActions.waitToBeClickable(driver.findElement(errorMsg),5);
+        return driver.findElement(errorMsg).getText();
     }
-
     public void login(String username,String psw){
-        getLoginEmail().sendKeys(username);
-        getLoginPsw().sendKeys(psw);
-        getSubmitLogin().click();
+        enterLoginUsername(username);
+        enterLoginPassword(psw);
+        submitLogin();
     }
 
 

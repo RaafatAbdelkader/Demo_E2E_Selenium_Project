@@ -25,17 +25,15 @@ public class ProductPurchase extends TestBase {
         loginPage=header.navigateToLoginPage();
         loginPage.login(username,password);
         summerDressesPage=header.navigateToSummerDressesPage();
-        softAssert.assertEquals(summerDressesPage.getCategoryName().getText().trim(),"SUMMER DRESSES");
+        softAssert.assertEquals(summerDressesPage.getCategoryNameMSG().trim(),"SUMMER DRESSES");
         int productsCount= summerDressesPage.getProductItems().size();
-        softAssert.assertEquals(summerDressesPage.getHeadingCounter().getText(),
+        softAssert.assertEquals(summerDressesPage.getHeadingCounterMSG(),
                 "There are "+productsCount+" products.","Items count does not match");
         summerDressesPage.sortBy("Price: Lowest first");
-        summerDressesPage.waitToBeSorted(5);
         List<Double>priceList=summerDressesPage.getPriceList();
         softAssert.assertTrue(summerDressesPage.isOrderedAscending(priceList),
                 "Products should be in an ascending order");
         summerDressesPage.sortBy("Price: Highest first");
-        summerDressesPage.waitToBeSorted(5);
         priceList=summerDressesPage.getPriceList();
         softAssert.assertTrue(summerDressesPage.isOrderedDescending(priceList),
                 "Products should be in a descending order");
@@ -50,28 +48,21 @@ public class ProductPurchase extends TestBase {
         WebElement productItem=summerDressesPage.getProductItem("Printed Chiffon Dress");
         actions.moveToElement(productItem).build().perform();
         productViewPage= summerDressesPage.viewProduct();
-        projectActions.waitToBeClickable(productViewPage.getQuantity(),5);
-        WebElement qty=productViewPage.getQuantity();
-        qty.clear();
-        qty.sendKeys("0");
+        productViewPage.setProductQuantity("0");
         productViewPage.addToCart();
         softAssert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");
-        qty.clear();
-        qty.sendKeys("test");
+        productViewPage.setProductQuantity("test");
         productViewPage.addToCart();
         softAssert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");
-        qty.clear();
-        qty.sendKeys("-20");
+        productViewPage.setProductQuantity("-20");
         productViewPage.addToCart();
         softAssert.assertFalse(productViewPage.isAddedToCart(),"product added to cart with invalid quantity");
         softAssert.assertEquals(productViewPage.getErrorMSG(),"Negative quantity.");
-        qty.clear();
-        qty.sendKeys("9999999999999999999999999999999999");
+        productViewPage.setProductQuantity("9999999999999999999999999999999999");
         productViewPage.addToCart();
         softAssert.assertFalse(productViewPage.isAddedToCart(),"product added to cart with invalid quantity");
         softAssert.assertEquals(productViewPage.getErrorMSG(),"Quantity should be between 1 and 1000");
-        qty.clear();
-        qty.sendKeys("h@#??//'");
+        productViewPage.setProductQuantity("h@#??//'");
         productViewPage.addToCart();
         softAssert.assertFalse(productViewPage.isAddedToCart(),"product added to cart with invalid quantity");
         softAssert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");

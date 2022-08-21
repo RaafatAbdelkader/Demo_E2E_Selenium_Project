@@ -1,5 +1,6 @@
 package automationpractice.FE;
 
+import base.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,10 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SummerDressesPage {
-    WebDriver driver;
-
+    private WebDriver driver;
+    private ProjectActions projectActions;
     public SummerDressesPage(WebDriver driver) {
         this.driver = driver;
+        projectActions=new ProjectActions(driver);
     }
     private By categoryName= By.xpath("//span[@class='cat-name']");
     private By headingCounter= By.xpath("//span[@class='heading-counter']");
@@ -27,12 +29,12 @@ public class SummerDressesPage {
     private By addToCart= By.xpath("//li[contains(@class,'hovered')] //a[@title='Add to cart']");
 
 
-    public WebElement getCategoryName(){
-        return driver.findElement(categoryName);
+    public String getCategoryNameMSG(){
+        return driver.findElement(categoryName).getText();
     }
 
-    public WebElement getHeadingCounter(){
-        return driver.findElement(headingCounter);
+    public String getHeadingCounterMSG(){
+        return driver.findElement(headingCounter).getText();
     }
     public List<WebElement> getProductItems(){
         return driver.findElements(productItems);
@@ -43,16 +45,17 @@ public class SummerDressesPage {
             if(s.getText().contains(text))
                 s.click();
         });
+       waitToBeSorted(5);
     }
 
     public Boolean isOrderedDescending(List<Double>numList){
         Boolean isOrderedDescending =null;
         List<Double>sortedList= numList.stream().sorted().toList();
-        int index=sortedList.size()-1;
-        for (int i =index ; i >=0; i--) {
-            if (!(numList.get(index-i).equals(sortedList.get(i)))) {
+        int lastIndex=sortedList.size()-1;
+        for (int i =lastIndex ; i >=0; i--) {
+            if (!(numList.get(lastIndex-i).equals(sortedList.get(i)))) {
                 System.out.println("List is not in a descending order");
-                isOrderedDescending= false;
+                isOrderedDescending=false;
                 break;
             }else
                 isOrderedDescending=true;
@@ -99,11 +102,12 @@ public class SummerDressesPage {
         }
         return item;
     }
-    public WebElement addToCart(){
-       return driver.findElement(addToCart);
+    public void addProductToCart(){
+        driver.findElement(addToCart).click();
     }
 
     public ProductViewPage  viewProduct(){
+
         driver.findElement(view).click();
         return new ProductViewPage(driver);
     }

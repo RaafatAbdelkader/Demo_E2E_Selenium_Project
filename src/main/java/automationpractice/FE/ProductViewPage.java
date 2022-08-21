@@ -1,11 +1,13 @@
 package automationpractice.FE;
 
+import base.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class ProductViewPage {
-    WebDriver driver;
+    private WebDriver driver;
+    private ProjectActions projectActions;
     private By qty= By.id("quantity_wanted");
     private By alertMsg= By.xpath("//p[@class='fancybox-error']");
     private By addToCart= By.xpath("//p[@id='add_to_cart']/button");
@@ -15,13 +17,15 @@ public class ProductViewPage {
     private By closeAddedToCartWindow =By.xpath(" //span[@title='Close window']");
 
 
-
     public ProductViewPage(WebDriver driver) {
         this.driver = driver;
+        projectActions=new ProjectActions(driver);
     }
 
-    public WebElement getQuantity(){
-            return driver.findElement(qty);
+    public void setProductQuantity(String quantity){
+        projectActions.waitToBeClickable(driver.findElement(qty), 5);
+        driver.findElement(qty).clear();
+        driver.findElement(qty).sendKeys(quantity);
     }
 
     public String getErrorMSG() throws InterruptedException {

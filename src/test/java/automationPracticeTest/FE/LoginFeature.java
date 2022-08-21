@@ -2,7 +2,6 @@ package automationPracticeTest.FE;
 import automationpractice.FE.LoginPage;
 import automationpractice.FE.MyAccountPage;
 import automationpractice.FE.SignupPage;
-import net.minidev.json.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import testBase.TestBase;
@@ -23,50 +22,47 @@ public class LoginFeature extends TestBase {
     public void createAccount() {
         loginPage=header.navigateToLoginPage();
         newEmail= loginPage.getNewRandomEmail();
-        Assert.assertEquals(loginPage.getHeadingMsg().getText(),"AUTHENTICATION","can't navigate to login page");
+        Assert.assertEquals(loginPage.getHeadingMsg(),"AUTHENTICATION","can't navigate to login page");
         log.info("navigated to LoginPage");
-        loginPage.createAccount_NewEmail().sendKeys(newEmail);
+        loginPage.createAccount_enterNewEmail(newEmail);
         log.info("entered a new email to create an account ");
         signupPage=loginPage.navigateToSignupPage();
-        projectActions.waitToBeClickable(signupPage.getSubHeadingMsg(),5);
-        Assert.assertEquals(signupPage.getSubHeadingMsg().getText(),
+        Assert.assertEquals(signupPage.getSubHeadingMsg(),
                 "YOUR PERSONAL INFORMATION","did not navigate to signup page");
         log.info("navigated to signupPage");
         Assert.assertFalse(signupPage.genderIsChecked("male"),"gender should be unchecked by default");
         Assert.assertFalse(signupPage.genderIsChecked("female"),"gender should be unchecked by default");
-        signupPage.getGenderRadio(getRegisterTestData.get("Gender*")).click();
-        signupPage.getFirstName().sendKeys(getRegisterTestData.get("Firstname*"));
-        signupPage.getLastName().sendKeys(getRegisterTestData.get("Lastname*"));
-        String placeholder_Email =signupPage.getEmail().getAttribute("value");
+        signupPage.selectGender(getRegisterTestData.get("Gender*"));
+        signupPage.setFirstName(getRegisterTestData.get("Firstname*"));
+        signupPage.setLastName(getRegisterTestData.get("Lastname*"));
+
+        String placeholder_Email =signupPage.getEmailPlaceholder();
         Assert.assertEquals(placeholder_Email,newEmail,
                 "Placeholder email does not match the new email entered");
         String psw= getRegisterTestData.get("Password*");
-        signupPage.getPassword().sendKeys(psw);
+        signupPage.setPassword(psw);
         signupPage.selectDate(getRegisterTestData.get("DateOfBirth*"));
         log.info("entered personal data ");
-        signupPage.getNewsletter().click();
-        signupPage.getSpecialOffers().click();
-        String placeholder_AddressFirstname= signupPage.getAddressFirstname().getAttribute("value");
-        Assert.assertEquals(placeholder_AddressFirstname, getRegisterTestData.get("Firstname*"),"Wrong Placeholder");
-        String placeholder_AddressLastname= signupPage.getAddressLastname().getAttribute("value");
-        Assert.assertEquals(placeholder_AddressLastname, getRegisterTestData.get("Lastname*"),"Wrong Placeholder");
+        signupPage.selectNewsletter();
+        signupPage.selectSpecialOffers();
+        Assert.assertEquals(signupPage.getAddressFirstnamePlaceholder(),getRegisterTestData.get("Firstname*"),"Wrong Placeholder");
+        Assert.assertEquals(signupPage.getAddressLastnamePlaceholder(), getRegisterTestData.get("Lastname*"),"Wrong Placeholder");
         if (getRegisterTestData.get("Company")!=null)
-            signupPage.getCompany().sendKeys(getRegisterTestData.get("Company"));
-        signupPage.getAddress().sendKeys(getRegisterTestData.get("Address*"));
-        signupPage.getCity().sendKeys(getRegisterTestData.get("City*"));
+            signupPage.setCompany(getRegisterTestData.get("Company"));
+        signupPage.setAddress(getRegisterTestData.get("Address*"));
+        signupPage.setCity(getRegisterTestData.get("City*"));
         signupPage.selectState(getRegisterTestData.get("State*"));
-        signupPage.getPostcode().sendKeys(getRegisterTestData.get("ZipCode*"));
-        Assert.assertEquals(signupPage.getDefaultSelectedCountry().getText(), getRegisterTestData.get("Country*"),
+        signupPage.setPostcode(getRegisterTestData.get("ZipCode*"));
+        Assert.assertEquals(signupPage.getDefaultSelectedCountry(), getRegisterTestData.get("Country*"),
                 "the country selected by default does not match the requirement");
         if (getRegisterTestData.get("MobilePhone*")!=null)
-            signupPage.getMobilePhone().sendKeys(getRegisterTestData.get("MobilePhone*"));
+            signupPage.setMobilePhone(getRegisterTestData.get("MobilePhone*"));
         else
-            signupPage.getPhone().sendKeys(getRegisterTestData.get("HomePhone"));
+            signupPage.setPhone(getRegisterTestData.get("HomePhone"));
         log.info("entered address and contact data");
-        signupPage.getSubmitAccount().click();
+        signupPage.getSubmitAccount();
         myAccountPage=header.navigateToMyAccount();
-        projectActions.waitToBeClickable(myAccountPage.getPage_heading_msg(),5);
-        String success_MSG=myAccountPage.getPage_heading_msg().getText();
+        String success_MSG=myAccountPage.getPage_heading_msg();
         Assert.assertEquals(success_MSG,
                 "Welcome to your account. Here you can manage all of your personal information and orders.",
                 "Failed to create an account");
@@ -79,15 +75,10 @@ public class LoginFeature extends TestBase {
     public void loginWithDataCreated(){
         loginPage=header.navigateToLoginPage();
         log.info("navigated to login page");
-        loginPage.getLoginEmail().sendKeys(registeredEmail);
-        log.info("entered an email");
-        loginPage.getLoginPsw().sendKeys(registeredPassword);
-        log.info("entered an Password");
-        loginPage.getSubmitLogin().click();
-        log.info("Clicked on submit");
+        loginPage.login(registeredEmail,registeredPassword);
+        log.info("Login submitted");
         myAccountPage=header.navigateToMyAccount();
-        projectActions.waitToBeClickable(myAccountPage.getPage_heading_msg(),5);
-        String success_MSG=myAccountPage.getPage_heading_msg().getText();
+        String success_MSG=myAccountPage.getPage_heading_msg();
         Assert.assertEquals(success_MSG,
                 "Welcome to your account. Here you can manage all of your personal information and orders.",
                 "Failed to login with valid data");
@@ -98,26 +89,24 @@ public class LoginFeature extends TestBase {
     public void accountCreationUsingRegisteredEmail(){
         loginPage=header.navigateToLoginPage();
         log.info("navigated to LoginPage");
-        loginPage.createAccount_NewEmail().sendKeys(registeredEmail);
+        loginPage.createAccount_enterNewEmail(registeredEmail);
         log.info("Entered a registered email");
         signupPage=loginPage.navigateToSignupPage();
         log.info("submitted account creation");
-        projectActions.waitToBeClickable(loginPage.getErrorMsg(),5);
-        Assert.assertEquals(loginPage.getErrorMsg().getText(),
+
+        Assert.assertEquals(loginPage.getErrorMsg(),
                "An account using this email address has already been registered. Please enter a valid password or request a new one.",
                 "user should not be able to create an account using an email already registered before");
         log.info("Error message displayed");
-        loginPage.createAccount_NewEmail().clear();
-        loginPage.createAccount_NewEmail().sendKeys(loginPage.getNewRandomEmail());
+        loginPage.createAccount_enterNewEmail(loginPage.getNewRandomEmail());
         log.info("entered an new random email");
         loginPage.navigateToSignupPage();
         log.info("submitted account creation");
-        signupPage.getEmail().clear();
-        signupPage.getEmail().sendKeys(registeredEmail);
+        signupPage.changeDefaultEmail(registeredEmail);
         log.info("change the default email value to a registered email after navigating to signup page");
-        signupPage.getSubmitAccount().click();
+        signupPage.getSubmitAccount();
         log.info("submitted account creation");
-        Assert.assertTrue(signupPage.getCreateAccountErrorMSG().getText()
+        Assert.assertTrue(signupPage.getCreateAccountErrorMSG()
                 .contains("An account using this email address has already been registered."),
                 "user should not be able to change the default email value to a registered email after navigating to signup page");
         log.info("Error message displayed");
@@ -129,27 +118,25 @@ public class LoginFeature extends TestBase {
                             String email,String email_errorMSG,String psw,String psw_errorMSG,String dateOfBirth,
                             String dateOfBirth_errorMsg){
         loginPage= header.navigateToLoginPage();
-        loginPage.createAccount_NewEmail().sendKeys(loginPage.getNewRandomEmail());
+        loginPage.createAccount_enterNewEmail(loginPage.getNewRandomEmail());
         log.info("entered an new random email");
         signupPage=loginPage.navigateToSignupPage();
-        projectActions.waitToBeClickable(signupPage.getSubHeadingMsg(),5);
-        Assert.assertEquals(signupPage.getSubHeadingMsg().getText(),
+        Assert.assertEquals(signupPage.getSubHeadingMsg(),
                 "YOUR PERSONAL INFORMATION","did not navigate to signup page");
         log.info("Navigated to signup page");
-        signupPage.getEmail().clear();
-        signupPage.getGenderRadio("male").click();
-        signupPage.getGenderRadio("female").click();
+        signupPage.selectGender("male");
+        signupPage.selectGender("female");
         Assert.assertFalse(signupPage.genderIsChecked("male"),
                 "the user should not be able to select both of gender types at same time");
-        signupPage.getFirstName().sendKeys(firstname);
-        signupPage.getLastName().sendKeys(lastname);
-        signupPage.getEmail().sendKeys(email);
-        signupPage.getPassword().sendKeys(psw);
+        signupPage.setFirstName(firstname);
+        signupPage.setLastName(lastname);
+        signupPage.changeDefaultEmail(email);
+        signupPage.setPassword(psw);
         signupPage.selectDate(dateOfBirth);
         log.info("entered invalid personal data");
-        signupPage.getSubmitAccount().click();
-        String actualErrorMSG=signupPage.getCreateAccountErrorMSG().getText();
-        String assertionMSG="The following error message: -M- is not contained in the following actual message:"+actualErrorMSG;
+        signupPage.getSubmitAccount();
+        String actualErrorMSG=signupPage.getCreateAccountErrorMSG();
+        String assertionMSG="The error message: -M- should be contained in the following actual message:"+actualErrorMSG;
         Assert.assertTrue(actualErrorMSG.contains(firstname_errorMSG),
                 assertionMSG.replace("-M-",firstname_errorMSG));
         Assert.assertTrue(actualErrorMSG.contains(lastname_errorMSG),
@@ -167,21 +154,19 @@ public class LoginFeature extends TestBase {
     public void loginValidation(String username,String password,String status, String expectedMSG){
         loginPage=header.navigateToLoginPage();
         log.info("navigated to login page");
-        loginPage.getLoginEmail().sendKeys(username);
+        loginPage.enterLoginUsername(username);
         log.info("entered an username");
-        loginPage.getLoginPsw().sendKeys(password);
+        loginPage.enterLoginPassword(password);
         log.info("entered a password");
-        loginPage.getSubmitLogin().click();
+        loginPage.submitLogin();
         log.info("submitted login");
         myAccountPage=header.navigateToMyAccount();
         if (status.equalsIgnoreCase("valid")) {
-            projectActions.waitToBeClickable(myAccountPage.getPage_heading_msg(),5);
-            Assert.assertEquals(myAccountPage.getPage_heading_msg().getText(),
+            Assert.assertEquals(myAccountPage.getPage_heading_msg(),
                     expectedMSG, "Not able to login" );
             log.info("logged in successfully with valid data");
         }else {
-            projectActions.waitToBeClickable(loginPage.getErrorMsg(),5);
-            Assert.assertTrue(loginPage.getErrorMsg().getText().contains(expectedMSG),
+            Assert.assertTrue(loginPage.getErrorMsg().contains(expectedMSG),
                     "Message verification failed. expected:"+expectedMSG+" but found: "+ loginPage.getErrorMsg());
             log.info("can not log in using invalid data");
         }

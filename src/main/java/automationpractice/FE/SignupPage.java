@@ -1,12 +1,14 @@
 package automationpractice.FE;
 
+import base.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class SignupPage {
-    WebDriver driver;
+    private WebDriver driver;
+    private ProjectActions projectActions;
     private By subHeadingMsg =By.xpath("//label[contains(text(),'Title')]/parent:: div/preceding-sibling:: h3[@class='page-subheading']");
     private By gender_radio_male= By.xpath("//input[@id='id_gender1']/parent::span");
     private By gender_radio_female=  By.xpath("//input[@id='id_gender2']/parent::span");
@@ -34,36 +36,41 @@ public class SignupPage {
     private By addressAlias=By.id("alias");
     private By submitAccount=By.id("submitAccount");
     private By create_account_error=By.xpath("//div[contains(@class,'alert')]");
+
     public SignupPage(WebDriver driver) {
         this.driver = driver;
+        projectActions=new ProjectActions(driver);
     }
-    public WebElement getSubHeadingMsg() {
-        return driver.findElement(subHeadingMsg);
+    public String getSubHeadingMsg() {
+        projectActions.waitToBeClickable(driver.findElement(subHeadingMsg),5);
+        return driver.findElement(subHeadingMsg).getText();
     }
-    public WebElement getCreateAccountErrorMSG() {
-        return driver.findElement(create_account_error);
+    public String getCreateAccountErrorMSG() {
+        return driver.findElement(create_account_error).getText();
     }
-    public WebElement getGenderRadio(String gender){
+    public void selectGender(String gender){
         if (gender.equalsIgnoreCase("male"))
-            return driver.findElement(gender_radio_male);
+                driver.findElement(gender_radio_male).click();
         else if (gender.equalsIgnoreCase("female"))
-            return driver.findElement(gender_radio_female);
-        else {
-            System.out.println("Please provide a specific gender Male/ Female");
-            return null;
-        }
+                driver.findElement(gender_radio_female).click();
+        else
+                System.out.println("Please provide a specific gender Male/ Female");
     }
-    public WebElement getFirstName() {
-        return driver.findElement(firstname);
+    public void setFirstName(String firstName) {
+        driver.findElement(firstname).sendKeys(firstName);
     }
-    public WebElement getLastName() {
-        return driver.findElement(lastname);
+    public void setLastName(String lastName) {
+         driver.findElement(lastname).sendKeys(lastName);
     }
-    public WebElement getEmail() {
-        return driver.findElement(email);
+    public String getEmailPlaceholder() {
+        return driver.findElement(email).getAttribute("value");
     }
-    public WebElement getPassword() {
-        return driver.findElement(psw);
+    public void changeDefaultEmail(String NEmail) {
+      driver.findElement(email).clear();
+      driver.findElement(email).sendKeys(NEmail);
+    }
+    public void setPassword(String password) {
+        driver.findElement(psw).sendKeys(password);
     }
     //the date should be provided in this Format:"dd/mm/yyyy"
     public void selectDate(String date) {
@@ -81,26 +88,32 @@ public class SignupPage {
         }
         System.out.println("Date: "+date+ " selected");
     }
-    public WebElement getNewsletter() {
-        return driver.findElement(newsletter);
+    public void selectNewsletter() {
+         driver.findElement(newsletter).click();
     }
-    public WebElement getSpecialOffers() {
-        return driver.findElement(specialOffers);
+    public void selectSpecialOffers() {
+        driver.findElement(specialOffers).click();
     }
-    public WebElement getAddressFirstname() {
-        return driver.findElement(addressFirstname);
+    public void setAddressFirstname(String addressFirstnameV) {
+         driver.findElement(addressFirstname).sendKeys(addressFirstnameV);
     }
-    public WebElement getAddressLastname() {
-        return driver.findElement(addressLastname);
+    public String getAddressFirstnamePlaceholder() {
+        return driver.findElement(addressFirstname).getAttribute("value");
     }
-    public WebElement getAddress() {
-        return driver.findElement(address);
+    public String getAddressLastnamePlaceholder() {
+        return driver.findElement(addressLastname).getAttribute("value");
     }
-    public WebElement getCity() {
-        return driver.findElement(city);
+    public void setAddressLastname(String addressLastnameV) {
+         driver.findElement(addressLastname).sendKeys(addressLastnameV);
     }
-    public WebElement getCompany() {
-        return driver.findElement(company);
+    public void setAddress(String addressV) {
+         driver.findElement(address).sendKeys(addressV);
+    }
+    public void setCity(String cityName) {
+         driver.findElement(city).sendKeys(cityName);
+    }
+    public void setCompany(String companyName) {
+         driver.findElement(company).sendKeys(companyName);
     }
     public void selectState(String stateName) {
         Select select= new Select(driver.findElement(state));
@@ -110,30 +123,30 @@ public class SignupPage {
         Select select= new Select(driver.findElement(country));
         select.selectByVisibleText(stateName);
     }
-    public WebElement getDefaultSelectedCountry() {
+    public String getDefaultSelectedCountry() {
         Select select= new Select(driver.findElement(country));
-        return   select.getFirstSelectedOption();
+        return   select.getFirstSelectedOption().getText();
     }
-    public WebElement getPostcode() {
-        return driver.findElement(postcode);
+    public void setPostcode(String postalCode) {
+        driver.findElement(postcode).sendKeys(postalCode);
     }
-    public WebElement getCountry() {
-        return driver.findElement(country);
+    public void setCountry(String countryName) {
+        driver.findElement(country).sendKeys(countryName);
     }
-    public WebElement getAdditionalInfo() {
-        return driver.findElement(additionalInfo);
+    public void getAdditionalInfo(String info) {
+         driver.findElement(additionalInfo).sendKeys(info);
     }
-    public WebElement getPhone() {
-        return driver.findElement(phone);
+    public void setPhone(String phoneV) {
+        driver.findElement(phone).sendKeys(phoneV);
     }
-    public WebElement getMobilePhone() {
-        return driver.findElement(mobilePhone);
+    public void setMobilePhone(String mobilePhoneV) {
+        driver.findElement(mobilePhone).sendKeys(mobilePhoneV);
     }
-    public WebElement getAddressAlias() {
-        return driver.findElement(addressAlias);
+    public void setAddressAlias(String addressAliasV) {
+        driver.findElement(addressAlias).sendKeys(addressAliasV);
     }
-    public WebElement getSubmitAccount() {
-        return driver.findElement(submitAccount);
+    public void getSubmitAccount() {
+       driver.findElement(submitAccount).click();
     }
     public boolean genderIsChecked(String gender){
         if (gender.equalsIgnoreCase("male"))
