@@ -149,7 +149,6 @@ public class LoginFeature extends TestBase {
                 assertionMSG.replace("-M-",dateOfBirth_errorMsg));
         log.info("all expected messages have been verified");
     }
-
     @Test(dataProvider = "getAllTestUsers")
     public void loginValidation(String username,String password,String status, String expectedMSG){
         loginPage=header.navigateToLoginPage();

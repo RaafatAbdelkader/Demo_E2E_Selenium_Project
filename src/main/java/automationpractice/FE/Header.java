@@ -9,10 +9,12 @@ import org.openqa.selenium.interactions.Actions;
 public class Header {
     private WebDriver driver;
     private ProjectActions projectActions;
+    private Actions actions;
 
     public Header( WebDriver driver){
         this.driver=driver;
         projectActions=new ProjectActions(driver);
+        actions= new Actions(driver);
     }
 
     private By loginBTN=By.className("login");
@@ -23,6 +25,8 @@ public class Header {
     private By women=By.xpath("//li/a[@title='Women']");
     private By summerDresses=By.xpath("//li/a[@title='Summer Dresses']");
     private By myAccount=By.xpath("//a[@class='account']");
+    private By viewCartProductsQuantity=By.xpath("//a[@title='View my shopping cart']/span[contains(@class,'cart_quantity')]");
+
 
     public LoginPage navigateToLoginPage(){
         if (isLoggedIn())
@@ -51,13 +55,23 @@ public class Header {
             driver.findElement(myAccount).click();
         return new MyAccountPage(driver);
     }
-    public void openShoppingCart(){
+    public void viewShoppingCart(){
         WebElement shoppingCartWE=driver.findElement(shoppingCart);
         projectActions.waitToBeClickable(shoppingCartWE,5);
-        shoppingCartWE.click();
+        actions.moveToElement(shoppingCartWE).build().perform();
     }
     public WebElement searchInput(){
         return driver.findElement(searchInput);
     }
+    public Integer getProductQtyAddedToCart(){
+        int qty=0;
+        viewShoppingCart();
+        String v=driver.findElement(viewCartProductsQuantity).getText().trim();
+        if (v.length()<1){
 
+        }else {
+             qty=Integer.valueOf(v);
+        }
+        return qty;
+    }
 }

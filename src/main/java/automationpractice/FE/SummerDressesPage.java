@@ -106,8 +106,7 @@ public class SummerDressesPage {
         driver.findElement(addToCart).click();
     }
 
-    public ProductViewPage  viewProduct(){
-
+    public ProductViewPage viewProduct(){
         driver.findElement(view).click();
         return new ProductViewPage(driver);
     }

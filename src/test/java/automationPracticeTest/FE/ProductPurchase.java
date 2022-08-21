@@ -4,6 +4,7 @@ import automationpractice.FE.ProductViewPage;
 import automationpractice.FE.SummerDressesPage;
 import net.minidev.json.parser.ParseException;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import testBase.TestBase;
@@ -39,7 +40,6 @@ public class ProductPurchase extends TestBase {
                 "Products should be in a descending order");
         softAssert.assertAll();
     }
-
     @Test(description = "validation of quantity with invalid entries")
     public void productQuantityValidation() throws InterruptedException {
         loginPage=header.navigateToLoginPage();
@@ -67,6 +67,22 @@ public class ProductPurchase extends TestBase {
         softAssert.assertFalse(productViewPage.isAddedToCart(),"product added to cart with invalid quantity");
         softAssert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");
         softAssert.assertAll();
+    }
+    @Test(description = "verify product is still added to cart after user is logged out")
+    public void AddToCartFunctionality(){
+        int productQtyAddedToCart;
+        loginPage= header.navigateToLoginPage();
+        loginPage.login(username,password);
+        productQtyAddedToCart=header.getProductQtyAddedToCart();
+        summerDressesPage= header.navigateToSummerDressesPage();
+        actions.moveToElement(summerDressesPage.getProductItem("Printed Chiffon Dress")).build().perform();
+        productViewPage=summerDressesPage.viewProduct();
+        productViewPage.addToCart();
+        header.logout();
+        header.navigateToLoginPage();
+        loginPage.login(username,password);
+        Assert.assertEquals(header.getProductQtyAddedToCart(),
+                header.getProductQtyAddedToCart()+1,"product added to the cart can not be found");
     }
 
 }
