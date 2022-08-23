@@ -74,13 +74,14 @@ public class SignupPage {
     }
     //the date should be provided in this Format:"dd/mm/yyyy"
     public void selectDate(String date) {
+        System.out.println(date);
         String[]dateValues=date.split("/");
         for (int i = 0; i < dateValues.length; i++) {
             WebElement  element;
             if (i==0)
                 element = driver.findElement(days);
             else if (i==1)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            element = driver.findElement(months);
+                element = driver.findElement(months);
             else
                 element= driver.findElement(years);
             Select select =new Select(element);

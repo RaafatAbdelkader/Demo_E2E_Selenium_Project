@@ -29,8 +29,7 @@ public class Header {
 
 
     public LoginPage navigateToLoginPage(){
-        if (isLoggedIn())
-            logout();
+       logout();
        driver.findElement(loginBTN).click();
        return  new LoginPage(driver);
     }
@@ -38,6 +37,7 @@ public class Header {
         return driver.findElement(headerText).getText().contains("Sign out");
     }
     public void logout(){
+        if (isLoggedIn())
         driver.findElement(logoutBTN).click();
     }
     public void clickWomenBTN(){

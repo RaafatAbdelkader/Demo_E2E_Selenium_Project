@@ -116,7 +116,7 @@ public class LoginFeature extends TestBase {
     public void accountCreationUsingInvalidPersonalData(
                             String firstname,String firstname_errorMSG, String lastname,String lastname_errorMSG,
                             String email,String email_errorMSG,String psw,String psw_errorMSG,String dateOfBirth,
-                            String dateOfBirth_errorMsg){
+                            String dateOfBirth_errorMsg) throws InterruptedException {
         loginPage= header.navigateToLoginPage();
         loginPage.createAccount_enterNewEmail(loginPage.getNewRandomEmail());
         log.info("entered an new random email");

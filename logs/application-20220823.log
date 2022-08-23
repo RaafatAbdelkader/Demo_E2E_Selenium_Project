@@ -1,0 +1,28 @@
+2022-08-23 12:05:43.331 [TestNG-test=Smoke-1] INFO  testBase.TestBase - navigated to LoginPage
+2022-08-23 12:05:43.542 [TestNG-test=Smoke-1] INFO  testBase.TestBase - entered a new email to create an account 
+2022-08-23 12:05:48.100 [TestNG-test=Smoke-1] INFO  testBase.TestBase - navigated to signupPage
+2022-08-23 12:05:49.358 [TestNG-test=Smoke-1] INFO  testBase.TestBase - entered personal data 
+2022-08-23 12:05:50.382 [TestNG-test=Smoke-1] INFO  testBase.TestBase - entered address and contact data
+2022-08-23 12:06:06.495 [TestNG-test=Smoke-1] INFO  testBase.TestBase - Account created successfully
+2022-08-23 12:06:53.890 [TestNG-test=Smoke-3] INFO  testBase.TestBase - navigated to login page
+2022-08-23 12:06:56.264 [TestNG-test=Smoke-3] INFO  testBase.TestBase - Login submitted
+2022-08-23 12:07:01.983 [TestNG-test=Smoke-3] INFO  testBase.TestBase - user logged in successfully
+2022-08-23 12:16:42.176 [main] INFO  testBase.TestBase - entered an new random email
+2022-08-23 12:16:47.553 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-08-23 12:16:58.572 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-08-23 12:17:03.851 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-08-23 12:22:26.267 [main] INFO  testBase.TestBase - entered an new random email
+2022-08-23 12:22:36.184 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-08-23 12:22:47.228 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-08-23 12:22:58.286 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-08-23 12:24:54.105 [main] INFO  testBase.TestBase - entered an new random email
+2022-08-23 12:25:04.194 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-08-23 12:25:15.196 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-08-23 12:25:22.787 [main] INFO  testBase.TestBase - all expected messages have been verified
+2022-08-23 12:25:56.964 [main] INFO  testBase.TestBase - entered an new random email
+2022-08-23 12:26:04.760 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-08-23 12:26:15.977 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-08-23 12:27:02.542 [main] INFO  testBase.TestBase - entered an new random email
+2022-08-23 12:27:12.517 [main] INFO  testBase.TestBase - Navigated to signup page
+2022-08-23 12:27:24.244 [main] INFO  testBase.TestBase - entered invalid personal data
+2022-08-23 12:28:00.145 [main] INFO  testBase.TestBase - entered an new random email

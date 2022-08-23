@@ -38,7 +38,7 @@ public class TestBase{
     String browserName= propReader.getBrowserName();
     public static Logger log = LogManager.getLogger(TestBase.class.getName());
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeMethod(alwaysRun = true)
     public void before()  {
         switch (browserName) {
             case "firefox": {
@@ -78,9 +78,10 @@ public class TestBase{
         driver.get(url);
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void postConditions() {
-     //driver.quit();
+        header.logout();
+        driver.quit();
     }
 
     //---Data driven  from json file--

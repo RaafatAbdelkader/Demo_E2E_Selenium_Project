@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="classes" thread-count="3">
+<suite name="All Test Suite" parallel="classes" thread-count="5">
     <listeners>
         <listener class-name="testBase.TestListener"></listener>
     </listeners>
     <test name="Regression">
-        <classes>
-            <class name="automationPracticeTest.FE.LoginFeature"></class>
-        </classes>
-<!--        <packages>-->
-<!--            <package name="automationPracticeTest.FE"></package>-->
-<!--        </packages>-->
+<!--        <classes>-->
+<!--            <class name="automationPracticeTest.FE.LoginFeature"></class>-->
+<!--        </classes>-->
+        <packages>
+            <package name="automationPracticeTest.FE"></package>
+        </packages>
     </test>
 </suite>
