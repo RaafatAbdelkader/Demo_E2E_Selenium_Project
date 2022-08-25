@@ -1,7 +1,7 @@
 package testBase;
 
-import base.ExtentReporterNG;
-import base.ProjectActions;
+import basePg.ExtentReporterNG;
+import basePg.ProjectActions;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;

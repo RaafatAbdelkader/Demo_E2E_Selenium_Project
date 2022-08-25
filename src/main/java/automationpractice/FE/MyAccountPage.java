@@ -1,9 +1,8 @@
 package automationpractice.FE;
 
-import base.ProjectActions;
+import basePg.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class MyAccountPage {
     private WebDriver driver;

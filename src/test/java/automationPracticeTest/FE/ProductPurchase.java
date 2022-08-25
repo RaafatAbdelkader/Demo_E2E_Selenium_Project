@@ -2,13 +2,22 @@ package automationPracticeTest.FE;
 import automationpractice.FE.LoginPage;
 import automationpractice.FE.ProductViewPage;
 import automationpractice.FE.SummerDressesPage;
+import automationpractice.FE.checkoutPages.AddressPage;
+import automationpractice.FE.checkoutPages.ShippingPage;
+import automationpractice.FE.checkoutPages.SummeryPage;
+import basePg.PropReader;
 import net.minidev.json.parser.ParseException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import testBase.TestBase;
+
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class ProductPurchase extends TestBase {
@@ -18,10 +27,12 @@ public class ProductPurchase extends TestBase {
     private SoftAssert softAssert=new SoftAssert();
     private SummerDressesPage summerDressesPage;
     private ProductViewPage productViewPage;
-    public ProductPurchase() throws IOException, ParseException {
-    }
+    private SummeryPage summeryPage;
+    private AddressPage addressPage;
+    private ShippingPage shippingPage;
+    private String productName="Printed Chiffon Dress";
 
-    @Test(description = "verify an user can sort by price", groups = "Smoke")
+    @Test(description = "verify an user can sort by price")
     public void validationOfProductSorting(){
         loginPage=header.navigateToLoginPage();
         loginPage.login(username,password);
@@ -45,7 +56,7 @@ public class ProductPurchase extends TestBase {
         loginPage=header.navigateToLoginPage();
         loginPage.login(username,password);
         summerDressesPage=header.navigateToSummerDressesPage();
-        WebElement productItem=summerDressesPage.getProductItem("Printed Chiffon Dress");
+        WebElement productItem=summerDressesPage.getProductItem(productName);
         actions.moveToElement(productItem).build().perform();
         productViewPage= summerDressesPage.viewProduct();
         productViewPage.setProductQuantity("0");
@@ -75,7 +86,7 @@ public class ProductPurchase extends TestBase {
         loginPage.login(username,password);
         productQtyAddedToCart=header.getProductQtyAddedToCart();
         summerDressesPage= header.navigateToSummerDressesPage();
-        actions.moveToElement(summerDressesPage.getProductItem("Printed Chiffon Dress")).build().perform();
+        actions.moveToElement(summerDressesPage.getProductItem(productName)).build().perform();
         productViewPage=summerDressesPage.viewProduct();
         productViewPage.addToCart();
         header.logout();
@@ -84,5 +95,59 @@ public class ProductPurchase extends TestBase {
         Assert.assertEquals(header.getProductQtyAddedToCart(),
                 header.getProductQtyAddedToCart()+1,"product added to the cart can not be found");
     }
+
+    @Test(priority = 1,groups = "Smoke",description = "productPurchase_E2E")
+    public  void productPurchase_E2E(){
+        loginPage = header.navigateToLoginPage();
+        loginPage.login(username, password);
+        summerDressesPage = header.navigateToSummerDressesPage();
+        WebElement product = summerDressesPage.getProductItem(productName);
+        actions.moveToElement(product).build().perform();
+        summerDressesPage.addProductToCart();
+        String acMsg=header.getAddedTOCartSuccessMSG();
+        Assert.assertEquals(acMsg,"Product successfully added to your shopping cart");
+        summeryPage= header.proceedToCheckout();
+        Assert.assertTrue(summeryPage.getCartTitle()
+                .contains("SHOPPING-CART SUMMARY"),"Title does not match");
+        int numOfCartItems=summeryPage.getNumOfCartItems();
+        Assert.assertTrue(summeryPage.getHeadingCounterMsg()
+                .contains("Your shopping cart contains: "+numOfCartItems+" Product"),"counter message does not match");
+        addressPage=summeryPage.proceedToAddressPage();
+        Assert.assertEquals(addressPage.getHeadingMsg(),"ADDRESSES","heading message does not match");
+        shippingPage=addressPage.proceedToShipping();
+
+    }
+    @Test(priority = 1,groups = "Smoke",description = "verify invoice pdf can be downloaded and it has the right product")
+    public  void validateDownloadingInvoicePDF(){
+        //projectActions.cleanupDownLoadDirectory();
+        int lastDownloadedFilesNum = projectActions.getNumOfFilesExist();
+        driver.navigate().to("http://automationpractice.com/index.php?controller=history");
+        WebElement pdf= driver.findElement(By.xpath("//a[@title='Invoice']"));
+        projectActions.waitToBeClickable(pdf,10);
+        pdf.click();
+        projectActions.waitToBeDownloaded();
+        int currentDownloadedFilesNum=projectActions.getNumOfFilesExist();
+        Assert.assertTrue(currentDownloadedFilesNum>lastDownloadedFilesNum,"File was not downloaded");
+        projectActions.openNewTab();
+        projectActions.openLastModifiedFile();
+        String filePath=projectActions.getLastModifiedFile().getPath();
+        String pdfContent=projectActions.getPDFContent(filePath);
+        Assert.assertTrue(pdfContent.contains(productName));
+        driver.close();
+        projectActions.returnToLastTab();
+        projectActions.deleteLastModifiedFile();
+
+
+
+
+
+//        driver.findElement(By.id("dateColumnHeader")).click();
+//        driver.findElement(By.xpath(("//tbody/tr/td/a)[1]"))).click();
+//        System.out.println(driver.getTitle());
+        //projectActions.returnToLastTab();
+
+
+    }
+
 
 }

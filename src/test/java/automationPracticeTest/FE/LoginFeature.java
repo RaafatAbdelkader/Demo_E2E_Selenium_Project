@@ -2,10 +2,13 @@ package automationPracticeTest.FE;
 import automationpractice.FE.LoginPage;
 import automationpractice.FE.MyAccountPage;
 import automationpractice.FE.SignupPage;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import testBase.TestBase;
-import java.io.IOException;
+
+import java.io.*;
 
 public class LoginFeature extends TestBase {
     String newEmail= null;
@@ -14,11 +17,8 @@ public class LoginFeature extends TestBase {
     LoginPage loginPage;
     SignupPage signupPage;
     MyAccountPage myAccountPage;
-    public LoginFeature() throws IOException {
-    }
 
-
-    @Test(description = "As an user I should be able to create an account using valid data", groups = "Smoke")
+    @Test(priority = 1,groups = "Smoke", description = "As an user I should be able to create an account using valid data")
     public void createAccount() {
         loginPage=header.navigateToLoginPage();
         newEmail= loginPage.getNewRandomEmail();
@@ -71,7 +71,7 @@ public class LoginFeature extends TestBase {
         registeredPassword=psw;
     }
 
-    @Test(dependsOnMethods = "createAccount",description = "The user is able to log in with Login data created", groups = "Smoke")
+    @Test(dependsOnMethods = "createAccount",priority = 1,description = "The user is able to log in with Login data created", groups = "Smoke")
     public void loginWithDataCreated(){
         loginPage=header.navigateToLoginPage();
         log.info("navigated to login page");
@@ -149,7 +149,7 @@ public class LoginFeature extends TestBase {
                 assertionMSG.replace("-M-",dateOfBirth_errorMsg));
         log.info("all expected messages have been verified");
     }
-    @Test(dataProvider = "getAllTestUsers")
+    @Test(dataProvider = "getAllTestUsers",priority = 1,groups = "Smoke")
     public void loginValidation(String username,String password,String status, String expectedMSG){
         loginPage=header.navigateToLoginPage();
         log.info("navigated to login page");
@@ -170,5 +170,6 @@ public class LoginFeature extends TestBase {
             log.info("can not log in using invalid data");
         }
     }
+
 
 }

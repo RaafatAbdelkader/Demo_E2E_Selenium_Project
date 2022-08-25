@@ -1,6 +1,7 @@
 package automationpractice.FE;
 
-import base.ProjectActions;
+import automationpractice.FE.checkoutPages.SummeryPage;
+import basePg.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,6 +27,8 @@ public class Header {
     private By summerDresses=By.xpath("//li/a[@title='Summer Dresses']");
     private By myAccount=By.xpath("//a[@class='account']");
     private By viewCartProductsQuantity=By.xpath("//a[@title='View my shopping cart']/span[contains(@class,'cart_quantity')]");
+    private By proceedToCheckout=By.xpath("//a[@title='Proceed to checkout']");
+    private By addedTOCartSuccessMSG=By.xpath("//div[contains(@class,'layer_cart_product')] //h2");
 
 
     public LoginPage navigateToLoginPage(){
@@ -74,4 +77,14 @@ public class Header {
         }
         return qty;
     }
+    public SummeryPage proceedToCheckout(){
+        projectActions.waitToBeClickable(driver.findElement(addedTOCartSuccessMSG),10);
+        driver.findElement(proceedToCheckout).click();
+        return new SummeryPage(driver);
+    }
+    public String getAddedTOCartSuccessMSG(){
+        projectActions.waitToBeClickable(driver.findElement(addedTOCartSuccessMSG),10);
+        return  driver.findElement(addedTOCartSuccessMSG).getText().trim();
+    }
+
 }
