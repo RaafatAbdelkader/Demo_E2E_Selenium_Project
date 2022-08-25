@@ -29,7 +29,7 @@ public class Header {
     private By viewCartProductsQuantity=By.xpath("//a[@title='View my shopping cart']/span[contains(@class,'cart_quantity')]");
     private By proceedToCheckout=By.xpath("//a[@title='Proceed to checkout']");
     private By addedTOCartSuccessMSG=By.xpath("//div[contains(@class,'layer_cart_product')] //h2");
-
+    private By homePage=By.xpath("//a[@title='My Store']");
 
     public LoginPage navigateToLoginPage(){
        logout();
@@ -85,6 +85,10 @@ public class Header {
     public String getAddedTOCartSuccessMSG(){
         projectActions.waitToBeClickable(driver.findElement(addedTOCartSuccessMSG),10);
         return  driver.findElement(addedTOCartSuccessMSG).getText().trim();
+    }
+    public void returnToHomePage(){
+        if (driver.findElement(homePage).isDisplayed())
+            driver.findElement(homePage).click();
     }
 
 }
