@@ -6,15 +6,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class Header {
     private WebDriver driver;
-    private ProjectActions projectActions;
+    private WebDriverWait wait;
     private Actions actions;
 
     public Header( WebDriver driver){
         this.driver=driver;
-        projectActions=new ProjectActions(driver);
+        wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         actions= new Actions(driver);
     }
 
@@ -37,11 +41,15 @@ public class Header {
        return  new LoginPage(driver);
     }
     public boolean isLoggedIn(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(headerText));
         return driver.findElement(headerText).getText().contains("Sign out");
     }
     public void logout(){
-        if (isLoggedIn())
-        driver.findElement(logoutBTN).click();
+        if (isLoggedIn()){
+            wait.until(ExpectedConditions.elementToBeClickable(logoutBTN));
+            driver.findElement(logoutBTN).click();
+        }
+
     }
     public void clickWomenBTN(){
         driver.findElement(women).click();
@@ -49,7 +57,7 @@ public class Header {
     public SummerDressesPage navigateToSummerDressesPage(){
         Actions actions=new Actions(driver);
         actions.moveToElement(driver.findElement(women)).build().perform();
-        projectActions.waitToBeClickable(driver.findElement(summerDresses),5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(summerDresses));
          driver.findElement(summerDresses).click();
          return new SummerDressesPage(driver);
     }
@@ -59,14 +67,13 @@ public class Header {
         return new MyAccountPage(driver);
     }
     public void viewShoppingCart(){
-        WebElement shoppingCartWE=driver.findElement(shoppingCart);
-        projectActions.waitToBeClickable(shoppingCartWE,5);
-        actions.moveToElement(shoppingCartWE).build().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(shoppingCart));
+        actions.moveToElement(driver.findElement(shoppingCart)).build().perform();
     }
-    public WebElement searchInput(){
-        return driver.findElement(searchInput);
+    public void searchInput(String searchWord){
+        driver.findElement(searchInput).sendKeys(searchWord);
     }
-    public Integer getProductQtyAddedToCart(){
+    public Integer getNumOfProductItemsAddedToCart(){
         int qty=0;
         viewShoppingCart();
         String v=driver.findElement(viewCartProductsQuantity).getText().trim();
@@ -78,12 +85,12 @@ public class Header {
         return qty;
     }
     public SummeryPage proceedToCheckout(){
-        projectActions.waitToBeClickable(driver.findElement(addedTOCartSuccessMSG),10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(addedTOCartSuccessMSG));
         driver.findElement(proceedToCheckout).click();
         return new SummeryPage(driver);
     }
     public String getAddedTOCartSuccessMSG(){
-        projectActions.waitToBeClickable(driver.findElement(addedTOCartSuccessMSG),10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(addedTOCartSuccessMSG));
         return  driver.findElement(addedTOCartSuccessMSG).getText().trim();
     }
     public void returnToHomePage(){

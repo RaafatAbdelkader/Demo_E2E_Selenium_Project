@@ -1,0 +1,267 @@
+<html>
+<head>
+<title>TestNG:  Regression</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Aug 27 03:07:51 EET 2022</td>
+</tr>
+<tr><td>Total time:</td><td>202 seconds (202104 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automationPracticeTest.FE.ProductPurchase.productQuantityValidation()'><b>productQuantityValidation</b><br>Test class: automationPracticeTest.FE.ProductPurchase<br>Test method: validation of quantity with invalid entries</td>
+<td><div><pre>java.lang.AssertionError: expected [Negative quantity.] but found [null]
+	at automationPracticeTest.FE.ProductPurchase.productQuantityValidation(ProductPurchase.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1173863759", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1173863759'><pre>java.lang.AssertionError: expected [Negative quantity.] but found [null]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at automationPracticeTest.FE.ProductPurchase.productQuantityValidation(ProductPurchase.java:108)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>35</td>
+<td>automationPracticeTest.FE.ProductPurchase@20095ab4</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.ProductPurchase.validationOfProductSorting()'><b>validationOfProductSorting</b><br>Test class: automationPracticeTest.FE.ProductPurchase<br>Test method: verify an user can sort by price</td>
+<td><div><pre>java.lang.AssertionError: Products should be in a descending order expected [true] but found [false]
+	at automationPracticeTest.FE.ProductPurchase.validationOfProductSorting(ProductPurchase.java:91)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1145763476", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1145763476'><pre>java.lang.AssertionError: Products should be in a descending order expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at automationPracticeTest.FE.ProductPurchase.validationOfProductSorting(ProductPurchase.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>45</td>
+<td>automationPracticeTest.FE.ProductPurchase@20095ab4</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.ProductPurchase.AddToCartFunctionality()'><b>AddToCartFunctionality</b><br>Test class: automationPracticeTest.FE.ProductPurchase<br>Test method: verify product is still added to cart after user is logged out</td>
+<td><div><pre>java.lang.AssertionError: product added to the cart can not be found expected [1] but found [0]
+	at automationPracticeTest.FE.ProductPurchase.AddToCartFunctionality(ProductPurchase.java:129)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1219181092", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1219181092'><pre>java.lang.AssertionError: product added to the cart can not be found expected [1] but found [0]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1252)
+	at automationPracticeTest.FE.ProductPurchase.AddToCartFunctionality(ProductPurchase.java:129)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>45</td>
+<td>automationPracticeTest.FE.ProductPurchase@20095ab4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.accountCreationUsingRegisteredEmail()'><b>accountCreationUsingRegisteredEmail</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Test method: An user should not be able to create an account using an email already registered before</td>
+<td></td>
+<td>13</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.loginWithDataCreated()'><b>loginWithDataCreated</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Test method: The user is able to log in with Login data created</td>
+<td></td>
+<td>14</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.accountCreationUsingInvalidPersonalData()'><b>accountCreationUsingInvalidPersonalData</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Test method: As an user I should not be able to create an account using invalid PersonalData<br>Parameters: !#?//?@//, firstname is invalid., !#?//?@//, lastname is invalid., test@, email is invalid., /999999999999999999999999999999999999999999999999999999999999999, passwd is too long. Maximum length: 32, /10/1994, Invalid date of birth</td>
+<td></td>
+<td>15</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.loginValidation()'><b>loginValidation</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Parameters: moagmail.com, guyg54@d, invalid, Invalid email address.</td>
+<td></td>
+<td>4</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.loginValidation()'><b>loginValidation</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Parameters: Araafat.abdo@gmail.com, $!@)(#%@@, invalid, Authentication failed.</td>
+<td></td>
+<td>16</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.accountCreationUsingInvalidPersonalData()'><b>accountCreationUsingInvalidPersonalData</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Test method: As an user I should not be able to create an account using invalid PersonalData<br>Parameters: 15.15.1998, firstname is invalid., 15.15.1998, lastname is invalid., 77777, email is invalid., x, passwd is invalid., 15/10/, Invalid date of birth</td>
+<td></td>
+<td>21</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.createAccountValidation()'><b>createAccountValidation</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Test method: As an user I should be able to create an account using valid data</td>
+<td></td>
+<td>19</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.loginValidation()'><b>loginValidation</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Parameters: test8888@gmail.com, A1hS#!25, valid, Welcome to your account. Here you can manage all of your personal information and orders.</td>
+<td></td>
+<td>25</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.loginValidation()'><b>loginValidation</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Parameters: , A1hS#!25, invalid, An email address required.</td>
+<td></td>
+<td>6</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.accountCreationUsingInvalidPersonalData()'><b>accountCreationUsingInvalidPersonalData</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Test method: As an user I should not be able to create an account using invalid PersonalData<br>Parameters: , firstname is required, , lastname is required, , email is required., , passwd is required., , </td>
+<td></td>
+<td>16</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.accountCreationUsingInvalidPersonalData()'><b>accountCreationUsingInvalidPersonalData</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Test method: As an user I should not be able to create an account using invalid PersonalData<br>Parameters: 9999999999, firstname is invalid., 88888888885, lastname is invalid., raadelkader.gmail.com, email is invalid., 123, passwd is invalid., 15//1993, Invalid date of birth</td>
+<td></td>
+<td>12</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.loginValidation()'><b>loginValidation</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Parameters: nasr@gmail.com, 99999999999999999999999999999999999999, invalid, Authentication failed.</td>
+<td></td>
+<td>6</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.ProductPurchase.productPurchase_E2E()'><b>productPurchase_E2E</b><br>Test class: automationPracticeTest.FE.ProductPurchase<br>Test method: productPurchase_E2E</td>
+<td></td>
+<td>55</td>
+<td>automationPracticeTest.FE.ProductPurchase@20095ab4</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.loginValidation()'><b>loginValidation</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Parameters: , , invalid, An email address required.</td>
+<td></td>
+<td>11</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.ProductPurchase.validateDownloadingInvoicePDF()'><b>validateDownloadingInvoicePDF</b><br>Test class: automationPracticeTest.FE.ProductPurchase<br>Test method: verify invoice pdf can be downloaded successfully and it has the right product and reference</td>
+<td></td>
+<td>7</td>
+<td>automationPracticeTest.FE.ProductPurchase@20095ab4</td></tr>
+<tr>
+<td title='automationPracticeTest.FE.LoginFeature.loginValidation()'><b>loginValidation</b><br>Test class: automationPracticeTest.FE.LoginFeature<br>Parameters: test8888@gmail.com, , invalid, Password is required.</td>
+<td></td>
+<td>5</td>
+<td>automationPracticeTest.FE.LoginFeature@87abc48</td></tr>
+</table><p>
+</body>
+</html>

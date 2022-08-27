@@ -4,6 +4,7 @@ import basePg.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,10 +15,10 @@ import java.util.List;
 
 public class SummerDressesPage {
     private WebDriver driver;
-    private ProjectActions projectActions;
+    private Actions actions;
     public SummerDressesPage(WebDriver driver) {
         this.driver = driver;
-        projectActions=new ProjectActions(driver);
+        actions=new Actions(driver);
     }
     private By categoryName= By.xpath("//span[@class='cat-name']");
     private By headingCounter= By.xpath("//span[@class='heading-counter']");
@@ -48,12 +49,13 @@ public class SummerDressesPage {
        waitToBeSorted(5);
     }
 
-    public Boolean isOrderedDescending(List<Double>numList){
+    public Boolean isOrderedDescending(){
+        List<Double>priceList=getPriceList();
         Boolean isOrderedDescending =null;
-        List<Double>sortedList= numList.stream().sorted().toList();
+        List<Double>sortedList= priceList.stream().sorted().toList();
         int lastIndex=sortedList.size()-1;
         for (int i =lastIndex ; i >=0; i--) {
-            if (!(numList.get(lastIndex-i).equals(sortedList.get(i)))) {
+            if (!(priceList.get(lastIndex-i).equals(sortedList.get(i)))) {
                 System.out.println("List is not in a descending order");
                 isOrderedDescending=false;
                 break;
@@ -62,11 +64,12 @@ public class SummerDressesPage {
         }
         return isOrderedDescending;
     }
-    public Boolean isOrderedAscending(List<Double>numList){
+    public Boolean isOrderedAscending(){
+        List<Double>priceList=getPriceList();
         Boolean isOrderedAscending =null;
-        List<Double>sortedList= numList.stream().sorted().toList();
+        List<Double>sortedList= priceList.stream().sorted().toList();
         for (int i = 0; i < sortedList.size(); i++) {
-            if (!(numList.get(i).equals(sortedList.get(i)))){
+            if (!(priceList.get(i).equals(sortedList.get(i)))){
                 System.out.println("List is not in a Ascending order");
                 isOrderedAscending= false;
                 break;
@@ -75,7 +78,6 @@ public class SummerDressesPage {
         }
         return isOrderedAscending;
     }
-
     public List<Double> getPriceList(){
         List<Double>priceList = new ArrayList<>();
         driver.findElements(productPrice)
@@ -86,7 +88,6 @@ public class SummerDressesPage {
 
         return priceList;
     }
-
     public void waitToBeSorted(int timeLimitInSec){
        WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(timeLimitInSec));
        wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingIcon));
@@ -102,11 +103,14 @@ public class SummerDressesPage {
         }
         return item;
     }
-    public void addProductToCart(){
+    public void addProductToCart(String productName){
+        WebElement product = getProductItem(productName);
+        actions.moveToElement(product).build().perform();
         driver.findElement(addToCart).click();
     }
-
-    public ProductViewPage viewProduct(){
+    public ProductViewPage viewProduct(String productName){
+        WebElement productItem=getProductItem(productName);
+        actions.moveToElement(productItem).build().perform();
         driver.findElement(view).click();
         return new ProductViewPage(driver);
     }

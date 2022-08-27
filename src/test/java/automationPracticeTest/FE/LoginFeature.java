@@ -2,13 +2,9 @@ package automationPracticeTest.FE;
 import automationpractice.FE.LoginPage;
 import automationpractice.FE.MyAccountPage;
 import automationpractice.FE.SignupPage;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.text.PDFTextStripper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import testBase.TestBase;
-
-import java.io.*;
 
 public class LoginFeature extends TestBase {
     String newEmail= null;
@@ -18,47 +14,67 @@ public class LoginFeature extends TestBase {
     SignupPage signupPage;
     MyAccountPage myAccountPage;
 
+    @Test(dataProvider = "getAllTestUsers",priority = 1,groups = "Smoke")
+    public void loginValidation(String username,String password,String status, String expectedMSG){
+        loginPage=header.navigateToLoginPage();
+        log.info("navigated to login page");
+        loginPage.setLoginUsername(username);
+        log.info("entered an username");
+        loginPage.setLoginPassword(password);
+        log.info("entered a password");
+        loginPage.submitLogin();
+        log.info("submitted login");
+        myAccountPage=header.navigateToMyAccount();
+        if (status.equalsIgnoreCase("valid")) {
+            Assert.assertEquals(myAccountPage.getPage_heading_msg(),
+                    expectedMSG, "Not able to login" );
+            log.info("logged in successfully with valid data");
+        }else {
+            Assert.assertTrue(loginPage.getErrorMsg().contains(expectedMSG),
+                    "Message verification failed. expected:"+expectedMSG+" but found: "+ loginPage.getErrorMsg());
+            log.info("can not log in using invalid data");
+        }
+    }
+
     @Test(priority = 1,groups = "Smoke", description = "As an user I should be able to create an account using valid data")
-    public void createAccount() {
+    public void createAccountValidation() {
         loginPage=header.navigateToLoginPage();
         newEmail= loginPage.getNewRandomEmail();
-        Assert.assertEquals(loginPage.getHeadingMsg(),"AUTHENTICATION","can't navigate to login page");
         log.info("navigated to LoginPage");
         loginPage.createAccount_enterNewEmail(newEmail);
         log.info("entered a new email to create an account ");
         signupPage=loginPage.navigateToSignupPage();
         Assert.assertEquals(signupPage.getSubHeadingMsg(),
-                "YOUR PERSONAL INFORMATION","did not navigate to signup page");
+                "YOUR PERSONAL INFORMATION");
         log.info("navigated to signupPage");
         Assert.assertFalse(signupPage.genderIsChecked("male"),"gender should be unchecked by default");
         Assert.assertFalse(signupPage.genderIsChecked("female"),"gender should be unchecked by default");
-        signupPage.selectGender(getRegisterTestData.get("Gender*"));
-        signupPage.setFirstName(getRegisterTestData.get("Firstname*"));
-        signupPage.setLastName(getRegisterTestData.get("Lastname*"));
-
+        signupPage.selectGender(registerTData.get("Gender*"));
+        signupPage.setFirstName(registerTData.get("Firstname*"));
+        signupPage.setLastName(registerTData.get("Lastname*"));
         String placeholder_Email =signupPage.getEmailPlaceholder();
         Assert.assertEquals(placeholder_Email,newEmail,
                 "Placeholder email does not match the new email entered");
-        String psw= getRegisterTestData.get("Password*");
+        String psw= registerTData.get("Password*");
         signupPage.setPassword(psw);
-        signupPage.selectDate(getRegisterTestData.get("DateOfBirth*"));
+        signupPage.selectDate(registerTData.get("DateOfBirth*"));
         log.info("entered personal data ");
         signupPage.selectNewsletter();
         signupPage.selectSpecialOffers();
-        Assert.assertEquals(signupPage.getAddressFirstnamePlaceholder(),getRegisterTestData.get("Firstname*"),"Wrong Placeholder");
-        Assert.assertEquals(signupPage.getAddressLastnamePlaceholder(), getRegisterTestData.get("Lastname*"),"Wrong Placeholder");
-        if (getRegisterTestData.get("Company")!=null)
-            signupPage.setCompany(getRegisterTestData.get("Company"));
-        signupPage.setAddress(getRegisterTestData.get("Address*"));
-        signupPage.setCity(getRegisterTestData.get("City*"));
-        signupPage.selectState(getRegisterTestData.get("State*"));
-        signupPage.setPostcode(getRegisterTestData.get("ZipCode*"));
-        Assert.assertEquals(signupPage.getDefaultSelectedCountry(), getRegisterTestData.get("Country*"),
+        Assert.assertEquals(signupPage.getAddressFirstnamePlaceholder(), registerTData.get("Firstname*"),"Wrong Placeholder");
+        Assert.assertEquals(signupPage.getAddressLastnamePlaceholder(), registerTData.get("Lastname*"),"Wrong Placeholder");
+        if (registerTData.get("Company")!=null)
+            signupPage.setCompany(registerTData.get("Company"));
+        signupPage.setAddress(registerTData.get("Address*"));
+        signupPage.setCity(registerTData.get("City*"));
+        signupPage.selectState(registerTData.get("State*"));
+        signupPage.setPostcode(registerTData.get("ZipCode*"));
+        Assert.assertEquals(signupPage.getDefaultSelectedCountry(), registerTData.get("Country*"),
                 "the country selected by default does not match the requirement");
-        if (getRegisterTestData.get("MobilePhone*")!=null)
-            signupPage.setMobilePhone(getRegisterTestData.get("MobilePhone*"));
+        if (registerTData.get("MobilePhone*")!=null)
+            signupPage.setMobilePhone(registerTData.get("MobilePhone*"));
         else
-            signupPage.setPhone(getRegisterTestData.get("HomePhone"));
+            signupPage.setPhone(registerTData.get("HomePhone"));
         log.info("entered address and contact data");
         signupPage.getSubmitAccount();
         myAccountPage=header.navigateToMyAccount();
@@ -71,7 +87,7 @@ public class LoginFeature extends TestBase {
         registeredPassword=psw;
     }
 
-    @Test(dependsOnMethods = "createAccount",priority = 1,description = "The user is able to log in with Login data created", groups = "Smoke")
+    @Test(dependsOnMethods = "createAccountValidation",priority = 1,description = "The user is able to log in with Login data created", groups = "Smoke")
     public void loginWithDataCreated(){
         loginPage=header.navigateToLoginPage();
         log.info("navigated to login page");
@@ -85,7 +101,7 @@ public class LoginFeature extends TestBase {
         log.info("user logged in successfully");
     }
 
-    @Test(dependsOnMethods = "createAccount",description = "An user should not be able to create an account using an email already registered before")
+    @Test(dependsOnMethods = "createAccountValidation",priority = 2,description = "An user should not be able to create an account using an email already registered before")
     public void accountCreationUsingRegisteredEmail(){
         loginPage=header.navigateToLoginPage();
         log.info("navigated to LoginPage");
@@ -103,7 +119,7 @@ public class LoginFeature extends TestBase {
         loginPage.navigateToSignupPage();
         log.info("submitted account creation");
         signupPage.changeDefaultEmail(registeredEmail);
-        log.info("change the default email value to a registered email after navigating to signup page");
+        log.info("changed the default email value to a registered email after navigation to signup page");
         signupPage.getSubmitAccount();
         log.info("submitted account creation");
         Assert.assertTrue(signupPage.getCreateAccountErrorMSG()
@@ -112,11 +128,11 @@ public class LoginFeature extends TestBase {
         log.info("Error message displayed");
     }
 
-    @Test(dataProvider = "getInvalidPersonalData",description = "As an user I should not be able to create an account using invalid PersonalData")
+    @Test(dataProvider = "getInvalidPersonalData",priority = 2,description = "As an user I should not be able to create an account using invalid PersonalData")
     public void accountCreationUsingInvalidPersonalData(
                             String firstname,String firstname_errorMSG, String lastname,String lastname_errorMSG,
                             String email,String email_errorMSG,String psw,String psw_errorMSG,String dateOfBirth,
-                            String dateOfBirth_errorMsg) throws InterruptedException {
+                            String dateOfBirth_errorMsg){
         loginPage= header.navigateToLoginPage();
         loginPage.createAccount_enterNewEmail(loginPage.getNewRandomEmail());
         log.info("entered an new random email");
@@ -149,27 +165,5 @@ public class LoginFeature extends TestBase {
                 assertionMSG.replace("-M-",dateOfBirth_errorMsg));
         log.info("all expected messages have been verified");
     }
-    @Test(dataProvider = "getAllTestUsers",priority = 1,groups = "Smoke")
-    public void loginValidation(String username,String password,String status, String expectedMSG){
-        loginPage=header.navigateToLoginPage();
-        log.info("navigated to login page");
-        loginPage.enterLoginUsername(username);
-        log.info("entered an username");
-        loginPage.enterLoginPassword(password);
-        log.info("entered a password");
-        loginPage.submitLogin();
-        log.info("submitted login");
-        myAccountPage=header.navigateToMyAccount();
-        if (status.equalsIgnoreCase("valid")) {
-            Assert.assertEquals(myAccountPage.getPage_heading_msg(),
-                    expectedMSG, "Not able to login" );
-            log.info("logged in successfully with valid data");
-        }else {
-            Assert.assertTrue(loginPage.getErrorMsg().contains(expectedMSG),
-                    "Message verification failed. expected:"+expectedMSG+" but found: "+ loginPage.getErrorMsg());
-            log.info("can not log in using invalid data");
-        }
-    }
-
 
 }

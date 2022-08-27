@@ -42,11 +42,8 @@ public class TestBase {
     }
    @AfterClass(alwaysRun = true)
     public void postConditions() {
-//        header.logout();
         //driver.quit();
     }
-
-
 
     //---Data driven  from json file--
     private static List<String> valuesToReturn= List.of("username","password","status","expectedMSG");
@@ -73,7 +70,7 @@ public class TestBase {
 
 
     //---Data driven dynamically from Excel file---
-    public Map<String,String> getRegisterTestData =excelReader.getRegisterTestData("UserX");
+    public Map<String,String> registerTData =excelReader.getRegisterTestData("UserX");
 
     @DataProvider
     public Object[][] getInvalidPersonalData() throws IOException {

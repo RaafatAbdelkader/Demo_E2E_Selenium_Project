@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="19" passed="16" failed="3" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-27T03:07:51 EET" name="All Test Suite" finished-at="2022-08-27T03:11:13 EET" duration-ms="202104">
+    <groups>
+      <group name="Smoke">
+        <method signature="LoginFeature.createAccountValidation()[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" name="createAccountValidation" class="automationPracticeTest.FE.LoginFeature"/>
+        <method signature="LoginFeature.loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" name="loginValidation" class="automationPracticeTest.FE.LoginFeature"/>
+        <method signature="LoginFeature.loginWithDataCreated()[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" name="loginWithDataCreated" class="automationPracticeTest.FE.LoginFeature"/>
+        <method signature="ProductPurchase.productPurchase_E2E()[pri:1, instance:automationPracticeTest.FE.ProductPurchase@20095ab4]" name="productPurchase_E2E" class="automationPracticeTest.FE.ProductPurchase"/>
+        <method signature="ProductPurchase.validateDownloadingInvoicePDF()[pri:1, instance:automationPracticeTest.FE.ProductPurchase@20095ab4]" name="validateDownloadingInvoicePDF" class="automationPracticeTest.FE.ProductPurchase"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2022-08-27T03:07:51 EET" name="Regression" finished-at="2022-08-27T03:11:13 EET" duration-ms="202104">
+      <class name="automationPracticeTest.FE.LoginFeature">
+        <test-method is-config="true" signature="before()[pri:0, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:07:51 EET" name="before" finished-at="2022-08-27T03:08:01 EET" duration-ms="10064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createAccountValidation()[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:08:01 EET" name="createAccountValidation" description="As an user I should be able to create an account using valid data" finished-at="2022-08-27T03:08:21 EET" duration-ms="19817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccountValidation -->
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:08:21 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-27T03:08:46 EET" duration-ms="25289" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test8888@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A1hS#!25]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[valid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Welcome to your account. Here you can manage all of your personal information and orders.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidation -->
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:08:46 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-27T03:09:03 EET" duration-ms="16324" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Araafat.abdo@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$!@)(#%@@]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Authentication failed.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidation -->
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:09:03 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-27T03:09:09 EET" duration-ms="6364" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nasr@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[99999999999999999999999999999999999999]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Authentication failed.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidation -->
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:09:09 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-27T03:09:14 EET" duration-ms="4508" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[moagmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[guyg54@d]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Invalid email address.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidation -->
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:09:14 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-27T03:09:19 EET" duration-ms="5502" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test8888@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Password is required.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidation -->
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:09:19 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-27T03:09:26 EET" duration-ms="6944" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A1hS#!25]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[An email address required.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidation -->
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:09:26 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-27T03:09:37 EET" duration-ms="11373" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[An email address required.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidation -->
+        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:09:37 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-27T03:09:54 EET" duration-ms="16511" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firstname is required]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[lastname is required]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[email is required.]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[passwd is required.]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountCreationUsingInvalidPersonalData -->
+        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:09:54 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-27T03:10:07 EET" duration-ms="12754" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9999999999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firstname is invalid.]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[88888888885]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[lastname is invalid.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[raadelkader.gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[email is invalid.]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[passwd is invalid.]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[15//1993]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Invalid date of birth]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountCreationUsingInvalidPersonalData -->
+        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:10:07 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-27T03:10:22 EET" duration-ms="15023" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[!#?//?@//]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firstname is invalid.]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[!#?//?@//]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[lastname is invalid.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test@]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[email is invalid.]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[/999999999999999999999999999999999999999999999999999999999999999]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[passwd is too long. Maximum length: 32]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[/10/1994]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Invalid date of birth]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountCreationUsingInvalidPersonalData -->
+        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:10:22 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-27T03:10:43 EET" duration-ms="21545" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[15.15.1998]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firstname is invalid.]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[15.15.1998]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[lastname is invalid.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[77777]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[email is invalid.]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[x]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[passwd is invalid.]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[15/10/]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Invalid date of birth]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountCreationUsingInvalidPersonalData -->
+        <test-method signature="loginWithDataCreated()[pri:1, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:10:43 EET" name="loginWithDataCreated" description="The user is able to log in with Login data created" finished-at="2022-08-27T03:10:58 EET" depends-on-methods="automationPracticeTest.FE.LoginFeature.createAccountValidation" duration-ms="14865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithDataCreated -->
+        <test-method signature="accountCreationUsingRegisteredEmail()[pri:2, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:10:58 EET" name="accountCreationUsingRegisteredEmail" description="An user should not be able to create an account using an email already registered before" finished-at="2022-08-27T03:11:11 EET" depends-on-methods="automationPracticeTest.FE.LoginFeature.createAccountValidation" duration-ms="13145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountCreationUsingRegisteredEmail -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:automationPracticeTest.FE.LoginFeature@87abc48]" started-at="2022-08-27T03:11:11 EET" name="postConditions" finished-at="2022-08-27T03:11:11 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+      </class> <!-- automationPracticeTest.FE.LoginFeature -->
+      <class name="automationPracticeTest.FE.ProductPurchase">
+        <test-method is-config="true" signature="before()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@20095ab4]" started-at="2022-08-27T03:07:51 EET" name="before" finished-at="2022-08-27T03:08:01 EET" duration-ms="10046" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="AddToCartFunctionality()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@20095ab4]" started-at="2022-08-27T03:08:01 EET" name="AddToCartFunctionality" description="verify product is still added to cart after user is logged out" finished-at="2022-08-27T03:08:47 EET" duration-ms="45798" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[product added to the cart can not be found expected [1] but found [0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: product added to the cart can not be found expected [1] but found [0]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:1252)
+at automationPracticeTest.FE.ProductPurchase.AddToCartFunctionality(ProductPurchase.java:129)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCartFunctionality -->
+        <test-method signature="productQuantityValidation()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@20095ab4]" started-at="2022-08-27T03:08:47 EET" name="productQuantityValidation" description="validation of quantity with invalid entries" finished-at="2022-08-27T03:09:23 EET" duration-ms="35887" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Negative quantity.] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Negative quantity.] but found [null]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at automationPracticeTest.FE.ProductPurchase.productQuantityValidation(ProductPurchase.java:108)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productQuantityValidation -->
+        <test-method signature="validationOfProductSorting()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@20095ab4]" started-at="2022-08-27T03:09:24 EET" name="validationOfProductSorting" description="verify an user can sort by price" finished-at="2022-08-27T03:10:09 EET" duration-ms="45746" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Products should be in a descending order expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Products should be in a descending order expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at automationPracticeTest.FE.ProductPurchase.validationOfProductSorting(ProductPurchase.java:91)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validationOfProductSorting -->
+        <test-method signature="productPurchase_E2E()[pri:1, instance:automationPracticeTest.FE.ProductPurchase@20095ab4]" started-at="2022-08-27T03:10:10 EET" name="productPurchase_E2E" description="productPurchase_E2E" finished-at="2022-08-27T03:11:06 EET" duration-ms="55837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productPurchase_E2E -->
+        <test-method signature="validateDownloadingInvoicePDF()[pri:1, instance:automationPracticeTest.FE.ProductPurchase@20095ab4]" started-at="2022-08-27T03:11:06 EET" name="validateDownloadingInvoicePDF" description="verify invoice pdf can be downloaded successfully and it has the right product and reference" finished-at="2022-08-27T03:11:13 EET" depends-on-methods="automationPracticeTest.FE.ProductPurchase.productPurchase_E2E" duration-ms="7540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDownloadingInvoicePDF -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@20095ab4]" started-at="2022-08-27T03:11:13 EET" name="postConditions" finished-at="2022-08-27T03:11:13 EET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+      </class> <!-- automationPracticeTest.FE.ProductPurchase -->
+    </test> <!-- Regression -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

@@ -3,6 +3,7 @@ package automationpractice.FE.checkoutPages;
 import basePg.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,6 +18,7 @@ public class PaymentPage {
     private By pageBtn=By.xpath("//ul[@id='order_step']/li[contains(@class,' last')]");
     private By confirmOrder=By.xpath("//p[@id='cart_navigation']/button[@type='submit']");
     private By alertMsg=By.xpath("//p[contains(@class,'alert')]");
+    private By orderInformation=By.xpath("//div[contains(@class,'order-confirmation')]");
 
     public PaymentPage(WebDriver driver) {
         this.driver = driver;
@@ -41,9 +43,26 @@ public class PaymentPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(confirmOrder));
         driver.findElement(confirmOrder).click();
     }
-    public String getConfirmationMsg(){
+    public String getOrderConfirmationMsg(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertMsg));
         return driver.findElement(alertMsg).getText();
+    }
+    public String getOrderInformationMsg(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(orderInformation));
+        return driver.findElement(orderInformation).getText();
+    }
+    public  String getOrderReferenceNum(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(orderInformation));
+        String ref = null;
+        String orderInfoMSG= driver.findElement(orderInformation).getText();
+        String[]arrMsg=orderInfoMSG.split("-");
+        for (String msg:arrMsg) {
+            if(msg.contains("reference")) {
+                ref = msg.split("reference")[1].split("\\.")[0].trim();
+                break;
+            }
+        }
+        return ref;
     }
 
 }

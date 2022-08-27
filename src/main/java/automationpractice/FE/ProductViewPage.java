@@ -3,10 +3,14 @@ package automationpractice.FE;
 import basePg.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class ProductViewPage {
     private WebDriver driver;
-    private ProjectActions projectActions;
+    WebDriverWait wait;
     private By qty= By.id("quantity_wanted");
     private By alertMsg= By.xpath("//p[@class='fancybox-error']");
     private By addToCart= By.xpath("//p[@id='add_to_cart']/button");
@@ -18,11 +22,11 @@ public class ProductViewPage {
 
     public ProductViewPage(WebDriver driver) {
         this.driver = driver;
-        projectActions=new ProjectActions(driver);
+       wait=new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void setProductQuantity(String quantity){
-        projectActions.waitToBeClickable(driver.findElement(qty), 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(qty));
         driver.findElement(qty).clear();
         driver.findElement(qty).sendKeys(quantity);
     }
@@ -40,7 +44,7 @@ public class ProductViewPage {
     }
 
     public boolean isAddedToCart() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         boolean displayed=driver.findElement(addedTOCartSuccessMSG).isDisplayed();
         if (displayed)
             return true;
@@ -49,11 +53,14 @@ public class ProductViewPage {
     }
 
     public void closeAddedToCartWindow() throws InterruptedException {
-        if (isAddedToCart())
-           driver.findElement(closeAddedToCartWindow).click();
+        if (isAddedToCart()) {
+            wait.until(ExpectedConditions.elementToBeClickable(closeAddedToCartWindow));
+            driver.findElement(closeAddedToCartWindow).click();
+        }
     }
 
     public void addToCart(){
+        wait.until(ExpectedConditions.elementToBeClickable(addToCart));
         driver.findElement(addToCart).click();
     }
 }

@@ -13,6 +13,7 @@ public class Footer {
     }
 
     private By url=By.xpath("//footer[@id='footer'] //a[contains(@href,'http')]");
+
     public List<String>getFooterLinks(){
        List<String>links =new ArrayList<>();
        driver.findElements(url).forEach(s->links.add(s.getAttribute("href")));

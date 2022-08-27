@@ -1,47 +1,40 @@
 package automationPracticeTest.FE;
 import automationpractice.FE.LoginPage;
+import automationpractice.FE.MyAccountPage;
 import automationpractice.FE.ProductViewPage;
 import automationpractice.FE.SummerDressesPage;
 import automationpractice.FE.checkoutPages.AddressPage;
 import automationpractice.FE.checkoutPages.PaymentPage;
 import automationpractice.FE.checkoutPages.ShippingPage;
 import automationpractice.FE.checkoutPages.SummeryPage;
-import basePg.PropReader;
-import net.minidev.json.parser.ParseException;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import automationpractice.FE.myAccountPages.OrderHistoryPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import testBase.TestBase;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 public class ProductPurchase extends TestBase {
     private String username=oneValidTestData().get("username");
     private String password=oneValidTestData().get("password");
+    private String productName="Printed Chiffon Dress";
     private LoginPage loginPage;
-    private SoftAssert softAssert=new SoftAssert();
     private SummerDressesPage summerDressesPage;
     private ProductViewPage productViewPage;
     private SummeryPage summeryPage;
     private AddressPage addressPage;
     private ShippingPage shippingPage;
     private PaymentPage paymentPage;
-    private String productName="Printed Chiffon Dress";
+    private MyAccountPage myAccountPage;
+    private OrderHistoryPage orderHistoryPage;
+    private String orderReference;
 
     @Test(priority = 1,groups = "Smoke",description = "productPurchase_E2E")
     public  void productPurchase_E2E(){
         loginPage = header.navigateToLoginPage();
         loginPage.login(username, password);
         summerDressesPage = header.navigateToSummerDressesPage();
-        WebElement product = summerDressesPage.getProductItem(productName);
-        actions.moveToElement(product).build().perform();
-        summerDressesPage.addProductToCart();
+        summerDressesPage.addProductToCart(productName);
         String acMsg=header.getAddedTOCartSuccessMSG();
         Assert.assertEquals(acMsg,"Product successfully added to your shopping cart");
         summeryPage= header.proceedToCheckout();
@@ -60,93 +53,81 @@ public class ProductPurchase extends TestBase {
         paymentPage.selectPayByCheck();
         Assert.assertEquals(paymentPage.getSubHeadingMsg(),"CHECK PAYMENT");
         paymentPage.confirmOrder();
-        Assert.assertEquals(paymentPage.getConfirmationMsg(),"Your order on My Store is complete.","order is not completed successfully");
-        //get order ref and save it
-        header.returnToHomePage();
+        Assert.assertEquals(paymentPage.getOrderConfirmationMsg(),"Your order on My Store is complete.","order is not completed successfully");
+        orderReference=paymentPage.getOrderReferenceNum();
     }
-    @Test(priority = 1,groups = "Smoke",description = "verify invoice pdf can be downloaded and it has the right product")
-    public  void validateDownloadingInvoicePDF(){
-        //projectActions.cleanupDownLoadDirectory();
+    @Test(priority = 1,dependsOnMethods="productPurchase_E2E",groups = "Smoke",description = "verify invoice pdf can be downloaded successfully and it has the right product and reference")
+    public  void validateDownloadingInvoicePDF() throws IOException {
+        //projectActions.cleanupProjectDownLoadDir();
+        myAccountPage=header.navigateToMyAccount();
+        orderHistoryPage=myAccountPage.navigateToOrderHistory();
         int lastDownloadedFilesNum = projectActions.getNumOfFilesExist();
-        driver.navigate().to("http://automationpractice.com/index.php?controller=history");
-        WebElement pdf= driver.findElement(By.xpath("//a[@title='Invoice']"));
-        projectActions.waitToBeClickable(pdf,10);
-        pdf.click();
-        projectActions.waitToBeDownloaded();
+        orderHistoryPage.downloadInvoice(orderReference);
         int currentDownloadedFilesNum=projectActions.getNumOfFilesExist();
-        Assert.assertTrue(currentDownloadedFilesNum>lastDownloadedFilesNum,"File was not downloaded");
+        Assert.assertTrue(currentDownloadedFilesNum==lastDownloadedFilesNum+1,"File was not downloaded");
         projectActions.openNewTab();
         projectActions.openLastModifiedFile();
         String filePath=projectActions.getLastModifiedFile().getPath();
         String pdfContent=projectActions.getPDFContent(filePath);
         Assert.assertTrue(pdfContent.contains(productName));
+        Assert.assertTrue(pdfContent.contains(orderReference));
         driver.close();
         projectActions.returnToLastTab();
         projectActions.deleteLastModifiedFile();
-
     }
     @Test(description = "verify an user can sort by price")
     public void validationOfProductSorting(){
         loginPage=header.navigateToLoginPage();
         loginPage.login(username,password);
         summerDressesPage=header.navigateToSummerDressesPage();
-        softAssert.assertEquals(summerDressesPage.getCategoryNameMSG().trim(),"SUMMER DRESSES");
+        Assert.assertEquals(summerDressesPage.getCategoryNameMSG().trim(),"SUMMER DRESSES");
         int productsCount= summerDressesPage.getProductItems().size();
-        softAssert.assertEquals(summerDressesPage.getHeadingCounterMSG(),
+        Assert.assertEquals(summerDressesPage.getHeadingCounterMSG(),
                 "There are "+productsCount+" products.","Items count does not match");
         summerDressesPage.sortBy("Price: Lowest first");
-        List<Double>priceList=summerDressesPage.getPriceList();
-        softAssert.assertTrue(summerDressesPage.isOrderedAscending(priceList),
+        Assert.assertTrue(summerDressesPage.isOrderedAscending(),
                 "Products should be in an ascending order");
         summerDressesPage.sortBy("Price: Highest first");
-        priceList=summerDressesPage.getPriceList();
-        softAssert.assertTrue(summerDressesPage.isOrderedDescending(priceList),
-                "Products should be in a descending order");
-        softAssert.assertAll();
+        Assert.assertTrue(summerDressesPage.isOrderedDescending(),
+                "Products should be in a descending order");  //bug
     }
     @Test(description = "validation of quantity with invalid entries")
     public void productQuantityValidation() throws InterruptedException {
         loginPage=header.navigateToLoginPage();
         loginPage.login(username,password);
         summerDressesPage=header.navigateToSummerDressesPage();
-        WebElement productItem=summerDressesPage.getProductItem(productName);
-        actions.moveToElement(productItem).build().perform();
-        productViewPage= summerDressesPage.viewProduct();
+        productViewPage= summerDressesPage.viewProduct(productName);
         productViewPage.setProductQuantity("0");
         productViewPage.addToCart();
-        softAssert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");
+        Assert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");
         productViewPage.setProductQuantity("test");
         productViewPage.addToCart();
-        softAssert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");
+        Assert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");
         productViewPage.setProductQuantity("-20");
         productViewPage.addToCart();
-        softAssert.assertFalse(productViewPage.isAddedToCart(),"product added to cart with invalid quantity");
-        softAssert.assertEquals(productViewPage.getErrorMSG(),"Negative quantity.");
+        Assert.assertEquals(productViewPage.getErrorMSG(),"Negative quantity.");
         productViewPage.setProductQuantity("9999999999999999999999999999999999");
         productViewPage.addToCart();
-        softAssert.assertFalse(productViewPage.isAddedToCart(),"product added to cart with invalid quantity");
-        softAssert.assertEquals(productViewPage.getErrorMSG(),"Quantity should be between 1 and 1000");
+        Assert.assertEquals(productViewPage.getErrorMSG(),"Quantity should be between 1 and 1000");
         productViewPage.setProductQuantity("h@#??//'");
         productViewPage.addToCart();
-        softAssert.assertFalse(productViewPage.isAddedToCart(),"product added to cart with invalid quantity");
-        softAssert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");
-        softAssert.assertAll();
+        Assert.assertEquals(productViewPage.getErrorMSG(),"Null quantity.");
+
     }
     @Test(description = "verify product is still added to cart after user is logged out")
     public void AddToCartFunctionality(){
-        int productQtyAddedToCart;
+        int numOfProductItemsAddedToCart;
         loginPage= header.navigateToLoginPage();
         loginPage.login(username,password);
-        productQtyAddedToCart=header.getProductQtyAddedToCart();
+        numOfProductItemsAddedToCart=header.getNumOfProductItemsAddedToCart();
         summerDressesPage= header.navigateToSummerDressesPage();
-        actions.moveToElement(summerDressesPage.getProductItem(productName)).build().perform();
-        productViewPage=summerDressesPage.viewProduct();
+        productViewPage=summerDressesPage.viewProduct(productName);
         productViewPage.addToCart();
         header.logout();
         header.navigateToLoginPage();
         loginPage.login(username,password);
-        Assert.assertEquals(header.getProductQtyAddedToCart(),
-                header.getProductQtyAddedToCart()+1,"product added to the cart can not be found");
+        Assert.assertEquals(header.getNumOfProductItemsAddedToCart(),
+                header.getNumOfProductItemsAddedToCart()+1,"product added to the cart can not be found");
     }
 
 }

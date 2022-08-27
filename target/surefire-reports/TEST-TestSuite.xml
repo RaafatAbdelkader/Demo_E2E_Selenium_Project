@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="204.614" tests="19" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="webdriver.chrome.driver" value="C:\Users\BluRay\.cache\selenium\chromedriver\win32\104.0.5112.79\chromedriver.exe"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\projects\E2E_Demo_Project\target\test-classes;C:\projects\E2E_Demo_Project\target\classes;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-java\4.4.0\selenium-java-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-api\4.4.0\selenium-api-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v102\4.4.0\selenium-devtools-v102-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v103\4.4.0\selenium-devtools-v103-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v104\4.4.0\selenium-devtools-v104-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.4.0\selenium-devtools-v85-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.4.0\selenium-edge-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.4.0\selenium-firefox-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.4.0\selenium-ie-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.4.0\selenium-opera-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.4.0\selenium-safari-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-support\4.4.0\selenium-support-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.4.0\selenium-chrome-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\BluRay\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\BluRay\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\BluRay\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\BluRay\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\BluRay\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\BluRay\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\BluRay\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\BluRay\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.4.0\selenium-chromium-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-json\4.4.0\selenium-json-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\testng\testng\7.6.0\testng-7.6.0.jar;C:\Users\BluRay\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\BluRay\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\BluRay\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\BluRay\.m2\repository\org\webjars\jquery\3.6.0\jquery-3.6.0.jar;C:\Users\BluRay\.m2\repository\io\github\bonigarcia\webdrivermanager\5.2.0\webdrivermanager-5.2.0.jar;C:\Users\BluRay\.m2\repository\com\google\code\gson\gson\2.9.0\gson-2.9.0.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java\3.2.13\docker-java-3.2.13.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java-core\3.2.13\docker-java-core-3.2.13.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java-api\3.2.13\docker-java-api-3.2.13.jar;C:\Users\BluRay\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\BluRay\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\BluRay\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\BluRay\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\BluRay\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\BluRay\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.13\docker-java-transport-httpclient5-3.2.13.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java-transport\3.2.13\docker-java-transport-3.2.13.jar;C:\Users\BluRay\.m2\repository\net\java\dev\jna\jna\5.8.0\jna-5.8.0.jar;C:\Users\BluRay\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\BluRay\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.1.3\httpclient5-5.1.3.jar;C:\Users\BluRay\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.1.3\httpcore5-5.1.3.jar;C:\Users\BluRay\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.1.3\httpcore5-h2-5.1.3.jar;C:\Users\BluRay\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;C:\Users\BluRay\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\BluRay\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\BluRay\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\BluRay\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\BluRay\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\BluRay\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.2\log4j-core-2.17.2.jar;C:\Users\BluRay\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar;C:\Users\BluRay\.m2\repository\org\json\json\20220320\json-20220320.jar;C:\Users\BluRay\.m2\repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;C:\Users\BluRay\.m2\repository\net\minidev\json-smart\2.4.7\json-smart-2.4.7.jar;C:\Users\BluRay\.m2\repository\net\minidev\accessors-smart\2.4.7\accessors-smart-2.4.7.jar;C:\Users\BluRay\.m2\repository\org\ow2\asm\asm\9.1\asm-9.1.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-server\3.141.59\selenium-server-3.141.59.jar;C:\Users\BluRay\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\BluRay\.m2\repository\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\jetty-repacked\9.4.12.v20180830\jetty-repacked-9.4.12.v20180830.jar;C:\Users\BluRay\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\BluRay\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\BluRay\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\BluRay\.m2\repository\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.3.0\selenium-remote-driver-4.3.0.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-buffer\4.1.78.Final\netty-buffer-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-codec-http\4.1.78.Final\netty-codec-http-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-codec\4.1.78.Final\netty-codec-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-handler\4.1.78.Final\netty-handler-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-common\4.1.78.Final\netty-common-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.78.Final\netty-transport-classes-epoll-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.78.Final\netty-transport-classes-kqueue-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-epoll\4.1.78.Final\netty-transport-native-epoll-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.78.Final\netty-transport-native-kqueue-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.78.Final\netty-transport-native-unix-common-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport\4.1.78.Final\netty-transport-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-resolver\4.1.78.Final\netty-resolver-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-api\1.15.0\opentelemetry-api-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-context\1.15.0\opentelemetry-context-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.15.0\opentelemetry-exporter-logging-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.15.0\opentelemetry-sdk-metrics-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.15.0-alpha\opentelemetry-sdk-logs-1.15.0-alpha.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.15.0\opentelemetry-sdk-common-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.15.0\opentelemetry-sdk-extension-autoconfigure-spi-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.15.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.15.0-alpha.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.15.0\opentelemetry-sdk-trace-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.15.0\opentelemetry-sdk-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.15.0-alpha\opentelemetry-semconv-1.15.0-alpha.jar;C:\Users\BluRay\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\BluRay\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\BluRay\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\BluRay\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\BluRay\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-http\4.3.0\selenium-http-4.3.0.jar;C:\Users\BluRay\.m2\repository\dev\failsafe\failsafe\3.2.4\failsafe-3.2.4.jar;C:\Users\BluRay\.m2\repository\com\microsoft\sqlserver\mssql-jdbc\10.2.0.jre11\mssql-jdbc-10.2.0.jre11.jar;C:\Users\BluRay\.m2\repository\org\apache\poi\poi-ooxml\5.2.0\poi-ooxml-5.2.0.jar;C:\Users\BluRay\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.0\poi-ooxml-lite-5.2.0.jar;C:\Users\BluRay\.m2\repository\org\apache\xmlbeans\xmlbeans\5.0.3\xmlbeans-5.0.3.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\BluRay\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\BluRay\.m2\repository\com\github\virtuald\curvesapi\1.06\curvesapi-1.06.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\BluRay\.m2\repository\org\apache\poi\poi\5.2.0\poi-5.2.0.jar;C:\Users\BluRay\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\BluRay\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\BluRay\.m2\repository\org\apache\pdfbox\pdfbox\3.0.0-RC1\pdfbox-3.0.0-RC1.jar;C:\Users\BluRay\.m2\repository\org\apache\pdfbox\fontbox\3.0.0-RC1\fontbox-3.0.0-RC1.jar;C:\Users\BluRay\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Africa/Cairo"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\BluRay\AppData\Local\Temp\surefire12477483026238322027\surefirebooter-20220827030749578_3.jar C:\Users\BluRay\AppData\Local\Temp\surefire12477483026238322027 2022-08-27T03-07-49_218-jvmRun1 surefire-20220827030749578_1tmp surefire_0-20220827030749578_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\projects\E2E_Demo_Project\target\test-classes;C:\projects\E2E_Demo_Project\target\classes;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-java\4.4.0\selenium-java-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-api\4.4.0\selenium-api-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v102\4.4.0\selenium-devtools-v102-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v103\4.4.0\selenium-devtools-v103-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v104\4.4.0\selenium-devtools-v104-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.4.0\selenium-devtools-v85-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.4.0\selenium-edge-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.4.0\selenium-firefox-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.4.0\selenium-ie-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.4.0\selenium-opera-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.4.0\selenium-safari-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-support\4.4.0\selenium-support-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.4.0\selenium-chrome-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\BluRay\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\BluRay\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\BluRay\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\BluRay\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\BluRay\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\BluRay\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\BluRay\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\BluRay\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.4.0\selenium-chromium-driver-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-json\4.4.0\selenium-json-4.4.0.jar;C:\Users\BluRay\.m2\repository\org\testng\testng\7.6.0\testng-7.6.0.jar;C:\Users\BluRay\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\BluRay\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\BluRay\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\BluRay\.m2\repository\org\webjars\jquery\3.6.0\jquery-3.6.0.jar;C:\Users\BluRay\.m2\repository\io\github\bonigarcia\webdrivermanager\5.2.0\webdrivermanager-5.2.0.jar;C:\Users\BluRay\.m2\repository\com\google\code\gson\gson\2.9.0\gson-2.9.0.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java\3.2.13\docker-java-3.2.13.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java-core\3.2.13\docker-java-core-3.2.13.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java-api\3.2.13\docker-java-api-3.2.13.jar;C:\Users\BluRay\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\BluRay\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\BluRay\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\BluRay\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\BluRay\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\BluRay\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.13\docker-java-transport-httpclient5-3.2.13.jar;C:\Users\BluRay\.m2\repository\com\github\docker-java\docker-java-transport\3.2.13\docker-java-transport-3.2.13.jar;C:\Users\BluRay\.m2\repository\net\java\dev\jna\jna\5.8.0\jna-5.8.0.jar;C:\Users\BluRay\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\BluRay\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.1.3\httpclient5-5.1.3.jar;C:\Users\BluRay\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.1.3\httpcore5-5.1.3.jar;C:\Users\BluRay\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.1.3\httpcore5-h2-5.1.3.jar;C:\Users\BluRay\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;C:\Users\BluRay\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\BluRay\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\BluRay\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\BluRay\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\BluRay\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\BluRay\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.2\log4j-core-2.17.2.jar;C:\Users\BluRay\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar;C:\Users\BluRay\.m2\repository\org\json\json\20220320\json-20220320.jar;C:\Users\BluRay\.m2\repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;C:\Users\BluRay\.m2\repository\net\minidev\json-smart\2.4.7\json-smart-2.4.7.jar;C:\Users\BluRay\.m2\repository\net\minidev\accessors-smart\2.4.7\accessors-smart-2.4.7.jar;C:\Users\BluRay\.m2\repository\org\ow2\asm\asm\9.1\asm-9.1.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-server\3.141.59\selenium-server-3.141.59.jar;C:\Users\BluRay\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\BluRay\.m2\repository\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\jetty-repacked\9.4.12.v20180830\jetty-repacked-9.4.12.v20180830.jar;C:\Users\BluRay\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\BluRay\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\BluRay\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\BluRay\.m2\repository\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.3.0\selenium-remote-driver-4.3.0.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-buffer\4.1.78.Final\netty-buffer-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-codec-http\4.1.78.Final\netty-codec-http-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-codec\4.1.78.Final\netty-codec-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-handler\4.1.78.Final\netty-handler-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-common\4.1.78.Final\netty-common-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.78.Final\netty-transport-classes-epoll-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.78.Final\netty-transport-classes-kqueue-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-epoll\4.1.78.Final\netty-transport-native-epoll-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.78.Final\netty-transport-native-kqueue-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.78.Final\netty-transport-native-unix-common-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport\4.1.78.Final\netty-transport-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-resolver\4.1.78.Final\netty-resolver-4.1.78.Final.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-api\1.15.0\opentelemetry-api-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-context\1.15.0\opentelemetry-context-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.15.0\opentelemetry-exporter-logging-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.15.0\opentelemetry-sdk-metrics-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.15.0-alpha\opentelemetry-sdk-logs-1.15.0-alpha.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.15.0\opentelemetry-sdk-common-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.15.0\opentelemetry-sdk-extension-autoconfigure-spi-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.15.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.15.0-alpha.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.15.0\opentelemetry-sdk-trace-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.15.0\opentelemetry-sdk-1.15.0.jar;C:\Users\BluRay\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.15.0-alpha\opentelemetry-semconv-1.15.0-alpha.jar;C:\Users\BluRay\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\BluRay\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\BluRay\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\BluRay\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\BluRay\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\BluRay\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\BluRay\.m2\repository\org\seleniumhq\selenium\selenium-http\4.3.0\selenium-http-4.3.0.jar;C:\Users\BluRay\.m2\repository\dev\failsafe\failsafe\3.2.4\failsafe-3.2.4.jar;C:\Users\BluRay\.m2\repository\com\microsoft\sqlserver\mssql-jdbc\10.2.0.jre11\mssql-jdbc-10.2.0.jre11.jar;C:\Users\BluRay\.m2\repository\org\apache\poi\poi-ooxml\5.2.0\poi-ooxml-5.2.0.jar;C:\Users\BluRay\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.0\poi-ooxml-lite-5.2.0.jar;C:\Users\BluRay\.m2\repository\org\apache\xmlbeans\xmlbeans\5.0.3\xmlbeans-5.0.3.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\BluRay\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\BluRay\.m2\repository\com\github\virtuald\curvesapi\1.06\curvesapi-1.06.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\BluRay\.m2\repository\org\apache\poi\poi\5.2.0\poi-5.2.0.jar;C:\Users\BluRay\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\BluRay\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\BluRay\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\BluRay\.m2\repository\org\apache\pdfbox\pdfbox\3.0.0-RC1\pdfbox-3.0.0-RC1.jar;C:\Users\BluRay\.m2\repository\org\apache\pdfbox\fontbox\3.0.0-RC1\fontbox-3.0.0-RC1.jar;C:\Users\BluRay\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\BluRay"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-09-14"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\projects\E2E_Demo_Project"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\BluRay\AppData\Local\Temp\surefire12477483026238322027\surefirebooter-20220827030749578_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17+35-LTS-2724"/>
+    <property name="user.name" value="BluRay"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\BluRay\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\BluRay\AppData\Local\Temp\"/>
+    <property name="java.version" value="17"/>
+    <property name="user.dir" value="C:\projects\E2E_Demo_Project"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\ActiveState Komodo Edit 12\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\BluRay\AppData\Local\Microsoft\WindowsApps;C:\Users\BluRay\AppData\Local\Programs\Microsoft VS Code\bin;C:\src\flutter\bin;C:\dart-sdk\bin;C:\Users\BluRay\AppData\Local\GitHubDesktop\bin;C:\Program Files\Java\jre1.8.0_271\jdk-16.0.2\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\bin;;C:\Program Files\Azure Data Studio\bin;C:\Work\apache-maven-3.8.6\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17+35-LTS-2724"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="createAccountValidation" classname="automationPracticeTest.FE.LoginFeature" time="19.823">
+    <system-out><![CDATA[03:08:06.210 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to LoginPage
+03:08:06.410 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered a new email to create an account 
+03:08:11.231 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to signupPage
+15/10/1993
+Date: 15/10/1993 selected
+03:08:12.582 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered personal data 
+03:08:13.277 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered address and contact data
+03:08:21.510 [TestNG-test=Regression-2] INFO  testBase.TestBase - Account created successfully
+]]></system-out>
+    <system-err><![CDATA[[TestNG-test=Regression-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+[TestNG-test=Regression-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 104.0.5112.79 (resolved driver for Chrome 104)
+[TestNG-test=Regression-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\BluRay\.cache\selenium\chromedriver\win32\104.0.5112.79\chromedriver.exe
+[TestNG-test=Regression-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\BluRay\.cache\selenium\chromedriver\win32\104.0.5112.79\chromedriver.exe
+Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 51917
+Only local cSotnanercttiionngs  Carher oamlleoDwreidv.e
+r P1le0a4s.e 0.s5e1e1 2h.t79t p(s3c:f//3ceh8rco8meadr07idv1e0r4.bc9he1r2om6i0cu9m.1o0erfg/bs8fec3ur8i3ty2-8co5ndscide5r-arteiofnss/ bfroarn chs-huegagdess/5t1i1o2n@s{ #o13n0 k7e})e poinn gp Cohrrto m4e9D7ri7v9er
+ Osnlayfe .loc
+al connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping CChhrromoemDerDirvievre sra few.as
+ started successfully.
+ChromeDriver was started successfully.
+Aug 27, 2022 3:07:53 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Aug 27, 2022 3:07:53 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Aug 27, 2022 3:07:54 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found exact CDP implementation for version 104
+Aug 27, 2022 3:07:54 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found exact CDP implementation for version 104
+]]></system-err>
+  </testcase>
+  <testcase name="loginValidation[test8888@gmail.com, A1hS#!25, valid, Welcome to your account. Here you can manage all of your personal information and orders.](1)" classname="automationPracticeTest.FE.LoginFeature" time="25.291">
+    <system-out><![CDATA[03:08:37.000 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to login page
+03:08:37.147 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an username
+03:08:37.290 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered a password
+03:08:44.157 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted login
+03:08:46.819 [TestNG-test=Regression-2] INFO  testBase.TestBase - logged in successfully with valid data
+]]></system-out>
+  </testcase>
+  <testcase name="loginValidation[Araafat.abdo@gmail.com, $!@)(#%@@, invalid, Authentication failed.](2)" classname="automationPracticeTest.FE.LoginFeature" time="15.218">
+    <system-out><![CDATA[03:09:00.827 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to login page
+03:09:01.003 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an username
+03:09:01.155 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered a password
+03:09:02.941 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted login
+03:09:03.144 [TestNG-test=Regression-2] INFO  testBase.TestBase - can not log in using invalid data
+]]></system-out>
+  </testcase>
+  <testcase name="loginValidation[nasr@gmail.com, 99999999999999999999999999999999999999, invalid, Authentication failed.](3)" classname="automationPracticeTest.FE.LoginFeature" time="6.365">
+    <system-out><![CDATA[03:09:06.473 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to login page
+03:09:06.634 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an username
+03:09:06.840 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered a password
+03:09:09.347 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted login
+03:09:09.509 [TestNG-test=Regression-2] INFO  testBase.TestBase - can not log in using invalid data
+]]></system-out>
+  </testcase>
+  <testcase name="loginValidation[moagmail.com, guyg54@d, invalid, Invalid email address.](4)" classname="automationPracticeTest.FE.LoginFeature" time="4.509">
+    <system-out><![CDATA[03:09:12.400 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to login page
+03:09:12.500 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an username
+03:09:12.589 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered a password
+03:09:13.853 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted login
+03:09:14.020 [TestNG-test=Regression-2] INFO  testBase.TestBase - can not log in using invalid data
+]]></system-out>
+  </testcase>
+  <testcase name="loginValidation[test8888@gmail.com, , invalid, Password is required.](5)" classname="automationPracticeTest.FE.LoginFeature" time="5.503">
+    <system-out><![CDATA[03:09:17.707 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to login page
+03:09:17.804 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an username
+03:09:17.884 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered a password
+03:09:19.356 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted login
+03:09:19.524 [TestNG-test=Regression-2] INFO  testBase.TestBase - can not log in using invalid data
+]]></system-out>
+  </testcase>
+  <testcase name="loginValidation[, A1hS#!25, invalid, An email address required.](6)" classname="automationPracticeTest.FE.LoginFeature" time="2.313">
+    <system-out><![CDATA[03:09:24.635 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to login page
+03:09:24.730 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an username
+03:09:24.834 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered a password
+03:09:26.336 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted login
+03:09:26.471 [TestNG-test=Regression-2] INFO  testBase.TestBase - can not log in using invalid data
+]]></system-out>
+  </testcase>
+  <testcase name="loginValidation[, , invalid, An email address required.](7)" classname="automationPracticeTest.FE.LoginFeature" time="11.373">
+    <system-out><![CDATA[03:09:32.843 [TestNG-test=Regression-2] INFO  testBase.TestBase - navigated to login page
+03:09:32.934 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an username
+03:09:33.033 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered a password
+03:09:37.699 [TestNG-test=Regression-2] INFO  testBase.TestBase - submitted login
+03:09:37.845 [TestNG-test=Regression-2] INFO  testBase.TestBase - can not log in using invalid data
+]]></system-out>
+  </testcase>
+  <testcase name="accountCreationUsingInvalidPersonalData[, firstname is required, , lastname is required, , email is required., , passwd is required., , ](1)" classname="automationPracticeTest.FE.LoginFeature" time="16.511">
+    <system-out><![CDATA[03:09:45.411 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an new random email
+03:09:49.711 [TestNG-test=Regression-2] INFO  testBase.TestBase - Navigated to signup page
+
+Date:  selected
+03:09:51.098 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered invalid personal data
+03:09:54.427 [TestNG-test=Regression-2] INFO  testBase.TestBase - all expected messages have been verified
+]]></system-out>
+  </testcase>
+  <testcase name="accountCreationUsingInvalidPersonalData[9999999999, firstname is invalid., 88888888885, lastname is invalid., raadelkader.gmail.com, email is invalid., 123, passwd is invalid., 15//1993, Invalid date of birth](2)" classname="automationPracticeTest.FE.LoginFeature" time="12.77">
+    <system-out><![CDATA[03:10:00.241 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an new random email
+03:10:03.963 [TestNG-test=Regression-2] INFO  testBase.TestBase - Navigated to signup page
+15//1993
+Date: 15//1993 selected
+03:10:05.291 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered invalid personal data
+03:10:07.181 [TestNG-test=Regression-2] INFO  testBase.TestBase - all expected messages have been verified
+]]></system-out>
+  </testcase>
+  <testcase name="accountCreationUsingInvalidPersonalData[!#?//?@//, firstname is invalid., !#?//?@//, lastname is invalid., test@, email is invalid., /999999999999999999999999999999999999999999999999999999999999999, passwd is too long. Maximum length: 32, /10/1994, Invalid date of birth](3)" classname="automationPracticeTest.FE.LoginFeature" time="11.903">
+    <system-out><![CDATA[03:10:13.649 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an new random email
+03:10:18.320 [TestNG-test=Regression-2] INFO  testBase.TestBase - Navigated to signup page
+/10/1994
+Date: /10/1994 selected
+03:10:20.040 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered invalid personal data
+03:10:22.220 [TestNG-test=Regression-2] INFO  testBase.TestBase - all expected messages have been verified
+]]></system-out>
+  </testcase>
+  <testcase name="accountCreationUsingInvalidPersonalData[15.15.1998, firstname is invalid., 15.15.1998, lastname is invalid., 77777, email is invalid., x, passwd is invalid., 15/10/, Invalid date of birth](4)" classname="automationPracticeTest.FE.LoginFeature" time="21.546">
+    <system-out><![CDATA[03:10:31.420 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered an new random email
+03:10:37.484 [TestNG-test=Regression-2] INFO  testBase.TestBase - Navigated to signup page
+15/10/
+Date: 15/10/ selected
+03:10:39.054 [TestNG-test=Regression-2] INFO  testBase.TestBase - entered invalid personal data
+03:10:43.766 [TestNG-test=Regression-2] INFO  testBase.TestBase - all expected messages have been verified
+]]></system-out>
+  </testcase>
+  <testcase name="loginWithDataCreated" classname="automationPracticeTest.FE.LoginFeature" time="14.864">
+    <system-out><![CDATA[03:10:48.991 [TestNG-test=Regression-3] INFO  testBase.TestBase - navigated to login page
+03:10:54.546 [TestNG-test=Regression-3] INFO  testBase.TestBase - Login submitted
+03:10:58.636 [TestNG-test=Regression-3] INFO  testBase.TestBase - user logged in successfully
+]]></system-out>
+  </testcase>
+  <testcase name="accountCreationUsingRegisteredEmail" classname="automationPracticeTest.FE.LoginFeature" time="5.641">
+    <system-out><![CDATA[03:11:06.435 [TestNG-test=Regression-3] INFO  testBase.TestBase - navigated to LoginPage
+03:11:06.586 [TestNG-test=Regression-3] INFO  testBase.TestBase - Entered a registered email
+03:11:06.677 [TestNG-test=Regression-3] INFO  testBase.TestBase - submitted account creation
+03:11:07.831 [TestNG-test=Regression-3] INFO  testBase.TestBase - Error message displayed
+03:11:07.980 [TestNG-test=Regression-3] INFO  testBase.TestBase - entered an new random email
+03:11:08.034 [TestNG-test=Regression-3] INFO  testBase.TestBase - submitted account creation
+03:11:10.063 [TestNG-test=Regression-3] INFO  testBase.TestBase - changed the default email value to a registered email after navigation to signup page
+03:11:11.720 [TestNG-test=Regression-3] INFO  testBase.TestBase - submitted account creation
+03:11:11.784 [TestNG-test=Regression-3] INFO  testBase.TestBase - Error message displayed
+]]></system-out>
+  </testcase>
+  <testcase name="AddToCartFunctionality" classname="automationPracticeTest.FE.ProductPurchase" time="1.106">
+    <failure message="product added to the cart can not be found expected [1] but found [0]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: product added to the cart can not be found expected [1] but found [0]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1252)
+	at automationPracticeTest.FE.ProductPurchase.AddToCartFunctionality(ProductPurchase.java:129)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+]]></failure>
+    <system-out><![CDATA[Took a screenshot: C:\projects\E2E_Demo_Project/scrShots/failedTCs/AddToCartFunctionality.png
+C:\projects\E2E_Demo_Project/scrShots/failedTCs/AddToCartFunctionality.png
+]]></system-out>
+  </testcase>
+  <testcase name="productQuantityValidation" classname="automationPracticeTest.FE.ProductPurchase" time="4.631">
+    <failure message="expected [Negative quantity.] but found [null]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Negative quantity.] but found [null]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at automationPracticeTest.FE.ProductPurchase.productQuantityValidation(ProductPurchase.java:108)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+]]></failure>
+    <system-out><![CDATA[Error message not displayed. product added to cart
+Took a screenshot: C:\projects\E2E_Demo_Project/scrShots/failedTCs/productQuantityValidation.png
+C:\projects\E2E_Demo_Project/scrShots/failedTCs/productQuantityValidation.png
+]]></system-out>
+  </testcase>
+  <testcase name="validationOfProductSorting" classname="automationPracticeTest.FE.ProductPurchase" time="3.121">
+    <failure message="Products should be in a descending order expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Products should be in a descending order expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at automationPracticeTest.FE.ProductPurchase.validationOfProductSorting(ProductPurchase.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+]]></failure>
+    <system-out><![CDATA[List is not in a descending order
+Took a screenshot: C:\projects\E2E_Demo_Project/scrShots/failedTCs/validationOfProductSorting.png
+C:\projects\E2E_Demo_Project/scrShots/failedTCs/validationOfProductSorting.png
+]]></system-out>
+  </testcase>
+  <testcase name="productPurchase_E2E" classname="automationPracticeTest.FE.ProductPurchase" time="7.503"/>
+  <testcase name="validateDownloadingInvoicePDF" classname="automationPracticeTest.FE.ProductPurchase" time="7.543">
+    <system-out><![CDATA[file deleted: C:\projects\E2E_Demo_Project\download\IN238858.pdf
+]]></system-out>
+  </testcase>
+</testsuite>

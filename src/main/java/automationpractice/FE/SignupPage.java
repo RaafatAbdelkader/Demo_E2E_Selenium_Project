@@ -4,11 +4,15 @@ import basePg.ProjectActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class SignupPage {
     private WebDriver driver;
-    private ProjectActions projectActions;
+    private WebDriverWait wait;
     private By subHeadingMsg =By.xpath("//label[contains(text(),'Title')]/parent:: div/preceding-sibling:: h3[@class='page-subheading']");
     private By gender_radio_male= By.xpath("//input[@id='id_gender1']/parent::span");
     private By gender_radio_female=  By.xpath("//input[@id='id_gender2']/parent::span");
@@ -39,10 +43,10 @@ public class SignupPage {
 
     public SignupPage(WebDriver driver) {
         this.driver = driver;
-        projectActions=new ProjectActions(driver);
+        wait=new WebDriverWait(driver, Duration.ofSeconds(10));
     }
     public String getSubHeadingMsg() {
-        projectActions.waitToBeClickable(driver.findElement(subHeadingMsg),5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(subHeadingMsg));
         return driver.findElement(subHeadingMsg).getText();
     }
     public String getCreateAccountErrorMSG() {

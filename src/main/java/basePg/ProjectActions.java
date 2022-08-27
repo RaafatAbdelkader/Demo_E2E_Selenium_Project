@@ -1,6 +1,7 @@
 package basePg;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.*;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +22,6 @@ public class ProjectActions {
     public ProjectActions(WebDriver driver) {
         this.driver = driver;
     }
-
     public String getScreenshot(String image_name) throws IOException {
         File screenshot = driver.findElement(By.tagName("Body")).getScreenshotAs(OutputType.FILE);
         String path= System.getProperty("user.dir")+"/scrShots/failedTCs/" + image_name+".png";
@@ -28,27 +29,14 @@ public class ProjectActions {
         System.out.println("Took a screenshot: "+ path);
         return path;
     }
-
-    public void waitToBeClickable(WebElement el, int limit){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(limit));
-        wait.until(ExpectedConditions.elementToBeClickable(el));
-    }
-
-    public String getPDFContent(String filePath){
-        FileInputStream is;
-        PDDocument pdDoc;
-        String content = null;
-        try {
-            is =new FileInputStream(filePath);
-            pdDoc = new PDDocument().load(is);
-           content= new PDFTextStripper().getText(pdDoc);
-            pdDoc.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public String getPDFContent(String filePath) throws IOException {
+        File file=new File(filePath);
+        PDDocument pdDoc = Loader.loadPDF(file);
+        String content=new  PDFTextStripper().getText(pdDoc);
+        pdDoc.close();
         return content;
     }
-    String lastTabId=null;
+    private String lastTabId=null;
     public String openNewTab(){
         lastTabId=driver.getWindowHandle();
         return  driver.switchTo().newWindow(WindowType.TAB).getWindowHandle();
@@ -88,19 +76,25 @@ public class ProjectActions {
             }
         }else
             System.out.println("No file was found");
+
         return lastModifiedFile;
     }
     public void deleteLastModifiedFile(){
        File lastModifiedFile=getLastModifiedFile();
-        if (lastModifiedFile!=null)
-            lastModifiedFile.delete();
+       String path=lastModifiedFile.getPath();
+        if (lastModifiedFile.exists()) {
+            if (lastModifiedFile.delete())
+                System.out.println("file deleted: "+path);
+            else
+                System.out.println("File cant be deleted"+path);
+        }
     }
     public void openLastModifiedFile(){
         File fl=getLastModifiedFile();
         if (fl!=null&& fl.isFile())
            driver.navigate().to(fl.getPath());
     }
-    public void cleanupDownLoadDirectory(){
+    public void cleanupProjectDownLoadDir(){
         File dir = new File(downloadPath);
         if(dir.isDirectory()&&dir.listFiles().length>0){
           File[]files=  dir.listFiles();
@@ -116,7 +110,7 @@ public class ProjectActions {
     }
     public void waitToBeDownloaded(){
        int tabs= driver.getWindowHandles().size();
-       WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(25));
+       WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
        wait.until(ExpectedConditions.numberOfWindowsToBe(tabs-1));
     }
 
