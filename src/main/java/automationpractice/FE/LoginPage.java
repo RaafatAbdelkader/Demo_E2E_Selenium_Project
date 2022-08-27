@@ -1,8 +1,6 @@
 package automationpractice.FE;
 
-import basePg.ProjectActions;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import basePg.MyLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +13,6 @@ import java.util.Random;
 public class LoginPage {
     private WebDriver driver;
     private WebDriverWait wait;
-    private static Logger log = LogManager.getLogger(LoginPage.class.getName());
     private By createAccount_NewEmail =By.id("email_create");
     private By headingMsg =By.className("page-heading");
     private By submit_createAccount =By.id("SubmitCreate");
@@ -33,7 +30,7 @@ public class LoginPage {
         String newEmail="testX@gmail.com";
         Random r=new Random();
         newEmail=newEmail.replace("X",String.valueOf(r.nextInt(1000,100000)));
-        log.info("Created a new  random email: "+newEmail);
+        MyLogger.info("Created a new  random email: "+newEmail);
         return newEmail;
     }
     public void createAccount_enterNewEmail(String newEmail){
@@ -41,7 +38,7 @@ public class LoginPage {
         WebElement el=driver.findElement(createAccount_NewEmail);
         el.clear();
         el.sendKeys(newEmail);
-        log.info("Set "+newEmail+" as a new email to create an account");
+        MyLogger.info("Set "+newEmail+" as a new email to create an account");
      }
     public String getHeadingMsg() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(headingMsg));
@@ -50,23 +47,23 @@ public class LoginPage {
     public SignupPage navigateToSignupPage(){
        wait.until(ExpectedConditions.visibilityOfElementLocated(submit_createAccount));
        driver.findElement(submit_createAccount).click();
-       log.info("Navigated to signup page");
+       MyLogger.info("Navigated to signup page");
        return new SignupPage(driver);
     }
     public void setLoginUsername(String username) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(loginEmail));
         driver.findElement(loginEmail).sendKeys(username);
-        log.info("set username as: "+username);
+        MyLogger.info("set username as: "+username);
     }
     public void setLoginPassword(String password) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(loginPsw));
         driver.findElement(loginPsw).sendKeys(password);
-        log.info("set password as: "+password);
+        MyLogger.info("set password as: "+password);
     }
     public void submitLogin() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(submit_login));
         driver.findElement(submit_login).click();
-        log.info("submitted login");
+        MyLogger.info("submitted login");
     }
     public String getErrorMsg() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(errorMsg));

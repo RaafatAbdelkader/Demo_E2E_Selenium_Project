@@ -1,11 +1,8 @@
 package automationpractice.FE;
 
-import basePg.ProjectActions;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import basePg.MyLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,7 +11,6 @@ import java.time.Duration;
 public class ProductViewPage {
     private WebDriver driver;
     private WebDriverWait wait;
-    private static Logger log = LogManager.getLogger(ProductViewPage.class.getName());
     private By qty= By.id("quantity_wanted");
     private By alertMsg= By.xpath("//p[@class='fancybox-error']");
     private By addToCart= By.xpath("//p[@id='add_to_cart']/button");
@@ -33,12 +29,12 @@ public class ProductViewPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(qty));
         driver.findElement(qty).clear();
         driver.findElement(qty).sendKeys(quantity);
-        log.info("set quantity as: "+quantity);
+        MyLogger.info("set quantity as: "+quantity);
     }
 
     public String getErrorMSG() throws InterruptedException {
         if(isAddedToCart()){
-            log.warn("Error message not displayed. product added to cart");
+            MyLogger.warn("Error message not displayed. product added to cart");
             closeAddedToCartWindow();
             return null;
         } else{
@@ -66,13 +62,13 @@ public class ProductViewPage {
         if (isAddedToCart()) {
             wait.until(ExpectedConditions.elementToBeClickable(closeAddedToCartWindow));
             driver.findElement(closeAddedToCartWindow).click();
-            log.info("closed addedToCart window");
+            MyLogger.info("closed addedToCart window");
         }
     }
 
     public void addToCart(){
         wait.until(ExpectedConditions.elementToBeClickable(addToCart));
         driver.findElement(addToCart).click();
-        log.info("clicked add to cart");
+        MyLogger.info("clicked add to cart");
     }
 }

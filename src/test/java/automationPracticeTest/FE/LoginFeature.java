@@ -140,24 +140,4 @@ public class LoginFeature extends TestBase {
         Assert.assertTrue(actualErrorMSG.contains(dateOfBirth_errorMsg),
                 assertionMSG.replace("-M-",dateOfBirth_errorMsg));
     }
-
-
-    @Test
-    public void test(){
-        MyLogger.startTC(new Throwable().getStackTrace()[0].getClassName(),new Throwable().getStackTrace()[0].getMethodName());
-        MyLogger.info("test1 ");
-        MyLogger.info("test2 ");
-        MyLogger.info("test3 ");
-        MyLogger.endTC(new Throwable().getStackTrace()[0].getMethodName());
-    }
-    @Test
-    public void validation(){
-        MyLogger.startTC(new Throwable().getStackTrace()[0].getClassName(),new Throwable().getStackTrace()[0].getMethodName());
-        MyLogger.info("validation 1 ");
-        MyLogger.info("validation 2 ");
-        MyLogger.info("validation 3 ");
-        MyLogger.endTC(new Throwable().getStackTrace()[0].getMethodName());
-    }
-
-    //https://www.youtube.com/watch?v=0JQekot_5V8
 }

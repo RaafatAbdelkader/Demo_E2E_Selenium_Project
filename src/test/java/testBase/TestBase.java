@@ -27,7 +27,7 @@ public class TestBase {
     public String url= PropReader.getUrl();
     private DriverSetup setup=new DriverSetup();
 
-    @BeforeMethod(alwaysRun = true)
+    @BeforeClass(alwaysRun = true)
     public void before()  {
         driver= setup.initializeDriver();
         projectActions = new ProjectActions(driver);
@@ -38,7 +38,7 @@ public class TestBase {
         driver.manage().window().maximize();
         driver.get(url);
     }
-   @AfterMethod(alwaysRun = true)
+   @AfterClass(alwaysRun = true)
     public void postConditions() {
         driver.quit();
     }
@@ -66,7 +66,6 @@ public class TestBase {
         return  JsonReader.getDataUsingStatus(valuesToReturn,"invalid");
     }
 
-
     //---Data driven dynamically from Excel file---
     public Map<String,String> registerTData =excelReader.getRegisterTestData("UserX");
 
@@ -74,7 +73,6 @@ public class TestBase {
     public Object[][] getInvalidPersonalData() throws IOException {
         return excelReader.getInvalidPersonalData();
     }
-
 
 
 

@@ -1,8 +1,6 @@
 package automationpractice.FE;
 
-import basePg.ProjectActions;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import basePg.MyLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,11 +16,6 @@ import java.util.List;
 public class SummerDressesPage {
     private WebDriver driver;
     private Actions actions;
-    private static Logger log = LogManager.getLogger(SummerDressesPage.class.getName());
-    public SummerDressesPage(WebDriver driver) {
-        this.driver = driver;
-        actions=new Actions(driver);
-    }
     private By categoryName= By.xpath("//span[@class='cat-name']");
     private By headingCounter= By.xpath("//span[@class='heading-counter']");
     private By productItems= By.xpath("//ul[contains(@class,'product_list')]/li");
@@ -33,10 +26,14 @@ public class SummerDressesPage {
     private By addToCart= By.xpath("//li[contains(@class,'hovered')] //a[@title='Add to cart']");
 
 
+    public SummerDressesPage(WebDriver driver) {
+        this.driver = driver;
+        actions=new Actions(driver);
+    }
+
     public String getCategoryNameMSG(){
         return driver.findElement(categoryName).getText();
     }
-
     public String getHeadingCounterMSG(){
         return driver.findElement(headingCounter).getText();
     }
@@ -50,9 +47,8 @@ public class SummerDressesPage {
                 s.click();
         });
         waitToBeSorted(5);
-        log.info("Sorted by: "+text);
+        MyLogger.info("Sorted by: "+text);
     }
-
     public Boolean isOrderedDescending(){
         List<Double>priceList=getPriceList();
         Boolean isOrderedDescending =null;
@@ -60,7 +56,7 @@ public class SummerDressesPage {
         int lastIndex=sortedList.size()-1;
         for (int i =lastIndex ; i >=0; i--) {
             if (!(priceList.get(lastIndex-i).equals(sortedList.get(i)))) {
-                log.info("List is not in a descending order");
+                MyLogger.info("List is not in a descending order");
                 isOrderedDescending=false;
                 break;
             }else
@@ -74,7 +70,7 @@ public class SummerDressesPage {
         List<Double>sortedList= priceList.stream().sorted().toList();
         for (int i = 0; i < sortedList.size(); i++) {
             if (!(priceList.get(i).equals(sortedList.get(i)))){
-                log.info("List is not in a Ascending order");
+                MyLogger.info("List is not in a Ascending order");
                 isOrderedAscending= false;
                 break;
             }else
@@ -111,15 +107,14 @@ public class SummerDressesPage {
         WebElement product = getProductItem(productName);
         actions.moveToElement(product).build().perform();
         driver.findElement(addToCart).click();
-        log.info("Product ("+productName+") added to cart");
+        MyLogger.info("Product ("+productName+") added to cart");
     }
     public ProductViewPage viewProduct(String productName){
         WebElement productItem=getProductItem(productName);
         actions.moveToElement(productItem).build().perform();
         driver.findElement(view).click();
-        log.info("navigated to view page of the product: "+ productName);
+        MyLogger.info("navigated to view page of the product: "+ productName);
         return new ProductViewPage(driver);
     }
-
 
 }

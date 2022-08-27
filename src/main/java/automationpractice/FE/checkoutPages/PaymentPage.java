@@ -1,11 +1,8 @@
 package automationpractice.FE.checkoutPages;
 
-import basePg.ProjectActions;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import basePg.MyLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,7 +11,6 @@ import java.time.Duration;
 public class PaymentPage {
     private WebDriver driver;
     private WebDriverWait wait;
-    private static Logger log = LogManager.getLogger(PaymentPage.class.getName());
     private By headingMsg= By.className("page-heading");
     private By subHeadingMsg= By.className("page-subheading");
     private By payByCheck=By.className("cheque");
@@ -37,7 +33,7 @@ public class PaymentPage {
     public void selectPayByCheck(){
         waitForPageToBeLoaded();
         driver.findElement(payByCheck).click();
-        log.info("Selected payment by check");
+        MyLogger.info("Selected payment by check");
     }
     public String getSubHeadingMsg(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(subHeadingMsg));
@@ -46,7 +42,7 @@ public class PaymentPage {
     public void confirmOrder(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(confirmOrder));
         driver.findElement(confirmOrder).click();
-        log.info("order confirmed");
+        MyLogger.info("order confirmed");
     }
     public String getOrderConfirmationMsg(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertMsg));

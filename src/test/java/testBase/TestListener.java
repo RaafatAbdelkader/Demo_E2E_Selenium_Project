@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.annotations.Test;
+
 
 public class TestListener implements ITestListener {
     ExtentReports extentReports= ExtentReporterNG.config();
@@ -20,7 +20,10 @@ public class TestListener implements ITestListener {
     ThreadLocal<ExtentTest>exTest=new ThreadLocal<>();
     @Override
     public void onTestStart(ITestResult result) {
-//         MyLogger.startTC(result.getMethod().getMethodName());
+        String className =result.getTestClass().getName();
+        String methodName=result.getMethod().getMethodName();
+        MyLogger.startTC(className,methodName);
+
          ITestListener.super.onTestStart(result);
          test =extentReports.createTest(result.getMethod().getMethodName());
          exTest.set(test);
@@ -30,11 +33,13 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
         ITestListener.super.onTestSuccess(result);
+        MyLogger.testPassed(result.getMethod().getMethodName());
         exTest.get().log(Status.PASS,"Test passed");
     }
     @Override
     public void onTestFailure(ITestResult result) {
         ITestListener.super.onTestFailure(result);
+        MyLogger.testFailed(result.getMethod().getMethodName());
         WebDriver driver;
         exTest.get().fail(result.getThrowable());
         try {
@@ -52,6 +57,7 @@ public class TestListener implements ITestListener {
     public void onTestSkipped(ITestResult result) {
         ITestListener.super.onTestSkipped(result);
         exTest.get().skip(result.getThrowable());
+        MyLogger.testSkipped(result.getMethod().getMethodName());
     }
 
     @Override

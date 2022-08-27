@@ -1,12 +1,9 @@
 package automationpractice.FE;
 
 import automationpractice.FE.checkoutPages.SummeryPage;
-import basePg.ProjectActions;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import basePg.MyLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,13 +14,6 @@ public class Header {
     private WebDriver driver;
     private WebDriverWait wait;
     private Actions actions;
-    private static Logger log = LogManager.getLogger(Header.class.getName());
-    public Header( WebDriver driver){
-        this.driver=driver;
-        wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-        actions= new Actions(driver);
-    }
-
     private By loginBTN=By.className("login");
     private By searchInput= By.id("search_query_top");
     private By logoutBTN=By.className("logout");
@@ -36,6 +26,12 @@ public class Header {
     private By proceedToCheckout=By.xpath("//a[@title='Proceed to checkout']");
     private By addedTOCartSuccessMSG=By.xpath("//div[contains(@class,'layer_cart_product')] //h2");
     private By homePage=By.xpath("//a[@title='My Store']");
+
+    public Header( WebDriver driver){
+        this.driver=driver;
+        wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        actions= new Actions(driver);
+    }
 
     public LoginPage navigateToLoginPage(){
        logout();
@@ -50,7 +46,7 @@ public class Header {
         if (isLoggedIn()){
             wait.until(ExpectedConditions.elementToBeClickable(logoutBTN));
             driver.findElement(logoutBTN).click();
-            log.info(" clicked on Logout");
+            MyLogger.info(" clicked on Logout");
         }
 
     }
@@ -62,23 +58,23 @@ public class Header {
         actions.moveToElement(driver.findElement(women)).build().perform();
         wait.until(ExpectedConditions.visibilityOfElementLocated(summerDresses));
          driver.findElement(summerDresses).click();
-        log.info(" navigated to summer dresses page");
+         MyLogger.info(" navigated to summer dresses page");
          return new SummerDressesPage(driver);
     }
     public MyAccountPage navigateToMyAccount() {
         if (isLoggedIn()) {
             driver.findElement(myAccount).click();
-            log.info(" navigated to myAccount page");
+            MyLogger.info(" navigated to myAccount page");
             return new MyAccountPage(driver);
         }else {
-            log.info("Can not navigate to myAccount page: User is not logged in");
+            MyLogger.info("Can not navigate to myAccount page: User is not logged in");
             return null;
         }
     }
     public void viewShoppingCart(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(shoppingCart));
         actions.moveToElement(driver.findElement(shoppingCart)).build().perform();
-        log.info("opened shopping cart");
+        MyLogger.info("opened shopping cart");
     }
     public void searchInput(String searchWord){
         driver.findElement(searchInput).sendKeys(searchWord);
@@ -97,7 +93,7 @@ public class Header {
     public SummeryPage proceedToCheckout(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(addedTOCartSuccessMSG));
         driver.findElement(proceedToCheckout).click();
-        log.info("clicked on proceed to checkout");
+        MyLogger.info("clicked on proceed to checkout");
         return new SummeryPage(driver);
     }
     public String getAddedTOCartSuccessMSG(){
