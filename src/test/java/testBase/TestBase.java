@@ -42,7 +42,7 @@ public class TestBase {
     }
    @AfterClass(alwaysRun = true)
     public void postConditions() {
-        //driver.quit();
+        driver.quit();
     }
 
     //---Data driven  from json file--
