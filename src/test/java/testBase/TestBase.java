@@ -26,10 +26,8 @@ public class TestBase {
     public Actions actions;
     public String url= PropReader.getUrl();
     private DriverSetup setup=new DriverSetup();
-    public static Logger log = LogManager.getLogger(TestBase.class.getName());
 
-
-    @BeforeClass(alwaysRun = true)
+    @BeforeMethod(alwaysRun = true)
     public void before()  {
         driver= setup.initializeDriver();
         projectActions = new ProjectActions(driver);
@@ -40,7 +38,7 @@ public class TestBase {
         driver.manage().window().maximize();
         driver.get(url);
     }
-   @AfterClass(alwaysRun = true)
+   @AfterMethod(alwaysRun = true)
     public void postConditions() {
         driver.quit();
     }

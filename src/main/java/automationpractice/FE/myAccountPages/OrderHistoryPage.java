@@ -1,7 +1,11 @@
 package automationpractice.FE.myAccountPages;
 
+import automationpractice.FE.SignupPage;
 import automationpractice.FE.checkoutPages.ShippingPage;
 import basePg.ProjectActions;
+import basePg.PropReader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +18,8 @@ import java.util.List;
 public class OrderHistoryPage {
     private WebDriver driver;
     private WebDriverWait wait;
-    ProjectActions projectActions;
+    private static Logger log = LogManager.getLogger(OrderHistoryPage.class.getName());
+    private ProjectActions projectActions;
     private By navigationPage= By.className("navigation_page");
     private By orderItems= By.xpath("//table[@id='order-list']/tbody/tr");
     private By references= By.xpath("//td[contains(@class,'history_link')]/a");
@@ -36,6 +41,7 @@ public class OrderHistoryPage {
            }
         }
         projectActions.waitToBeDownloaded();
+        log.info("Invoice with reference number: "+ref+" has been downloaded");
     }
     private void waitForNavigation(){
         wait.until(ExpectedConditions.textToBePresentInElementLocated(navigationPage,"Order history"));

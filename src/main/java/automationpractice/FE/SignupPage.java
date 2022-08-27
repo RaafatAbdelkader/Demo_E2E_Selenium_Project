@@ -1,6 +1,7 @@
 package automationpractice.FE;
 
-import basePg.ProjectActions;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +14,7 @@ import java.time.Duration;
 public class SignupPage {
     private WebDriver driver;
     private WebDriverWait wait;
+    private static Logger log = LogManager.getLogger(SignupPage.class.getName());
     private By subHeadingMsg =By.xpath("//label[contains(text(),'Title')]/parent:: div/preceding-sibling:: h3[@class='page-subheading']");
     private By gender_radio_male= By.xpath("//input[@id='id_gender1']/parent::span");
     private By gender_radio_female=  By.xpath("//input[@id='id_gender2']/parent::span");
@@ -53,28 +55,33 @@ public class SignupPage {
         return driver.findElement(create_account_error).getText();
     }
     public void selectGender(String gender){
-        if (gender.equalsIgnoreCase("male"))
-                driver.findElement(gender_radio_male).click();
-        else if (gender.equalsIgnoreCase("female"))
+        if (gender.equalsIgnoreCase("male")) {
+            driver.findElement(gender_radio_male).click();
+        }else if (gender.equalsIgnoreCase("female"))
                 driver.findElement(gender_radio_female).click();
         else
-                System.out.println("Please provide a specific gender Male/ Female");
+            System.out.println("Please provide a specific gender Male/ Female");
+        log.info("Selected gender as: "+gender);
     }
     public void setFirstName(String firstName) {
         driver.findElement(firstname).sendKeys(firstName);
+        log.info("set firstname as: "+firstName);
     }
     public void setLastName(String lastName) {
          driver.findElement(lastname).sendKeys(lastName);
+        log.info("set lastName as: "+lastName);
     }
     public String getEmailPlaceholder() {
         return driver.findElement(email).getAttribute("value");
     }
-    public void changeDefaultEmail(String NEmail) {
+    public void changeDefaultEmail(String nEmail) {
       driver.findElement(email).clear();
-      driver.findElement(email).sendKeys(NEmail);
+      driver.findElement(email).sendKeys(nEmail);
+      log.info("changed the default email to: "+nEmail);
     }
     public void setPassword(String password) {
         driver.findElement(psw).sendKeys(password);
+        log.info("set password as: "+password);
     }
     //the date should be provided in this Format:"dd/mm/yyyy"
     public void selectDate(String date) {
@@ -91,16 +98,19 @@ public class SignupPage {
             Select select =new Select(element);
             select.selectByValue(dateValues[i]);
         }
-        System.out.println("Date: "+date+ " selected");
+        log.info("Date: "+date+ " selected");
     }
     public void selectNewsletter() {
-         driver.findElement(newsletter).click();
+        driver.findElement(newsletter).click();
+        log.info("selected news letter");
     }
     public void selectSpecialOffers() {
         driver.findElement(specialOffers).click();
+        log.info("selected special offers");
     }
     public void setAddressFirstname(String addressFirstnameV) {
-         driver.findElement(addressFirstname).sendKeys(addressFirstnameV);
+        driver.findElement(addressFirstname).sendKeys(addressFirstnameV);
+        log.info("set address firstname as: "+addressFirstnameV);
     }
     public String getAddressFirstnamePlaceholder() {
         return driver.findElement(addressFirstname).getAttribute("value");
@@ -110,23 +120,29 @@ public class SignupPage {
     }
     public void setAddressLastname(String addressLastnameV) {
          driver.findElement(addressLastname).sendKeys(addressLastnameV);
+         log.info("set address lastname as: "+addressLastnameV);
     }
     public void setAddress(String addressV) {
-         driver.findElement(address).sendKeys(addressV);
+        driver.findElement(address).sendKeys(addressV);
+        log.info("set address as: "+addressV);
     }
     public void setCity(String cityName) {
-         driver.findElement(city).sendKeys(cityName);
+        driver.findElement(city).sendKeys(cityName);
+        log.info("set cityName as: "+cityName);
     }
     public void setCompany(String companyName) {
-         driver.findElement(company).sendKeys(companyName);
+        driver.findElement(company).sendKeys(companyName);
+        log.info("set companyName as: "+companyName);
     }
     public void selectState(String stateName) {
         Select select= new Select(driver.findElement(state));
         select.selectByVisibleText(stateName);
+        log.info("selected stateName: "+stateName);
     }
-    public void selectCountry(String stateName) {
+    public void selectCountry(String vText) {
         Select select= new Select(driver.findElement(country));
-        select.selectByVisibleText(stateName);
+        select.selectByVisibleText(vText);
+        log.info("selected country: "+vText);
     }
     public String getDefaultSelectedCountry() {
         Select select= new Select(driver.findElement(country));
@@ -137,21 +153,27 @@ public class SignupPage {
     }
     public void setCountry(String countryName) {
         driver.findElement(country).sendKeys(countryName);
+        log.info("set country as: "+countryName);
     }
-    public void getAdditionalInfo(String info) {
-         driver.findElement(additionalInfo).sendKeys(info);
+    public void setAdditionalInfo(String info) {
+        driver.findElement(additionalInfo).sendKeys(info);
+        log.info("set additionalInfo as: "+info);
     }
     public void setPhone(String phoneV) {
         driver.findElement(phone).sendKeys(phoneV);
+        log.info("set phone as: "+phoneV);
     }
     public void setMobilePhone(String mobilePhoneV) {
         driver.findElement(mobilePhone).sendKeys(mobilePhoneV);
+        log.info("set mobile phone as: "+mobilePhoneV);
     }
     public void setAddressAlias(String addressAliasV) {
         driver.findElement(addressAlias).sendKeys(addressAliasV);
+        log.info("set address alias as: "+addressAliasV);
     }
     public void getSubmitAccount() {
        driver.findElement(submitAccount).click();
+       log.info("submitted account creation ");
     }
     public boolean genderIsChecked(String gender){
         if (gender.equalsIgnoreCase("male"))

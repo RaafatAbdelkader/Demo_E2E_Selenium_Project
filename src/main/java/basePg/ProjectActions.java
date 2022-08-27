@@ -1,6 +1,9 @@
 package basePg;
 
+import automationpractice.FE.SummerDressesPage;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -19,6 +22,7 @@ import java.util.Collection;
 public class ProjectActions {
     private WebDriver driver;
     private String downloadPath= PropReader.getDownloadPath();
+    private static Logger log = LogManager.getLogger(SummerDressesPage.class.getName());
     public ProjectActions(WebDriver driver) {
         this.driver = driver;
     }
@@ -39,12 +43,15 @@ public class ProjectActions {
     private String lastTabId=null;
     public String openNewTab(){
         lastTabId=driver.getWindowHandle();
-        return  driver.switchTo().newWindow(WindowType.TAB).getWindowHandle();
+        driver.switchTo().newWindow(WindowType.TAB);
+        log.info("switched to a new tab");
+        return driver.getWindowHandle();
     }
     public void returnToLastTab(){
-        if (lastTabId!=null)
+        if (lastTabId!=null) {
             driver.switchTo().window(lastTabId);
-        else
+            log.info("switched back to the last tab");
+        }else
             System.out.println("No last tab found");
     }
     public String getIdOfCurrentTab(){
@@ -83,16 +90,18 @@ public class ProjectActions {
        File lastModifiedFile=getLastModifiedFile();
        String path=lastModifiedFile.getPath();
         if (lastModifiedFile.exists()) {
-            if (lastModifiedFile.delete())
-                System.out.println("file deleted: "+path);
-            else
-                System.out.println("File cant be deleted"+path);
+            if (lastModifiedFile.delete()) {
+                log.info("Deleted file: " + path);
+            }else
+                log.info("File cant be deleted"+path);
         }
     }
     public void openLastModifiedFile(){
         File fl=getLastModifiedFile();
-        if (fl!=null&& fl.isFile())
-           driver.navigate().to(fl.getPath());
+        if (fl!=null&& fl.isFile()) {
+            driver.navigate().to(fl.getPath());
+            log.info("opened the last modified file: "+fl.getPath());
+        }
     }
     public void cleanupProjectDownLoadDir(){
         File dir = new File(downloadPath);
@@ -100,6 +109,7 @@ public class ProjectActions {
           File[]files=  dir.listFiles();
             for (File file:files) {
                 file.delete();
+                log.info("Deleted file: " + file.getPath());
             }
         }
 
@@ -114,4 +124,7 @@ public class ProjectActions {
        wait.until(ExpectedConditions.numberOfWindowsToBe(tabs-1));
     }
 
+    public void setInfo(){
+        MyLogger.info("hallo");
+    }
 }

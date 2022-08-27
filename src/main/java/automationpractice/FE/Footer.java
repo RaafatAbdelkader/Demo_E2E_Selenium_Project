@@ -1,5 +1,7 @@
 package automationpractice.FE;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,6 +10,7 @@ import java.util.List;
 
 public class Footer {
     private WebDriver driver;
+
     public Footer(WebDriver driver) {
         this.driver = driver;
     }
@@ -19,5 +22,6 @@ public class Footer {
        driver.findElements(url).forEach(s->links.add(s.getAttribute("href")));
        return links;
     }
+
 
 }

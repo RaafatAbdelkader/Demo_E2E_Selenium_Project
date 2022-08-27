@@ -1,6 +1,7 @@
 package testBase;
 
 import basePg.ExtentReporterNG;
+import basePg.MyLogger;
 import basePg.ProjectActions;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.Test;
 
 public class TestListener implements ITestListener {
     ExtentReports extentReports= ExtentReporterNG.config();
@@ -18,8 +20,8 @@ public class TestListener implements ITestListener {
     ThreadLocal<ExtentTest>exTest=new ThreadLocal<>();
     @Override
     public void onTestStart(ITestResult result) {
-
-        ITestListener.super.onTestStart(result);
+//         MyLogger.startTC(result.getMethod().getMethodName());
+         ITestListener.super.onTestStart(result);
          test =extentReports.createTest(result.getMethod().getMethodName());
          exTest.set(test);
     }
@@ -72,4 +74,6 @@ public class TestListener implements ITestListener {
         ITestListener.super.onFinish(context);
         extentReports.flush();
     }
+
+
 }

@@ -10,7 +10,6 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,10 +58,6 @@ public class DriverSetup {
         driverPrefs.put("profile.default_content_settings.popups",0);
         driverPrefs.put("download.default_directory",downloadPath);
         return driverPrefs;
-
-
     }
-
-
 
 }

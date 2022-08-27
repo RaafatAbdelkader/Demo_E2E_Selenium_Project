@@ -2,6 +2,8 @@ package automationpractice.FE;
 
 import automationpractice.FE.checkoutPages.SummeryPage;
 import basePg.ProjectActions;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +17,7 @@ public class Header {
     private WebDriver driver;
     private WebDriverWait wait;
     private Actions actions;
-
+    private static Logger log = LogManager.getLogger(Header.class.getName());
     public Header( WebDriver driver){
         this.driver=driver;
         wait=new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -48,6 +50,7 @@ public class Header {
         if (isLoggedIn()){
             wait.until(ExpectedConditions.elementToBeClickable(logoutBTN));
             driver.findElement(logoutBTN).click();
+            log.info(" clicked on Logout");
         }
 
     }
@@ -59,16 +62,23 @@ public class Header {
         actions.moveToElement(driver.findElement(women)).build().perform();
         wait.until(ExpectedConditions.visibilityOfElementLocated(summerDresses));
          driver.findElement(summerDresses).click();
+        log.info(" navigated to summer dresses page");
          return new SummerDressesPage(driver);
     }
-    public MyAccountPage navigateToMyAccount(){
-        if (isLoggedIn())
+    public MyAccountPage navigateToMyAccount() {
+        if (isLoggedIn()) {
             driver.findElement(myAccount).click();
-        return new MyAccountPage(driver);
+            log.info(" navigated to myAccount page");
+            return new MyAccountPage(driver);
+        }else {
+            log.info("Can not navigate to myAccount page: User is not logged in");
+            return null;
+        }
     }
     public void viewShoppingCart(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(shoppingCart));
         actions.moveToElement(driver.findElement(shoppingCart)).build().perform();
+        log.info("opened shopping cart");
     }
     public void searchInput(String searchWord){
         driver.findElement(searchInput).sendKeys(searchWord);
@@ -87,6 +97,7 @@ public class Header {
     public SummeryPage proceedToCheckout(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(addedTOCartSuccessMSG));
         driver.findElement(proceedToCheckout).click();
+        log.info("clicked on proceed to checkout");
         return new SummeryPage(driver);
     }
     public String getAddedTOCartSuccessMSG(){

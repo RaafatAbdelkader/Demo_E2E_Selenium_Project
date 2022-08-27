@@ -1,6 +1,8 @@
 package automationpractice.FE.checkoutPages;
 
 import basePg.ProjectActions;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +14,7 @@ import java.time.Duration;
 public class SummeryPage {
     private WebDriver driver;
     private WebDriverWait wait;
+    private static Logger log = LogManager.getLogger(SummeryPage.class.getName());
     private By cartTitle = By.id("cart_title");
     private By headingCounterMsg= By.className("heading-counter");
     private By productItems= By.xpath("//tr[contains(@class,'cart_item')]");
@@ -41,11 +44,13 @@ public class SummeryPage {
     public AddressPage proceedToAddressPage(){
         waitForPageToBeLoaded();
         driver.findElement(proceedToCheckout).click();
+        log.info("Clicked on proceed to checkout");
         return new AddressPage(driver);
     }
     public SigninPage proceedToSigninPage(){
         waitForPageToBeLoaded();
         driver.findElement(proceedToCheckout).click();
+        log.info("Clicked on proceed to checkout");
         return new SigninPage(driver);
     }
     public void waitForPageToBeLoaded(){

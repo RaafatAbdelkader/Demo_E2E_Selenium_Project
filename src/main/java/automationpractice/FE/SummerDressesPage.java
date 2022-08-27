@@ -1,6 +1,8 @@
 package automationpractice.FE;
 
 import basePg.ProjectActions;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +18,7 @@ import java.util.List;
 public class SummerDressesPage {
     private WebDriver driver;
     private Actions actions;
+    private static Logger log = LogManager.getLogger(SummerDressesPage.class.getName());
     public SummerDressesPage(WebDriver driver) {
         this.driver = driver;
         actions=new Actions(driver);
@@ -46,7 +49,8 @@ public class SummerDressesPage {
             if(s.getText().contains(text))
                 s.click();
         });
-       waitToBeSorted(5);
+        waitToBeSorted(5);
+        log.info("Sorted by: "+text);
     }
 
     public Boolean isOrderedDescending(){
@@ -56,7 +60,7 @@ public class SummerDressesPage {
         int lastIndex=sortedList.size()-1;
         for (int i =lastIndex ; i >=0; i--) {
             if (!(priceList.get(lastIndex-i).equals(sortedList.get(i)))) {
-                System.out.println("List is not in a descending order");
+                log.info("List is not in a descending order");
                 isOrderedDescending=false;
                 break;
             }else
@@ -70,7 +74,7 @@ public class SummerDressesPage {
         List<Double>sortedList= priceList.stream().sorted().toList();
         for (int i = 0; i < sortedList.size(); i++) {
             if (!(priceList.get(i).equals(sortedList.get(i)))){
-                System.out.println("List is not in a Ascending order");
+                log.info("List is not in a Ascending order");
                 isOrderedAscending= false;
                 break;
             }else
@@ -107,11 +111,13 @@ public class SummerDressesPage {
         WebElement product = getProductItem(productName);
         actions.moveToElement(product).build().perform();
         driver.findElement(addToCart).click();
+        log.info("Product ("+productName+") added to cart");
     }
     public ProductViewPage viewProduct(String productName){
         WebElement productItem=getProductItem(productName);
         actions.moveToElement(productItem).build().perform();
         driver.findElement(view).click();
+        log.info("navigated to view page of the product: "+ productName);
         return new ProductViewPage(driver);
     }
 
