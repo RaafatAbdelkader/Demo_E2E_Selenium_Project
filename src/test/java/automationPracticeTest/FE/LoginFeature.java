@@ -24,13 +24,13 @@ public class LoginFeature extends TestBase {
         loginPage.setLoginPassword(password);
         loginPage.submitLogin();
         myAccountPage=header.navigateToMyAccount();
-        if (status.equalsIgnoreCase("valid")) {
+        if (status.equalsIgnoreCase("valid"))
             Assert.assertEquals(myAccountPage.getPage_heading_msg(),
                     expectedMSG, "Not able to login" );
-        }else {
+        else
             Assert.assertTrue(loginPage.getErrorMsg().contains(expectedMSG),
                     "Message verification failed. expected:"+expectedMSG+" but found: "+ loginPage.getErrorMsg());
-        }
+
     }
 
     @Test(priority = 1,groups = "Smoke", description = "As an user I should be able to create an account using valid data")

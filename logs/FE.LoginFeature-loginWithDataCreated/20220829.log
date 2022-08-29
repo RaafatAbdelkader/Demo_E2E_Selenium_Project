@@ -1,6 +1,6 @@
-[INFO ] 2022-08-29 02:22:03.972-FE.LoginFeature-loginWithDataCreated - =========== TC: loginWithDataCreated started: ===========
-[INFO ] 2022-08-29 02:22:07.934-FE.LoginFeature-loginWithDataCreated - set username as: test71250@gmail.com
-[INFO ] 2022-08-29 02:22:08.080-FE.LoginFeature-loginWithDataCreated - set password as: ra@1245
-[INFO ] 2022-08-29 02:22:12.440-FE.LoginFeature-loginWithDataCreated - submitted login
-[INFO ] 2022-08-29 02:22:16.134-FE.LoginFeature-loginWithDataCreated -  navigated to myAccount page
-[INFO ] 2022-08-29 02:22:16.291-FE.LoginFeature-loginWithDataCreated - =========== TC: loginWithDataCreated passed  ===========
+[INFO ] 2022-08-29 03:02:09.463-FE.LoginFeature-loginWithDataCreated - =========== TC: loginWithDataCreated started: ===========
+[INFO ] 2022-08-29 03:02:12.216-FE.LoginFeature-loginWithDataCreated - set username as: test94408@gmail.com
+[INFO ] 2022-08-29 03:02:12.470-FE.LoginFeature-loginWithDataCreated - set password as: ra@1245
+[INFO ] 2022-08-29 03:02:15.047-FE.LoginFeature-loginWithDataCreated - submitted login
+[INFO ] 2022-08-29 03:02:16.468-FE.LoginFeature-loginWithDataCreated -  navigated to myAccount page
+[INFO ] 2022-08-29 03:02:16.636-FE.LoginFeature-loginWithDataCreated - =========== TC: loginWithDataCreated passed  ===========

@@ -1,7 +1,9 @@
 package automationpractice.FE;
 
 import basePg.MyLogger;
+import basePg.ProjectActions;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -16,6 +18,7 @@ import java.util.List;
 public class SummerDressesPage {
     private WebDriver driver;
     private Actions actions;
+    private ProjectActions projectActions;
     private By categoryName= By.xpath("//span[@class='cat-name']");
     private By headingCounter= By.xpath("//span[@class='heading-counter']");
     private By productItems= By.xpath("//ul[contains(@class,'product_list')]/li");
@@ -29,6 +32,7 @@ public class SummerDressesPage {
     public SummerDressesPage(WebDriver driver) {
         this.driver = driver;
         actions=new Actions(driver);
+        projectActions= new ProjectActions(driver);
     }
 
     public String getCategoryNameMSG(){
@@ -46,7 +50,8 @@ public class SummerDressesPage {
             if(s.getText().contains(text))
                 s.click();
         });
-        waitToBeSorted(5);
+        waitToBeSorted(10);
+        projectActions.scrollDown("250");
         MyLogger.info("Sorted by: "+text);
     }
     public Boolean isOrderedDescending(){

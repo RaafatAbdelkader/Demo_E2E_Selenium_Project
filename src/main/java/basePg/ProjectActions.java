@@ -26,6 +26,9 @@ public class ProjectActions {
         MyLogger.warn("Captured a screenshot: "+ path);
         return path;
     }
+    public void scrollDown(String px){
+        ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,"+px+")");
+    }
     public String getPDFContent(String filePath) throws IOException {
         File file=new File(filePath);
         PDDocument pdDoc = Loader.loadPDF(file);

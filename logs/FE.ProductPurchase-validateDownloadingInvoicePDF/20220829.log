@@ -1,9 +1,9 @@
-[INFO ] 2022-08-29 02:22:37.317-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF started: ===========
-[INFO ] 2022-08-29 02:22:38.658-FE.ProductPurchase-validateDownloadingInvoicePDF -  navigated to myAccount page
-[INFO ] 2022-08-29 02:22:40.834-FE.ProductPurchase-validateDownloadingInvoicePDF - navigated to order History page
-[INFO ] 2022-08-29 02:22:43.336-FE.ProductPurchase-validateDownloadingInvoicePDF - Invoice with reference number: YKAKPXBPJ has been downloaded
-[INFO ] 2022-08-29 02:22:43.435-FE.ProductPurchase-validateDownloadingInvoicePDF - switched to a new tab
-[INFO ] 2022-08-29 02:22:43.706-FE.ProductPurchase-validateDownloadingInvoicePDF - opened the last modified file: C:\projects\E2E_Demo_Project\download\IN239905.pdf
-[INFO ] 2022-08-29 02:22:45.741-FE.ProductPurchase-validateDownloadingInvoicePDF - switched back to the last tab
-[INFO ] 2022-08-29 02:22:45.744-FE.ProductPurchase-validateDownloadingInvoicePDF - Deleted file: C:\projects\E2E_Demo_Project\download\IN239905.pdf
-[INFO ] 2022-08-29 02:22:45.745-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF passed  ===========
+[INFO ] 2022-08-29 03:02:33.386-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF started: ===========
+[INFO ] 2022-08-29 03:02:35.396-FE.ProductPurchase-validateDownloadingInvoicePDF -  navigated to myAccount page
+[INFO ] 2022-08-29 03:02:37.250-FE.ProductPurchase-validateDownloadingInvoicePDF - navigated to order History page
+[INFO ] 2022-08-29 03:02:39.554-FE.ProductPurchase-validateDownloadingInvoicePDF - Invoice with reference number: ROZBRCMIS has been downloaded
+[INFO ] 2022-08-29 03:02:39.676-FE.ProductPurchase-validateDownloadingInvoicePDF - switched to a new tab
+[INFO ] 2022-08-29 03:02:39.816-FE.ProductPurchase-validateDownloadingInvoicePDF - opened the last modified file: C:\projects\E2E_Demo_Project\download\IN239917.pdf
+[INFO ] 2022-08-29 03:02:41.085-FE.ProductPurchase-validateDownloadingInvoicePDF - switched back to the last tab
+[INFO ] 2022-08-29 03:02:41.085-FE.ProductPurchase-validateDownloadingInvoicePDF - Deleted file: C:\projects\E2E_Demo_Project\download\IN239917.pdf
+[INFO ] 2022-08-29 03:02:41.085-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF passed  ===========
