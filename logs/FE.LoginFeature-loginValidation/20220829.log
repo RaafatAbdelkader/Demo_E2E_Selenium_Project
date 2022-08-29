@@ -1,0 +1,44 @@
+[INFO ] 2022-08-29 02:20:18.796-FE.LoginFeature-loginValidation - =========== TC: loginValidation started: ===========
+[INFO ] 2022-08-29 02:20:24.439-FE.LoginFeature-loginValidation -  clicked on Logout
+[INFO ] 2022-08-29 02:20:28.630-FE.LoginFeature-loginValidation - set username as: test8888@gmail.com
+[INFO ] 2022-08-29 02:20:28.749-FE.LoginFeature-loginValidation - set password as: A1hS#!25
+[INFO ] 2022-08-29 02:20:31.819-FE.LoginFeature-loginValidation - submitted login
+[INFO ] 2022-08-29 02:20:33.411-FE.LoginFeature-loginValidation -  navigated to myAccount page
+[INFO ] 2022-08-29 02:20:33.527-FE.LoginFeature-loginValidation - =========== TC: loginValidation passed  ===========
+[INFO ] 2022-08-29 02:20:33.536-FE.LoginFeature-loginValidation - =========== TC: loginValidation started: ===========
+[INFO ] 2022-08-29 02:20:37.599-FE.LoginFeature-loginValidation -  clicked on Logout
+[INFO ] 2022-08-29 02:20:40.263-FE.LoginFeature-loginValidation - set username as: Araafat.abdo@gmail.com
+[INFO ] 2022-08-29 02:20:40.467-FE.LoginFeature-loginValidation - set password as: $!@)(#%@@
+[INFO ] 2022-08-29 02:20:42.677-FE.LoginFeature-loginValidation - submitted login
+[INFO ] 2022-08-29 02:20:42.795-FE.LoginFeature-loginValidation - Can not navigate to myAccount page: User is not logged in
+[INFO ] 2022-08-29 02:20:42.973-FE.LoginFeature-loginValidation - =========== TC: loginValidation passed  ===========
+[INFO ] 2022-08-29 02:20:42.975-FE.LoginFeature-loginValidation - =========== TC: loginValidation started: ===========
+[INFO ] 2022-08-29 02:20:46.420-FE.LoginFeature-loginValidation - set username as: nasr@gmail.com
+[INFO ] 2022-08-29 02:20:46.803-FE.LoginFeature-loginValidation - set password as: 99999999999999999999999999999999999999
+[INFO ] 2022-08-29 02:20:50.464-FE.LoginFeature-loginValidation - submitted login
+[INFO ] 2022-08-29 02:20:50.605-FE.LoginFeature-loginValidation - Can not navigate to myAccount page: User is not logged in
+[INFO ] 2022-08-29 02:20:50.803-FE.LoginFeature-loginValidation - =========== TC: loginValidation passed  ===========
+[INFO ] 2022-08-29 02:20:50.805-FE.LoginFeature-loginValidation - =========== TC: loginValidation started: ===========
+[INFO ] 2022-08-29 02:20:54.591-FE.LoginFeature-loginValidation - set username as: moagmail.com
+[INFO ] 2022-08-29 02:20:54.807-FE.LoginFeature-loginValidation - set password as: guyg54@d
+[INFO ] 2022-08-29 02:20:57.187-FE.LoginFeature-loginValidation - submitted login
+[INFO ] 2022-08-29 02:20:57.287-FE.LoginFeature-loginValidation - Can not navigate to myAccount page: User is not logged in
+[INFO ] 2022-08-29 02:20:57.436-FE.LoginFeature-loginValidation - =========== TC: loginValidation passed  ===========
+[INFO ] 2022-08-29 02:20:57.436-FE.LoginFeature-loginValidation - =========== TC: loginValidation started: ===========
+[INFO ] 2022-08-29 02:21:02.848-FE.LoginFeature-loginValidation - set username as: test8888@gmail.com
+[INFO ] 2022-08-29 02:21:02.990-FE.LoginFeature-loginValidation - set password as: 
+[INFO ] 2022-08-29 02:21:04.496-FE.LoginFeature-loginValidation - submitted login
+[INFO ] 2022-08-29 02:21:04.594-FE.LoginFeature-loginValidation - Can not navigate to myAccount page: User is not logged in
+[INFO ] 2022-08-29 02:21:04.699-FE.LoginFeature-loginValidation - =========== TC: loginValidation passed  ===========
+[INFO ] 2022-08-29 02:21:04.702-FE.LoginFeature-loginValidation - =========== TC: loginValidation started: ===========
+[INFO ] 2022-08-29 02:21:07.307-FE.LoginFeature-loginValidation - set username as: 
+[INFO ] 2022-08-29 02:21:07.430-FE.LoginFeature-loginValidation - set password as: A1hS#!25
+[INFO ] 2022-08-29 02:21:08.861-FE.LoginFeature-loginValidation - submitted login
+[INFO ] 2022-08-29 02:21:09.001-FE.LoginFeature-loginValidation - Can not navigate to myAccount page: User is not logged in
+[INFO ] 2022-08-29 02:21:09.151-FE.LoginFeature-loginValidation - =========== TC: loginValidation passed  ===========
+[INFO ] 2022-08-29 02:21:09.151-FE.LoginFeature-loginValidation - =========== TC: loginValidation started: ===========
+[INFO ] 2022-08-29 02:21:12.117-FE.LoginFeature-loginValidation - set username as: 
+[INFO ] 2022-08-29 02:21:12.293-FE.LoginFeature-loginValidation - set password as: 
+[INFO ] 2022-08-29 02:21:15.629-FE.LoginFeature-loginValidation - submitted login
+[INFO ] 2022-08-29 02:21:15.742-FE.LoginFeature-loginValidation - Can not navigate to myAccount page: User is not logged in
+[INFO ] 2022-08-29 02:21:15.911-FE.LoginFeature-loginValidation - =========== TC: loginValidation passed  ===========

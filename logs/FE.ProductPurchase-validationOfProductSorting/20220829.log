@@ -1,0 +1,11 @@
+[INFO ] 2022-08-29 02:21:12.317-FE.ProductPurchase-validationOfProductSorting - =========== TC: validationOfProductSorting started: ===========
+[INFO ] 2022-08-29 02:21:18.324-FE.ProductPurchase-validationOfProductSorting -  clicked on Logout
+[INFO ] 2022-08-29 02:21:23.973-FE.ProductPurchase-validationOfProductSorting - set username as: test8888@gmail.com
+[INFO ] 2022-08-29 02:21:24.225-FE.ProductPurchase-validationOfProductSorting - set password as: A1hS#!25
+[INFO ] 2022-08-29 02:21:29.988-FE.ProductPurchase-validationOfProductSorting - submitted login
+[INFO ] 2022-08-29 02:21:38.201-FE.ProductPurchase-validationOfProductSorting -  navigated to summer dresses page
+[INFO ] 2022-08-29 02:21:48.831-FE.ProductPurchase-validationOfProductSorting - Sorted by: Price: Lowest first
+[INFO ] 2022-08-29 02:21:59.163-FE.ProductPurchase-validationOfProductSorting - Sorted by: Price: Highest first
+[INFO ] 2022-08-29 02:21:59.260-FE.ProductPurchase-validationOfProductSorting - List is not in a descending order
+[ERROR] 2022-08-29 02:21:59.260-FE.ProductPurchase-validationOfProductSorting - ===========TC: validationOfProductSorting failed  ===========
+[WARN ] 2022-08-29 02:22:00.022-FE.ProductPurchase-validationOfProductSorting - Capture a screenshot: C:\projects\E2E_Demo_Project/screenshots/failedTCs/validationOfProductSorting.png

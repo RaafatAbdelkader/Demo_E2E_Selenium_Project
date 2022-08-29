@@ -8,7 +8,7 @@
             <Routes pattern="$${ctx:logFilename}">
                 <Route>
                     <RollingFile name="Rolling-${ctx:logFilename}"
-                                 fileName="logs/${ctx:logFilename}-${date:yyyyMMdd}.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
+                                 fileName="logs/${ctx:logFilename}/${date:yyyyMMdd}.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz"
                                  append="true">
                         <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS}-${ctx:logFilename} - %msg%n" />
                         <SizeBasedTriggeringPolicy size="10 MB" />

@@ -1,0 +1,16 @@
+[INFO ] 2022-08-29 02:19:55.301-FE.ProductPurchase-AddToCartFunctionality - =========== TC: AddToCartFunctionality started: ===========
+[INFO ] 2022-08-29 02:20:05.338-FE.ProductPurchase-AddToCartFunctionality - set username as: test8888@gmail.com
+[INFO ] 2022-08-29 02:20:05.522-FE.ProductPurchase-AddToCartFunctionality - set password as: A1hS#!25
+[INFO ] 2022-08-29 02:20:10.473-FE.ProductPurchase-AddToCartFunctionality - submitted login
+[INFO ] 2022-08-29 02:20:10.704-FE.ProductPurchase-AddToCartFunctionality - opened shopping cart
+[INFO ] 2022-08-29 02:20:15.852-FE.ProductPurchase-AddToCartFunctionality -  navigated to summer dresses page
+[INFO ] 2022-08-29 02:20:20.743-FE.ProductPurchase-AddToCartFunctionality - navigated to view page of the product: Printed Chiffon Dress
+[INFO ] 2022-08-29 02:20:20.931-FE.ProductPurchase-AddToCartFunctionality - clicked add to cart
+[INFO ] 2022-08-29 02:20:26.807-FE.ProductPurchase-AddToCartFunctionality -  clicked on Logout
+[INFO ] 2022-08-29 02:20:30.138-FE.ProductPurchase-AddToCartFunctionality - set username as: test8888@gmail.com
+[INFO ] 2022-08-29 02:20:30.388-FE.ProductPurchase-AddToCartFunctionality - set password as: A1hS#!25
+[INFO ] 2022-08-29 02:20:33.194-FE.ProductPurchase-AddToCartFunctionality - submitted login
+[INFO ] 2022-08-29 02:20:33.424-FE.ProductPurchase-AddToCartFunctionality - opened shopping cart
+[INFO ] 2022-08-29 02:20:33.692-FE.ProductPurchase-AddToCartFunctionality - opened shopping cart
+[ERROR] 2022-08-29 02:20:33.730-FE.ProductPurchase-AddToCartFunctionality - ===========TC: AddToCartFunctionality failed  ===========
+[WARN ] 2022-08-29 02:20:34.786-FE.ProductPurchase-AddToCartFunctionality - Capture a screenshot: C:\projects\E2E_Demo_Project/screenshots/failedTCs/AddToCartFunctionality.png

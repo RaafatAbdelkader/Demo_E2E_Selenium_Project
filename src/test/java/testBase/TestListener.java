@@ -15,7 +15,6 @@ import org.testng.ITestResult;
 public class TestListener implements ITestListener {
     ExtentReports extentReports= ExtentReporterNG.config();
     ExtentTest test;
-
     //to run TCs parallel
     ThreadLocal<ExtentTest>exTest=new ThreadLocal<>();
     @Override
@@ -47,7 +46,6 @@ public class TestListener implements ITestListener {
             ProjectActions gm =new ProjectActions(driver);
             String scrPath= gm.getScreenshot(result.getName());
             exTest.get().addScreenCaptureFromPath(scrPath,result.getMethod().getMethodName());
-            System.out.println(scrPath);
         } catch (Exception e) {
             e.printStackTrace();
         }

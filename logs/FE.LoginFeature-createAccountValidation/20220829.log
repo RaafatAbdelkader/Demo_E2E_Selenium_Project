@@ -1,0 +1,19 @@
+[INFO ] 2022-08-29 02:19:55.261-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-08-29 02:20:04.472-FE.LoginFeature-createAccountValidation - Created a new  random email: test71250@gmail.com
+[INFO ] 2022-08-29 02:20:05.123-FE.LoginFeature-createAccountValidation - Set test71250@gmail.com as a new email to create an account
+[INFO ] 2022-08-29 02:20:05.378-FE.LoginFeature-createAccountValidation - Navigated to signup page
+[INFO ] 2022-08-29 02:20:08.972-FE.LoginFeature-createAccountValidation - Selected gender as: Male
+[INFO ] 2022-08-29 02:20:09.184-FE.LoginFeature-createAccountValidation - set firstname as: Raafat
+[INFO ] 2022-08-29 02:20:09.406-FE.LoginFeature-createAccountValidation - set lastName as: Abdelkader
+[INFO ] 2022-08-29 02:20:09.681-FE.LoginFeature-createAccountValidation - set password as: ra@1245
+[INFO ] 2022-08-29 02:20:10.347-FE.LoginFeature-createAccountValidation - Date: 15/10/1993 selected
+[INFO ] 2022-08-29 02:20:10.501-FE.LoginFeature-createAccountValidation - selected news letter
+[INFO ] 2022-08-29 02:20:10.654-FE.LoginFeature-createAccountValidation - selected special offers
+[INFO ] 2022-08-29 02:20:10.989-FE.LoginFeature-createAccountValidation - set companyName as: Qcentris
+[INFO ] 2022-08-29 02:20:11.178-FE.LoginFeature-createAccountValidation - set address as: Madi 2
+[INFO ] 2022-08-29 02:20:11.385-FE.LoginFeature-createAccountValidation - set cityName as: NewYork
+[INFO ] 2022-08-29 02:20:11.624-FE.LoginFeature-createAccountValidation - selected stateName: Montana
+[INFO ] 2022-08-29 02:20:12.225-FE.LoginFeature-createAccountValidation - set mobile phone as: 1028743586
+[INFO ] 2022-08-29 02:20:16.137-FE.LoginFeature-createAccountValidation - submitted account creation 
+[INFO ] 2022-08-29 02:20:18.590-FE.LoginFeature-createAccountValidation -  navigated to myAccount page
+[INFO ] 2022-08-29 02:20:18.760-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation passed  ===========

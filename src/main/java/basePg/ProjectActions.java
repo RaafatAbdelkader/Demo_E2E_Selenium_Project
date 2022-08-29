@@ -21,9 +21,9 @@ public class ProjectActions {
     }
     public String getScreenshot(String image_name) throws IOException {
         File screenshot = driver.findElement(By.tagName("Body")).getScreenshotAs(OutputType.FILE);
-        String path= System.getProperty("user.dir")+"/scrShots/failedTCs/" + image_name+".png";
+        String path= System.getProperty("user.dir")+"/screenshots/failedTCs/" + image_name+".png";
         FileUtils.copyFile(screenshot, new File(path));
-        System.out.println("Took a screenshot: "+ path);
+        MyLogger.warn("Captured a screenshot: "+ path);
         return path;
     }
     public String getPDFContent(String filePath) throws IOException {
@@ -82,7 +82,7 @@ public class ProjectActions {
     public void deleteLastModifiedFile(){
        File lastModifiedFile=getLastModifiedFile();
        String path=lastModifiedFile.getPath();
-        if (lastModifiedFile.exists()) {
+        if (lastModifiedFile.exists()&lastModifiedFile.isFile()) {
             if (lastModifiedFile.delete()) {
                 MyLogger.info("Deleted file: " + path);
             }else
@@ -101,6 +101,7 @@ public class ProjectActions {
         if(dir.isDirectory()&&dir.listFiles().length>0){
           File[]files=  dir.listFiles();
             for (File file:files) {
+                if (file.isFile())
                 file.delete();
                 MyLogger.info("Deleted file: " + file.getPath());
             }
@@ -109,7 +110,10 @@ public class ProjectActions {
     }
     public Integer getNumOfFilesExist(){
         File dir = new File(downloadPath);
-        return dir.listFiles().length;
+        if (dir.isDirectory()& dir.exists())
+            return dir.listFiles().length;
+        else
+            return 0;
     }
     public void waitToBeDownloaded(){
        int tabs= driver.getWindowHandles().size();
@@ -117,7 +121,4 @@ public class ProjectActions {
        wait.until(ExpectedConditions.numberOfWindowsToBe(tabs-1));
     }
 
-    public void setInfo(){
-        MyLogger.info("hallo");
-    }
 }
