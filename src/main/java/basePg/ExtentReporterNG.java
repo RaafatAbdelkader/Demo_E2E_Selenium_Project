@@ -6,6 +6,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 public class ExtentReporterNG {
      static ExtentSparkReporter sparkReporter;
      static ExtentReports extentReports;
+     private static  String browserName=PropReader.getBrowserName();
 
     //this is to get the result report at //reports//index.html
     public static ExtentReports config() {
@@ -16,6 +17,7 @@ public class ExtentReporterNG {
         extentReports = new ExtentReports();
         extentReports.attachReporter(sparkReporter);
         extentReports.setSystemInfo("Tester", "Raafat Abdelkader");
+        extentReports.setSystemInfo("Browser", browserName);
         return extentReports;
 
     }

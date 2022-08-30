@@ -92,7 +92,7 @@ public class ProductPurchase extends TestBase {
                 "Products should be in a descending order");  //bug
     }
     @Test(description = "validation of quantity with invalid entries")
-    public void productQuantityValidation() throws InterruptedException {
+    public void productQuantityValidation(){
         loginPage=header.navigateToLoginPage();
         loginPage.login(username,password);
         summerDressesPage=header.navigateToSummerDressesPage();
@@ -127,7 +127,7 @@ public class ProductPurchase extends TestBase {
         header.navigateToLoginPage();
         loginPage.login(username,password);
         Assert.assertEquals(header.getNumOfProductItemsAddedToCart(),
-                header.getNumOfProductItemsAddedToCart()+1,"product added to the cart can not be found");
+                numOfProductItemsAddedToCart+1,"product added to the cart can not be found");
     }
 
 }

@@ -1,0 +1,52 @@
+[INFO ] 2022-08-30 19:07:35.980-FE.LoginFeature-accountCreationUsingInvalidPersonalData - =========== TC: accountCreationUsingInvalidPersonalData started: ===========
+[INFO ] 2022-08-30 19:07:42.187-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Created a new  random email: test31840@gmail.com
+[INFO ] 2022-08-30 19:07:42.333-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Set test31840@gmail.com as a new email to create an account
+[INFO ] 2022-08-30 19:07:42.415-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Navigated to signup page
+[INFO ] 2022-08-30 19:07:44.772-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Selected gender as: male
+[INFO ] 2022-08-30 19:07:44.836-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Selected gender as: female
+[INFO ] 2022-08-30 19:07:44.942-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set firstname as: 
+[INFO ] 2022-08-30 19:07:45.022-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set lastName as: 
+[INFO ] 2022-08-30 19:07:45.185-FE.LoginFeature-accountCreationUsingInvalidPersonalData - changed the default email to: 
+[INFO ] 2022-08-30 19:07:45.286-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set password as: 
+[INFO ] 2022-08-30 19:07:45.362-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Date:  selected
+[INFO ] 2022-08-30 19:07:48.530-FE.LoginFeature-accountCreationUsingInvalidPersonalData - submitted account creation 
+[INFO ] 2022-08-30 19:07:48.571-FE.LoginFeature-accountCreationUsingInvalidPersonalData - =========== TC: accountCreationUsingInvalidPersonalData passed  ===========
+[INFO ] 2022-08-30 19:07:48.575-FE.LoginFeature-accountCreationUsingInvalidPersonalData - =========== TC: accountCreationUsingInvalidPersonalData started: ===========
+[INFO ] 2022-08-30 19:07:52.050-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Created a new  random email: test44327@gmail.com
+[INFO ] 2022-08-30 19:07:52.202-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Set test44327@gmail.com as a new email to create an account
+[INFO ] 2022-08-30 19:07:52.266-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Navigated to signup page
+[INFO ] 2022-08-30 19:07:57.270-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Selected gender as: male
+[INFO ] 2022-08-30 19:07:57.319-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Selected gender as: female
+[INFO ] 2022-08-30 19:07:57.415-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set firstname as: 9999999999
+[INFO ] 2022-08-30 19:07:57.490-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set lastName as: 88888888885
+[INFO ] 2022-08-30 19:07:57.614-FE.LoginFeature-accountCreationUsingInvalidPersonalData - changed the default email to: raadelkader.gmail.com
+[INFO ] 2022-08-30 19:07:57.690-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set password as: 123
+[INFO ] 2022-08-30 19:07:57.882-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Date: 15//1993 selected
+[INFO ] 2022-08-30 19:08:08.216-FE.LoginFeature-accountCreationUsingInvalidPersonalData - submitted account creation 
+[INFO ] 2022-08-30 19:08:08.269-FE.LoginFeature-accountCreationUsingInvalidPersonalData - =========== TC: accountCreationUsingInvalidPersonalData passed  ===========
+[INFO ] 2022-08-30 19:08:08.270-FE.LoginFeature-accountCreationUsingInvalidPersonalData - =========== TC: accountCreationUsingInvalidPersonalData started: ===========
+[INFO ] 2022-08-30 19:08:23.754-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Created a new  random email: test11840@gmail.com
+[INFO ] 2022-08-30 19:08:23.898-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Set test11840@gmail.com as a new email to create an account
+[INFO ] 2022-08-30 19:08:23.994-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Navigated to signup page
+[INFO ] 2022-08-30 19:08:31.211-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Selected gender as: male
+[INFO ] 2022-08-30 19:08:31.292-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Selected gender as: female
+[INFO ] 2022-08-30 19:08:31.429-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set firstname as: !#?//?@//
+[INFO ] 2022-08-30 19:08:31.624-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set lastName as: !#?//?@//
+[INFO ] 2022-08-30 19:08:31.836-FE.LoginFeature-accountCreationUsingInvalidPersonalData - changed the default email to: test@
+[INFO ] 2022-08-30 19:08:32.056-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set password as: /999999999999999999999999999999999999999999999999999999999999999
+[INFO ] 2022-08-30 19:08:32.504-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Date: /10/1994 selected
+[INFO ] 2022-08-30 19:08:35.854-FE.LoginFeature-accountCreationUsingInvalidPersonalData - submitted account creation 
+[INFO ] 2022-08-30 19:08:35.901-FE.LoginFeature-accountCreationUsingInvalidPersonalData - =========== TC: accountCreationUsingInvalidPersonalData passed  ===========
+[INFO ] 2022-08-30 19:08:35.903-FE.LoginFeature-accountCreationUsingInvalidPersonalData - =========== TC: accountCreationUsingInvalidPersonalData started: ===========
+[INFO ] 2022-08-30 19:08:47.024-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Created a new  random email: test35251@gmail.com
+[INFO ] 2022-08-30 19:08:47.175-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Set test35251@gmail.com as a new email to create an account
+[INFO ] 2022-08-30 19:08:47.271-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Navigated to signup page
+[INFO ] 2022-08-30 19:08:52.214-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Selected gender as: male
+[INFO ] 2022-08-30 19:08:52.274-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Selected gender as: female
+[INFO ] 2022-08-30 19:08:52.387-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set firstname as: 15.15.1998
+[INFO ] 2022-08-30 19:08:52.481-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set lastName as: 15.15.1998
+[INFO ] 2022-08-30 19:08:52.599-FE.LoginFeature-accountCreationUsingInvalidPersonalData - changed the default email to: 77777
+[INFO ] 2022-08-30 19:08:52.669-FE.LoginFeature-accountCreationUsingInvalidPersonalData - set password as: x
+[INFO ] 2022-08-30 19:08:52.824-FE.LoginFeature-accountCreationUsingInvalidPersonalData - Date: 15/10/ selected
+[INFO ] 2022-08-30 19:09:03.538-FE.LoginFeature-accountCreationUsingInvalidPersonalData - submitted account creation 
+[INFO ] 2022-08-30 19:09:03.594-FE.LoginFeature-accountCreationUsingInvalidPersonalData - =========== TC: accountCreationUsingInvalidPersonalData passed  ===========

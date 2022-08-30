@@ -7,8 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import testBase.TestBase;
 
-import java.lang.reflect.Method;
-
 public class LoginFeature extends TestBase {
     String newEmail= null;
     String registeredEmail=null;

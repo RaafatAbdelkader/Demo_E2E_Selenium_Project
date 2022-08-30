@@ -87,8 +87,8 @@ public class SummerDressesPage {
         List<Double>priceList = new ArrayList<>();
         driver.findElements(productPrice)
                 .forEach(s->{
-                    String[] priceValue = s.getText().trim().split("\\$");
-                    priceList.add(Double.valueOf(priceValue[1]));
+                    String[] priceValue = s.getText().split("\\$");
+                    priceList.add(Double.valueOf(priceValue[1].trim()));
                 });
 
         return priceList;

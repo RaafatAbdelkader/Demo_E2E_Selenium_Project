@@ -1,0 +1,9 @@
+[INFO ] 2022-08-30 19:09:45.811-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF started: ===========
+[INFO ] 2022-08-30 19:09:50.305-FE.ProductPurchase-validateDownloadingInvoicePDF -  navigated to myAccount page
+[INFO ] 2022-08-30 19:10:01.319-FE.ProductPurchase-validateDownloadingInvoicePDF - navigated to order History page
+[INFO ] 2022-08-30 19:10:12.574-FE.ProductPurchase-validateDownloadingInvoicePDF - Invoice with reference number: AAABYFMEW has been downloaded
+[INFO ] 2022-08-30 19:10:12.624-FE.ProductPurchase-validateDownloadingInvoicePDF - switched to a new tab
+[INFO ] 2022-08-30 19:10:12.896-FE.ProductPurchase-validateDownloadingInvoicePDF - opened the last modified file: C:\projects\E2E_Demo_Project\download\IN240782.pdf
+[INFO ] 2022-08-30 19:10:14.083-FE.ProductPurchase-validateDownloadingInvoicePDF - switched back to the last tab
+[INFO ] 2022-08-30 19:10:14.086-FE.ProductPurchase-validateDownloadingInvoicePDF - Deleted file: C:\projects\E2E_Demo_Project\download\IN240782.pdf
+[INFO ] 2022-08-30 19:10:14.086-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF passed  ===========

@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="19" passed="16" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-28T01:22:15 EET" name="All Test Suite" finished-at="2022-08-28T01:25:33 EET" duration-ms="198116">
+  <suite started-at="2022-08-30T19:03:00 EET" name="All Test Suite" finished-at="2022-08-30T19:10:35 EET" duration-ms="455296">
     <groups>
       <group name="Smoke">
         <method signature="LoginFeature.createAccountValidation()[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" name="createAccountValidation" class="automationPracticeTest.FE.LoginFeature"/>
@@ -12,17 +12,17 @@
         <method signature="ProductPurchase.validateDownloadingInvoicePDF()[pri:1, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" name="validateDownloadingInvoicePDF" class="automationPracticeTest.FE.ProductPurchase"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2022-08-28T01:22:15 EET" name="Regression" finished-at="2022-08-28T01:25:33 EET" duration-ms="198116">
+    <test started-at="2022-08-30T19:03:00 EET" name="Regression" finished-at="2022-08-30T19:10:35 EET" duration-ms="455296">
       <class name="automationPracticeTest.FE.LoginFeature">
-        <test-method is-config="true" signature="before()[pri:0, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:22:15 EET" name="before" finished-at="2022-08-28T01:22:26 EET" duration-ms="10356" status="PASS">
+        <test-method is-config="true" signature="before()[pri:0, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:03:00 EET" name="before" finished-at="2022-08-30T19:03:31 EET" duration-ms="30870" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="createAccountValidation()[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:22:26 EET" name="createAccountValidation" description="As an user I should be able to create an account using valid data" finished-at="2022-08-28T01:22:49 EET" duration-ms="23642" status="PASS">
+        <test-method signature="createAccountValidation()[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:03:31 EET" name="createAccountValidation" description="As an user I should be able to create an account using valid data" finished-at="2022-08-30T19:04:12 EET" duration-ms="40938" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAccountValidation -->
-        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:22:49 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-28T01:23:09 EET" duration-ms="19652" status="PASS">
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:04:12 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-30T19:05:33 EET" duration-ms="81377" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -48,7 +48,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidation -->
-        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:23:09 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-28T01:23:22 EET" duration-ms="12755" status="PASS">
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:05:33 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-30T19:06:01 EET" duration-ms="28307" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -74,7 +74,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidation -->
-        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:23:22 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-28T01:23:32 EET" duration-ms="9795" status="PASS">
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:06:01 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-30T19:06:15 EET" duration-ms="13537" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -100,7 +100,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidation -->
-        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:23:32 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-28T01:23:45 EET" duration-ms="13108" status="PASS">
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:06:15 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-30T19:06:27 EET" duration-ms="12218" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -126,7 +126,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidation -->
-        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:23:45 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-28T01:23:53 EET" duration-ms="7932" status="PASS">
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:06:27 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-30T19:06:42 EET" duration-ms="15006" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -152,7 +152,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidation -->
-        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:23:53 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-28T01:24:02 EET" duration-ms="8947" status="PASS">
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:06:42 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-30T19:07:14 EET" duration-ms="31626" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -178,7 +178,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidation -->
-        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:24:02 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-28T01:24:08 EET" duration-ms="6683" status="PASS">
+        <test-method signature="loginValidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:07:14 EET" name="loginValidation" data-provider="getAllTestUsers" finished-at="2022-08-30T19:07:35 EET" duration-ms="21814" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -204,7 +204,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidation -->
-        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:24:08 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-28T01:24:21 EET" duration-ms="12739" status="PASS">
+        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:07:35 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-30T19:07:48 EET" duration-ms="12591" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -260,7 +260,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountCreationUsingInvalidPersonalData -->
-        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:24:21 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-28T01:24:33 EET" duration-ms="11660" status="PASS">
+        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:07:48 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-30T19:08:08 EET" duration-ms="19696" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -316,7 +316,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountCreationUsingInvalidPersonalData -->
-        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:24:33 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-28T01:24:43 EET" duration-ms="9829" status="PASS">
+        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:08:08 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-30T19:08:35 EET" duration-ms="27631" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -372,7 +372,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountCreationUsingInvalidPersonalData -->
-        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:24:43 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-28T01:24:55 EET" duration-ms="12203" status="PASS">
+        <test-method signature="accountCreationUsingInvalidPersonalData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:08:35 EET" name="accountCreationUsingInvalidPersonalData" description="As an user I should not be able to create an account using invalid PersonalData" data-provider="getInvalidPersonalData" finished-at="2022-08-30T19:09:03 EET" duration-ms="27692" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -428,25 +428,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountCreationUsingInvalidPersonalData -->
-        <test-method signature="loginWithDataCreated()[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:24:55 EET" name="loginWithDataCreated" description="The user is able to log in with Login data created" finished-at="2022-08-28T01:25:09 EET" depends-on-methods="automationPracticeTest.FE.LoginFeature.createAccountValidation" duration-ms="13923" status="PASS">
+        <test-method signature="loginWithDataCreated()[pri:1, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:09:03 EET" name="loginWithDataCreated" description="The user is able to log in with Login data created" finished-at="2022-08-30T19:09:38 EET" depends-on-methods="automationPracticeTest.FE.LoginFeature.createAccountValidation" duration-ms="34692" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithDataCreated -->
-        <test-method signature="accountCreationUsingRegisteredEmail()[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:25:09 EET" name="accountCreationUsingRegisteredEmail" description="An user should not be able to create an account using an email already registered before" finished-at="2022-08-28T01:25:28 EET" depends-on-methods="automationPracticeTest.FE.LoginFeature.createAccountValidation" duration-ms="19064" status="PASS">
+        <test-method signature="accountCreationUsingRegisteredEmail()[pri:2, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:09:38 EET" name="accountCreationUsingRegisteredEmail" description="An user should not be able to create an account using an email already registered before" finished-at="2022-08-30T19:10:35 EET" depends-on-methods="automationPracticeTest.FE.LoginFeature.createAccountValidation" duration-ms="56850" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountCreationUsingRegisteredEmail -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-28T01:25:28 EET" name="postConditions" finished-at="2022-08-28T01:25:28 EET" duration-ms="399" status="PASS">
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:automationPracticeTest.FE.LoginFeature@543e593]" started-at="2022-08-30T19:10:35 EET" name="postConditions" finished-at="2022-08-30T19:10:35 EET" duration-ms="301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postConditions -->
       </class> <!-- automationPracticeTest.FE.LoginFeature -->
       <class name="automationPracticeTest.FE.ProductPurchase">
-        <test-method is-config="true" signature="before()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-28T01:22:15 EET" name="before" finished-at="2022-08-28T01:22:26 EET" duration-ms="10380" status="PASS">
+        <test-method is-config="true" signature="before()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-30T19:03:00 EET" name="before" finished-at="2022-08-30T19:03:31 EET" duration-ms="31039" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="AddToCartFunctionality()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-28T01:22:26 EET" name="AddToCartFunctionality" description="verify product is still added to cart after user is logged out" finished-at="2022-08-28T01:23:08 EET" duration-ms="42201" status="FAIL">
+        <test-method signature="AddToCartFunctionality()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-30T19:03:31 EET" name="AddToCartFunctionality" description="verify product is still added to cart after user is logged out" finished-at="2022-08-30T19:05:21 EET" duration-ms="110657" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[product added to the cart can not be found expected [1] but found [0]]]>
@@ -480,7 +480,7 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddToCartFunctionality -->
-        <test-method signature="productQuantityValidation()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-28T01:23:09 EET" name="productQuantityValidation" description="validation of quantity with invalid entries" finished-at="2022-08-28T01:23:55 EET" duration-ms="46036" status="FAIL">
+        <test-method signature="productQuantityValidation()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-30T19:05:22 EET" name="productQuantityValidation" description="validation of quantity with invalid entries" finished-at="2022-08-30T19:06:32 EET" duration-ms="69946" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Negative quantity.] but found [null]]]>
@@ -515,7 +515,7 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productQuantityValidation -->
-        <test-method signature="validationOfProductSorting()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-28T01:23:55 EET" name="validationOfProductSorting" description="verify an user can sort by price" finished-at="2022-08-28T01:24:38 EET" duration-ms="42837" status="FAIL">
+        <test-method signature="validationOfProductSorting()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-30T19:06:32 EET" name="validationOfProductSorting" description="verify an user can sort by price" finished-at="2022-08-30T19:07:55 EET" duration-ms="82635" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Products should be in a descending order expected [true] but found [false]]]>
@@ -547,15 +547,15 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validationOfProductSorting -->
-        <test-method signature="productPurchase_E2E()[pri:1, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-28T01:24:39 EET" name="productPurchase_E2E" description="productPurchase_E2E" finished-at="2022-08-28T01:25:21 EET" duration-ms="42071" status="PASS">
+        <test-method signature="productPurchase_E2E()[pri:1, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-30T19:07:55 EET" name="productPurchase_E2E" description="productPurchase_E2E" finished-at="2022-08-30T19:09:45 EET" duration-ms="110245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productPurchase_E2E -->
-        <test-method signature="validateDownloadingInvoicePDF()[pri:1, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-28T01:25:21 EET" name="validateDownloadingInvoicePDF" description="verify invoice pdf can be downloaded successfully and it has the right product and reference" finished-at="2022-08-28T01:25:33 EET" depends-on-methods="automationPracticeTest.FE.ProductPurchase.productPurchase_E2E" duration-ms="12374" status="PASS">
+        <test-method signature="validateDownloadingInvoicePDF()[pri:1, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-30T19:09:45 EET" name="validateDownloadingInvoicePDF" description="verify invoice pdf can be downloaded successfully and it has the right product and reference" finished-at="2022-08-30T19:10:14 EET" depends-on-methods="automationPracticeTest.FE.ProductPurchase.productPurchase_E2E" duration-ms="28275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateDownloadingInvoicePDF -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-28T01:25:33 EET" name="postConditions" finished-at="2022-08-28T01:25:33 EET" duration-ms="361" status="PASS">
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:automationPracticeTest.FE.ProductPurchase@7a2e0858]" started-at="2022-08-30T19:10:14 EET" name="postConditions" finished-at="2022-08-30T19:10:14 EET" duration-ms="433" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postConditions -->

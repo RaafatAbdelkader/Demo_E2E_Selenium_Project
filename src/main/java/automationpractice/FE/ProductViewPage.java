@@ -32,9 +32,9 @@ public class ProductViewPage {
         MyLogger.info("set quantity as: "+quantity);
     }
 
-    public String getErrorMSG() throws InterruptedException {
+    public String getErrorMSG(){
         if(isAddedToCart()){
-            MyLogger.warn("Error message not displayed. product added to cart");
+            MyLogger.warn("Error message not displayed. product is added to cart");
             closeAddedToCartWindow();
             return null;
         } else{
@@ -46,7 +46,7 @@ public class ProductViewPage {
 
     public boolean isAddedToCart(){
         wait.until(driver->{
-            Boolean displayed=false;
+            Boolean displayed;
             displayed=driver.findElement(addedTOCartSuccessMSG).isDisplayed() ||
                     driver.findElement(alertMsg).isDisplayed();
             return displayed;
@@ -58,7 +58,7 @@ public class ProductViewPage {
             return false;
     }
 
-    public void closeAddedToCartWindow() throws InterruptedException {
+    public void closeAddedToCartWindow(){
         if (isAddedToCart()) {
             wait.until(ExpectedConditions.elementToBeClickable(closeAddedToCartWindow));
             driver.findElement(closeAddedToCartWindow).click();

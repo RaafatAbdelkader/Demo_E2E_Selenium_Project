@@ -1,0 +1,17 @@
+[INFO ] 2022-08-30 19:05:22.301-FE.ProductPurchase-productQuantityValidation - =========== TC: productQuantityValidation started: ===========
+[INFO ] 2022-08-30 19:05:45.696-FE.ProductPurchase-productQuantityValidation -  clicked on Logout
+[INFO ] 2022-08-30 19:05:49.959-FE.ProductPurchase-productQuantityValidation - set username as: test8888@gmail.com
+[INFO ] 2022-08-30 19:05:50.119-FE.ProductPurchase-productQuantityValidation - set password as: A1hS#!25
+[INFO ] 2022-08-30 19:05:59.864-FE.ProductPurchase-productQuantityValidation - submitted login
+[INFO ] 2022-08-30 19:06:05.904-FE.ProductPurchase-productQuantityValidation -  navigated to summer dresses page
+[INFO ] 2022-08-30 19:06:12.124-FE.ProductPurchase-productQuantityValidation - navigated to view page of the product: Printed Chiffon Dress
+[INFO ] 2022-08-30 19:06:12.283-FE.ProductPurchase-productQuantityValidation - set quantity as: 0
+[INFO ] 2022-08-30 19:06:12.403-FE.ProductPurchase-productQuantityValidation - clicked add to cart
+[INFO ] 2022-08-30 19:06:17.883-FE.ProductPurchase-productQuantityValidation - set quantity as: test
+[INFO ] 2022-08-30 19:06:18.287-FE.ProductPurchase-productQuantityValidation - clicked add to cart
+[INFO ] 2022-08-30 19:06:21.035-FE.ProductPurchase-productQuantityValidation - set quantity as: -20
+[INFO ] 2022-08-30 19:06:21.456-FE.ProductPurchase-productQuantityValidation - clicked add to cart
+[WARN ] 2022-08-30 19:06:32.098-FE.ProductPurchase-productQuantityValidation - Error message not displayed. product is added to cart
+[INFO ] 2022-08-30 19:06:32.246-FE.ProductPurchase-productQuantityValidation - closed addedToCart window
+[ERROR] 2022-08-30 19:06:32.246-FE.ProductPurchase-productQuantityValidation - ===========TC: productQuantityValidation failed  ===========
+[WARN ] 2022-08-30 19:06:32.574-FE.ProductPurchase-productQuantityValidation - Captured a screenshot: C:\projects\E2E_Demo_Project/screenshots/failedTCs/productQuantityValidation.png

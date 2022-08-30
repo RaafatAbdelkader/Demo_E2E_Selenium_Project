@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 19, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 201.503 s <<< FAILURE! - in TestSuite
-automationPracticeTest.FE.ProductPurchase.AddToCartFunctionality  Time elapsed: 19.39 s  <<< FAILURE!
+Tests run: 19, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 457.921 s <<< FAILURE! - in TestSuite
+automationPracticeTest.FE.ProductPurchase.AddToCartFunctionality  Time elapsed: 70.281 s  <<< FAILURE!
 java.lang.AssertionError: product added to the cart can not be found expected [1] but found [0]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
@@ -26,7 +26,7 @@ java.lang.AssertionError: product added to the cart can not be found expected [1
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 
-automationPracticeTest.FE.ProductPurchase.productQuantityValidation  Time elapsed: 2.589 s  <<< FAILURE!
+automationPracticeTest.FE.ProductPurchase.productQuantityValidation  Time elapsed: 5.111 s  <<< FAILURE!
 java.lang.AssertionError: expected [Negative quantity.] but found [null]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
@@ -51,7 +51,7 @@ java.lang.AssertionError: expected [Negative quantity.] but found [null]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 
-automationPracticeTest.FE.ProductPurchase.validationOfProductSorting  Time elapsed: 5.741 s  <<< FAILURE!
+automationPracticeTest.FE.ProductPurchase.validationOfProductSorting  Time elapsed: 6.991 s  <<< FAILURE!
 java.lang.AssertionError: Products should be in a descending order expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
