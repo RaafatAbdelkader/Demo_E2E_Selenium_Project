@@ -1,6 +1,7 @@
 automationpractice\FE\MyAccountPage.class
 automationpractice\FE\checkoutPages\SigninPage.class
 automationpractice\FE\Homepage.class
+basePg\MyLogger.class
 basePg\DBReader.class
 automationpractice\FE\SignupPage.class
 automationpractice\FE\checkoutPages\SummeryPage.class

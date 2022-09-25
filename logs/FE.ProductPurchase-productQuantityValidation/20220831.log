@@ -1,0 +1,35 @@
+[INFO ] 2022-08-31 00:09:19.755-FE.ProductPurchase-productQuantityValidation - =========== TC: productQuantityValidation started: ===========
+[INFO ] 2022-08-31 00:09:32.157-FE.ProductPurchase-productQuantityValidation -  clicked on Logout
+[INFO ] 2022-08-31 00:09:44.897-FE.ProductPurchase-productQuantityValidation - set username as: test8888@gmail.com
+[INFO ] 2022-08-31 00:09:45.158-FE.ProductPurchase-productQuantityValidation - set password as: A1hS#!25
+[INFO ] 2022-08-31 00:09:58.571-FE.ProductPurchase-productQuantityValidation - submitted login
+[INFO ] 2022-08-31 00:10:09.978-FE.ProductPurchase-productQuantityValidation -  navigated to summer dresses page
+[INFO ] 2022-08-31 00:10:29.126-FE.ProductPurchase-productQuantityValidation - navigated to view page of the product: Printed Chiffon Dress
+[INFO ] 2022-08-31 00:10:29.469-FE.ProductPurchase-productQuantityValidation - set quantity as: 0
+[INFO ] 2022-08-31 00:10:29.699-FE.ProductPurchase-productQuantityValidation - clicked add to cart
+[INFO ] 2022-08-31 00:10:35.305-FE.ProductPurchase-productQuantityValidation - set quantity as: test
+[INFO ] 2022-08-31 00:10:35.584-FE.ProductPurchase-productQuantityValidation - clicked add to cart
+[INFO ] 2022-08-31 00:10:45.814-FE.ProductPurchase-productQuantityValidation - set quantity as: -20
+[INFO ] 2022-08-31 00:10:45.986-FE.ProductPurchase-productQuantityValidation - clicked add to cart
+[WARN ] 2022-08-31 00:10:56.765-FE.ProductPurchase-productQuantityValidation - Error message not displayed. product is added to cart
+[INFO ] 2022-08-31 00:10:56.990-FE.ProductPurchase-productQuantityValidation - closed addedToCart window
+[ERROR] 2022-08-31 00:10:56.990-FE.ProductPurchase-productQuantityValidation - ===========TC: productQuantityValidation failed  ===========
+[WARN ] 2022-08-31 00:10:57.518-FE.ProductPurchase-productQuantityValidation - Captured a screenshot: C:\projects\E2E_Demo_Project/screenshots/failedTCs/productQuantityValidation.png
+[INFO ] 2022-08-31 00:26:12.307-FE.ProductPurchase-productQuantityValidation - =========== TC: productQuantityValidation started: ===========
+[INFO ] 2022-08-31 00:42:43.083-FE.ProductPurchase-productQuantityValidation - =========== TC: productQuantityValidation started: ===========
+[INFO ] 2022-08-31 00:42:51.237-FE.ProductPurchase-productQuantityValidation -  clicked on Logout
+[INFO ] 2022-08-31 00:43:00.254-FE.ProductPurchase-productQuantityValidation - set username as: test8888@gmail.com
+[INFO ] 2022-08-31 00:43:00.526-FE.ProductPurchase-productQuantityValidation - set password as: A1hS#!25
+[INFO ] 2022-08-31 00:43:11.717-FE.ProductPurchase-productQuantityValidation - submitted login
+[INFO ] 2022-08-31 00:43:19.725-FE.ProductPurchase-productQuantityValidation -  navigated to summer dresses page
+[INFO ] 2022-08-31 00:43:30.076-FE.ProductPurchase-productQuantityValidation - navigated to view page of the product: Printed Chiffon Dress
+[INFO ] 2022-08-31 00:43:30.391-FE.ProductPurchase-productQuantityValidation - set quantity as: 0
+[INFO ] 2022-08-31 00:43:30.618-FE.ProductPurchase-productQuantityValidation - clicked add to cart
+[INFO ] 2022-08-31 00:43:35.802-FE.ProductPurchase-productQuantityValidation - set quantity as: test
+[INFO ] 2022-08-31 00:43:36.084-FE.ProductPurchase-productQuantityValidation - clicked add to cart
+[INFO ] 2022-08-31 00:43:41.750-FE.ProductPurchase-productQuantityValidation - set quantity as: -20
+[INFO ] 2022-08-31 00:43:42.059-FE.ProductPurchase-productQuantityValidation - clicked add to cart
+[WARN ] 2022-08-31 00:43:52.753-FE.ProductPurchase-productQuantityValidation - Error message not displayed. product is added to cart
+[INFO ] 2022-08-31 00:43:52.974-FE.ProductPurchase-productQuantityValidation - closed addedToCart window
+[ERROR] 2022-08-31 00:43:52.975-FE.ProductPurchase-productQuantityValidation - ===========TC: productQuantityValidation failed  ===========
+[WARN ] 2022-08-31 00:43:53.453-FE.ProductPurchase-productQuantityValidation - Captured a screenshot: C:\projects\E2E_Demo_Project/screenshots/failedTCs/productQuantityValidation.png

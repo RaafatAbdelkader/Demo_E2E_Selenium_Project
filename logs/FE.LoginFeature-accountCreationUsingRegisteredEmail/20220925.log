@@ -1,0 +1,10 @@
+[INFO ] 2022-09-25 02:08:54.905-FE.LoginFeature-accountCreationUsingRegisteredEmail - =========== TC: accountCreationUsingRegisteredEmail started: ===========
+[INFO ] 2022-09-25 02:09:04.080-FE.LoginFeature-accountCreationUsingRegisteredEmail -  clicked on Logout
+[INFO ] 2022-09-25 02:09:08.927-FE.LoginFeature-accountCreationUsingRegisteredEmail - Set test2348@gmail.com as a new email to create an account
+[INFO ] 2022-09-25 02:09:09.156-FE.LoginFeature-accountCreationUsingRegisteredEmail - Navigated to signup page
+[INFO ] 2022-09-25 02:09:12.131-FE.LoginFeature-accountCreationUsingRegisteredEmail - Created a new  random email: test38689@gmail.com
+[INFO ] 2022-09-25 02:09:12.421-FE.LoginFeature-accountCreationUsingRegisteredEmail - Set test38689@gmail.com as a new email to create an account
+[INFO ] 2022-09-25 02:09:12.592-FE.LoginFeature-accountCreationUsingRegisteredEmail - Navigated to signup page
+[INFO ] 2022-09-25 02:09:18.194-FE.LoginFeature-accountCreationUsingRegisteredEmail - changed the default email to: test2348@gmail.com
+[INFO ] 2022-09-25 02:09:22.756-FE.LoginFeature-accountCreationUsingRegisteredEmail - submitted account creation 
+[INFO ] 2022-09-25 02:09:22.850-FE.LoginFeature-accountCreationUsingRegisteredEmail - =========== TC: accountCreationUsingRegisteredEmail passed  ===========

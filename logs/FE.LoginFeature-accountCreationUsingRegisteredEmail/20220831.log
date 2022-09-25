@@ -1,0 +1,8 @@
+[INFO ] 2022-08-31 00:15:11.583-FE.LoginFeature-accountCreationUsingRegisteredEmail - =========== TC: accountCreationUsingRegisteredEmail started: ===========
+[INFO ] 2022-08-31 00:15:23.854-FE.LoginFeature-accountCreationUsingRegisteredEmail -  clicked on Logout
+[INFO ] 2022-08-31 00:15:53.795-FE.LoginFeature-accountCreationUsingRegisteredEmail - Set test26934@gmail.com as a new email to create an account
+[INFO ] 2022-08-31 00:15:53.962-FE.LoginFeature-accountCreationUsingRegisteredEmail - Navigated to signup page
+[ERROR] 2022-08-31 00:16:04.505-FE.LoginFeature-accountCreationUsingRegisteredEmail - ===========TC: accountCreationUsingRegisteredEmail failed  ===========
+[WARN ] 2022-08-31 00:16:04.916-FE.LoginFeature-accountCreationUsingRegisteredEmail - Captured a screenshot: C:\projects\E2E_Demo_Project/screenshots/failedTCs/accountCreationUsingRegisteredEmail.png
+[INFO ] 2022-08-31 00:23:25.461-FE.LoginFeature-accountCreationUsingRegisteredEmail - =========== TC: accountCreationUsingRegisteredEmail started: ===========
+[INFO ] 2022-08-31 00:23:25.469-FE.LoginFeature-accountCreationUsingRegisteredEmail - =========== TC: accountCreationUsingRegisteredEmail Skipped  ===========

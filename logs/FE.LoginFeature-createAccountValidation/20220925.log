@@ -1,0 +1,19 @@
+[INFO ] 2022-09-25 02:06:02.339-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-09-25 02:06:06.058-FE.LoginFeature-createAccountValidation - Created a new  random email: test2348@gmail.com
+[INFO ] 2022-09-25 02:06:06.403-FE.LoginFeature-createAccountValidation - Set test2348@gmail.com as a new email to create an account
+[INFO ] 2022-09-25 02:06:06.615-FE.LoginFeature-createAccountValidation - Navigated to signup page
+[INFO ] 2022-09-25 02:06:09.389-FE.LoginFeature-createAccountValidation - Selected gender as: Male
+[INFO ] 2022-09-25 02:06:09.565-FE.LoginFeature-createAccountValidation - set firstname as: Raafat
+[INFO ] 2022-09-25 02:06:09.761-FE.LoginFeature-createAccountValidation - set lastName as: Abdelkader
+[INFO ] 2022-09-25 02:06:10.035-FE.LoginFeature-createAccountValidation - set password as: ra@1245
+[INFO ] 2022-09-25 02:06:10.620-FE.LoginFeature-createAccountValidation - Date: 15/10/1993 selected
+[INFO ] 2022-09-25 02:06:10.773-FE.LoginFeature-createAccountValidation - selected news letter
+[INFO ] 2022-09-25 02:06:10.930-FE.LoginFeature-createAccountValidation - selected special offers
+[INFO ] 2022-09-25 02:06:11.290-FE.LoginFeature-createAccountValidation - set companyName as: dL
+[INFO ] 2022-09-25 02:06:11.428-FE.LoginFeature-createAccountValidation - set address as: Madi 2
+[INFO ] 2022-09-25 02:06:11.619-FE.LoginFeature-createAccountValidation - set cityName as: NewYork
+[INFO ] 2022-09-25 02:06:11.811-FE.LoginFeature-createAccountValidation - selected stateName: Montana
+[INFO ] 2022-09-25 02:06:12.408-FE.LoginFeature-createAccountValidation - set mobile phone as: 1028268523
+[INFO ] 2022-09-25 02:06:17.264-FE.LoginFeature-createAccountValidation - submitted account creation 
+[INFO ] 2022-09-25 02:06:19.075-FE.LoginFeature-createAccountValidation -  navigated to myAccount page
+[INFO ] 2022-09-25 02:06:19.251-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation passed  ===========

@@ -17,3 +17,22 @@
 [INFO ] 2022-08-30 19:03:58.313-FE.LoginFeature-createAccountValidation - submitted account creation 
 [INFO ] 2022-08-30 19:04:11.917-FE.LoginFeature-createAccountValidation -  navigated to myAccount page
 [INFO ] 2022-08-30 19:04:12.002-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation passed  ===========
+[INFO ] 2022-08-30 23:56:57.345-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-08-30 23:57:05.543-FE.LoginFeature-createAccountValidation - Created a new  random email: test68063@gmail.com
+[INFO ] 2022-08-30 23:57:05.976-FE.LoginFeature-createAccountValidation - Set test68063@gmail.com as a new email to create an account
+[INFO ] 2022-08-30 23:57:06.140-FE.LoginFeature-createAccountValidation - Navigated to signup page
+[INFO ] 2022-08-30 23:57:11.452-FE.LoginFeature-createAccountValidation - Selected gender as: Male
+[INFO ] 2022-08-30 23:57:11.550-FE.LoginFeature-createAccountValidation - set firstname as: Raafat
+[INFO ] 2022-08-30 23:57:11.681-FE.LoginFeature-createAccountValidation - set lastName as: Abdelkader
+[INFO ] 2022-08-30 23:57:11.801-FE.LoginFeature-createAccountValidation - set password as: ra@1245
+[INFO ] 2022-08-30 23:57:12.276-FE.LoginFeature-createAccountValidation - Date: 15/10/1993 selected
+[INFO ] 2022-08-30 23:57:12.415-FE.LoginFeature-createAccountValidation - selected news letter
+[INFO ] 2022-08-30 23:57:12.560-FE.LoginFeature-createAccountValidation - selected special offers
+[INFO ] 2022-08-30 23:57:12.735-FE.LoginFeature-createAccountValidation - set companyName as: dL
+[INFO ] 2022-08-30 23:57:12.832-FE.LoginFeature-createAccountValidation - set address as: Madi 2
+[INFO ] 2022-08-30 23:57:12.909-FE.LoginFeature-createAccountValidation - set cityName as: NewYork
+[INFO ] 2022-08-30 23:57:13.101-FE.LoginFeature-createAccountValidation - selected stateName: Montana
+[INFO ] 2022-08-30 23:57:13.393-FE.LoginFeature-createAccountValidation - set mobile phone as: 1028268523
+[INFO ] 2022-08-30 23:57:19.397-FE.LoginFeature-createAccountValidation - submitted account creation 
+[INFO ] 2022-08-30 23:57:22.443-FE.LoginFeature-createAccountValidation -  navigated to myAccount page
+[INFO ] 2022-08-30 23:57:22.546-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation passed  ===========

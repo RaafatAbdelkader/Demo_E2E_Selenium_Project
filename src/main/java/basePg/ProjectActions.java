@@ -43,6 +43,7 @@ public class ProjectActions {
         MyLogger.info("switched to a new tab");
         return driver.getWindowHandle();
     }
+
     public void returnToLastTab(){
         if (lastTabId!=null) {
             driver.switchTo().window(lastTabId);

@@ -5,13 +5,6 @@
         <listener class-name="testBase.TestListener"></listener>
     </listeners>
     <test name="Regression">
-<!--        <classes>-->
-<!--            <class name="automationPracticeTest.FE.LoginFeature">-->
-<!--                <methods>-->
-<!--                    <include name="loginValidation"></include>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
         <packages>
             <package name="automationPracticeTest.FE"></package>
         </packages>

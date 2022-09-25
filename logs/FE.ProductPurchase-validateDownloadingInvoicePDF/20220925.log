@@ -1,0 +1,9 @@
+[INFO ] 2022-09-25 02:09:06.173-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF started: ===========
+[INFO ] 2022-09-25 02:09:09.540-FE.ProductPurchase-validateDownloadingInvoicePDF -  navigated to myAccount page
+[INFO ] 2022-09-25 02:09:15.320-FE.ProductPurchase-validateDownloadingInvoicePDF - navigated to order History page
+[INFO ] 2022-09-25 02:09:22.796-FE.ProductPurchase-validateDownloadingInvoicePDF - Invoice with reference number: IURNMQLLY has been downloaded
+[INFO ] 2022-09-25 02:09:22.918-FE.ProductPurchase-validateDownloadingInvoicePDF - switched to a new tab
+[INFO ] 2022-09-25 02:09:23.166-FE.ProductPurchase-validateDownloadingInvoicePDF - opened the last modified file: C:\projects\E2E_Demo_Project\download\IN247874.pdf
+[INFO ] 2022-09-25 02:09:25.359-FE.ProductPurchase-validateDownloadingInvoicePDF - switched back to the last tab
+[INFO ] 2022-09-25 02:09:25.359-FE.ProductPurchase-validateDownloadingInvoicePDF - Deleted file: C:\projects\E2E_Demo_Project\download\IN247874.pdf
+[INFO ] 2022-09-25 02:09:25.359-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF passed  ===========

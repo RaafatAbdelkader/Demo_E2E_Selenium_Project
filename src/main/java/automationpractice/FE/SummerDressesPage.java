@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class SummerDressesPage {
@@ -56,39 +58,23 @@ public class SummerDressesPage {
     }
     public Boolean isOrderedDescending(){
         List<Double>priceList=getPriceList();
-        Boolean isOrderedDescending =null;
-        List<Double>sortedList= priceList.stream().sorted().toList();
-        int lastIndex=sortedList.size()-1;
-        for (int i =lastIndex ; i >=0; i--) {
-            if (!(priceList.get(lastIndex-i).equals(sortedList.get(i)))) {
-                MyLogger.info("List is not in a descending order");
-                isOrderedDescending=false;
-                break;
-            }else
-                isOrderedDescending=true;
-        }
-        return isOrderedDescending;
+        List<Double>temp=new ArrayList<>(priceList);
+        Collections.sort(temp,Collections.reverseOrder());
+        return priceList.equals(temp);
     }
     public Boolean isOrderedAscending(){
         List<Double>priceList=getPriceList();
-        Boolean isOrderedAscending =null;
-        List<Double>sortedList= priceList.stream().sorted().toList();
-        for (int i = 0; i < sortedList.size(); i++) {
-            if (!(priceList.get(i).equals(sortedList.get(i)))){
-                MyLogger.info("List is not in a Ascending order");
-                isOrderedAscending= false;
-                break;
-            }else
-                isOrderedAscending=true;
-        }
-        return isOrderedAscending;
+        List<Double>temp=new ArrayList<>(priceList);
+        Collections.sort(temp);
+        return priceList.equals(temp);
     }
+
     public List<Double> getPriceList(){
         List<Double>priceList = new ArrayList<>();
         driver.findElements(productPrice)
                 .forEach(s->{
                     String[] priceValue = s.getText().split("\\$");
-                    priceList.add(Double.valueOf(priceValue[1].trim()));
+                    priceList.add(Double.valueOf(priceValue[priceValue.length-1].trim()));
                 });
 
         return priceList;

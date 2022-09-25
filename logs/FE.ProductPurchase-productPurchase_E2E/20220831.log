@@ -1,0 +1,23 @@
+[INFO ] 2022-08-31 00:00:23.837-FE.ProductPurchase-productPurchase_E2E - =========== TC: productPurchase_E2E started: ===========
+[INFO ] 2022-08-31 00:00:33.731-FE.ProductPurchase-productPurchase_E2E -  clicked on Logout
+[INFO ] 2022-08-31 00:00:46.039-FE.ProductPurchase-productPurchase_E2E - set username as: test8888@gmail.com
+[INFO ] 2022-08-31 00:00:46.165-FE.ProductPurchase-productPurchase_E2E - set password as: A1hS#!25
+[INFO ] 2022-08-31 00:00:56.654-FE.ProductPurchase-productPurchase_E2E - submitted login
+[INFO ] 2022-08-31 00:01:04.410-FE.ProductPurchase-productPurchase_E2E -  navigated to summer dresses page
+[ERROR] 2022-08-31 00:01:04.443-FE.ProductPurchase-productPurchase_E2E - ===========TC: productPurchase_E2E failed  ===========
+[INFO ] 2022-08-31 00:11:52.763-FE.ProductPurchase-productPurchase_E2E - =========== TC: productPurchase_E2E started: ===========
+[INFO ] 2022-08-31 00:11:57.263-FE.ProductPurchase-productPurchase_E2E -  clicked on Logout
+[INFO ] 2022-08-31 00:12:05.015-FE.ProductPurchase-productPurchase_E2E - set username as: test8888@gmail.com
+[INFO ] 2022-08-31 00:12:05.226-FE.ProductPurchase-productPurchase_E2E - set password as: A1hS#!25
+[INFO ] 2022-08-31 00:12:10.296-FE.ProductPurchase-productPurchase_E2E - submitted login
+[INFO ] 2022-08-31 00:12:14.484-FE.ProductPurchase-productPurchase_E2E -  navigated to summer dresses page
+[INFO ] 2022-08-31 00:12:15.004-FE.ProductPurchase-productPurchase_E2E - Product (Printed Chiffon Dress) added to cart
+[INFO ] 2022-08-31 00:12:25.125-FE.ProductPurchase-productPurchase_E2E - clicked on proceed to checkout
+[INFO ] 2022-08-31 00:12:34.831-FE.ProductPurchase-productPurchase_E2E - Clicked on proceed to checkout
+[INFO ] 2022-08-31 00:12:44.392-FE.ProductPurchase-productPurchase_E2E - clicked on proceed to checkout
+[INFO ] 2022-08-31 00:12:44.804-FE.ProductPurchase-productPurchase_E2E - accepted to the terms of service
+[INFO ] 2022-08-31 00:12:53.488-FE.ProductPurchase-productPurchase_E2E - clicked on proceed to checkout
+[INFO ] 2022-08-31 00:12:58.570-FE.ProductPurchase-productPurchase_E2E - Selected payment by check
+[INFO ] 2022-08-31 00:13:14.525-FE.ProductPurchase-productPurchase_E2E - order confirmed
+[INFO ] 2022-08-31 00:13:14.783-FE.ProductPurchase-productPurchase_E2E - =========== TC: productPurchase_E2E passed  ===========
+[INFO ] 2022-08-31 00:44:02.562-FE.ProductPurchase-productPurchase_E2E - =========== TC: productPurchase_E2E started: ===========

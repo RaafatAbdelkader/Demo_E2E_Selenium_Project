@@ -1,0 +1,6 @@
+[INFO ] 2022-09-25 02:08:33.474-FE.LoginFeature-loginWithDataCreated - =========== TC: loginWithDataCreated started: ===========
+[INFO ] 2022-09-25 02:08:40.557-FE.LoginFeature-loginWithDataCreated - set username as: test2348@gmail.com
+[INFO ] 2022-09-25 02:08:40.788-FE.LoginFeature-loginWithDataCreated - set password as: ra@1245
+[INFO ] 2022-09-25 02:08:49.771-FE.LoginFeature-loginWithDataCreated - submitted login
+[INFO ] 2022-09-25 02:08:54.736-FE.LoginFeature-loginWithDataCreated -  navigated to myAccount page
+[INFO ] 2022-09-25 02:08:54.896-FE.LoginFeature-loginWithDataCreated - =========== TC: loginWithDataCreated passed  ===========

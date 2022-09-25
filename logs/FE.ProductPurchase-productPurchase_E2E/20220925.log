@@ -1,0 +1,15 @@
+[INFO ] 2022-09-25 02:08:02.880-FE.ProductPurchase-productPurchase_E2E - =========== TC: productPurchase_E2E started: ===========
+[INFO ] 2022-09-25 02:08:08.540-FE.ProductPurchase-productPurchase_E2E -  clicked on Logout
+[INFO ] 2022-09-25 02:08:13.804-FE.ProductPurchase-productPurchase_E2E - set username as: test8888@gmail.com
+[INFO ] 2022-09-25 02:08:14.105-FE.ProductPurchase-productPurchase_E2E - set password as: A1hS#!25
+[INFO ] 2022-09-25 02:08:20.432-FE.ProductPurchase-productPurchase_E2E - submitted login
+[INFO ] 2022-09-25 02:08:24.886-FE.ProductPurchase-productPurchase_E2E -  navigated to summer dresses page
+[INFO ] 2022-09-25 02:08:25.401-FE.ProductPurchase-productPurchase_E2E - Product (Printed Chiffon Dress) added to cart
+[INFO ] 2022-09-25 02:08:35.457-FE.ProductPurchase-productPurchase_E2E - clicked on proceed to checkout
+[INFO ] 2022-09-25 02:08:42.144-FE.ProductPurchase-productPurchase_E2E - Clicked on proceed to checkout
+[INFO ] 2022-09-25 02:08:49.055-FE.ProductPurchase-productPurchase_E2E - clicked on proceed to checkout
+[INFO ] 2022-09-25 02:08:49.438-FE.ProductPurchase-productPurchase_E2E - accepted to the terms of service
+[INFO ] 2022-09-25 02:08:55.276-FE.ProductPurchase-productPurchase_E2E - clicked on proceed to checkout
+[INFO ] 2022-09-25 02:09:00.872-FE.ProductPurchase-productPurchase_E2E - Selected payment by check
+[INFO ] 2022-09-25 02:09:05.918-FE.ProductPurchase-productPurchase_E2E - order confirmed
+[INFO ] 2022-09-25 02:09:06.154-FE.ProductPurchase-productPurchase_E2E - =========== TC: productPurchase_E2E passed  ===========

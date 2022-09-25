@@ -1,0 +1,11 @@
+[INFO ] 2022-08-31 00:01:04.519-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF started: ===========
+[INFO ] 2022-08-31 00:01:04.534-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF Skipped  ===========
+[INFO ] 2022-08-31 00:13:14.792-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF started: ===========
+[INFO ] 2022-08-31 00:13:19.271-FE.ProductPurchase-validateDownloadingInvoicePDF -  navigated to myAccount page
+[INFO ] 2022-08-31 00:13:28.383-FE.ProductPurchase-validateDownloadingInvoicePDF - navigated to order History page
+[INFO ] 2022-08-31 00:13:40.304-FE.ProductPurchase-validateDownloadingInvoicePDF - Invoice with reference number: USYNYLMFG has been downloaded
+[INFO ] 2022-08-31 00:13:40.507-FE.ProductPurchase-validateDownloadingInvoicePDF - switched to a new tab
+[INFO ] 2022-08-31 00:13:40.788-FE.ProductPurchase-validateDownloadingInvoicePDF - opened the last modified file: C:\projects\E2E_Demo_Project\download\IN240910.pdf
+[INFO ] 2022-08-31 00:13:43.203-FE.ProductPurchase-validateDownloadingInvoicePDF - switched back to the last tab
+[INFO ] 2022-08-31 00:13:43.203-FE.ProductPurchase-validateDownloadingInvoicePDF - Deleted file: C:\projects\E2E_Demo_Project\download\IN240910.pdf
+[INFO ] 2022-08-31 00:13:43.203-FE.ProductPurchase-validateDownloadingInvoicePDF - =========== TC: validateDownloadingInvoicePDF passed  ===========

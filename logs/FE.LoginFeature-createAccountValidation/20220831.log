@@ -1,0 +1,103 @@
+[INFO ] 2022-08-31 00:04:19.442-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-08-31 00:04:27.369-FE.LoginFeature-createAccountValidation - Created a new  random email: test63014@gmail.com
+[INFO ] 2022-08-31 00:04:27.579-FE.LoginFeature-createAccountValidation - Set test63014@gmail.com as a new email to create an account
+[INFO ] 2022-08-31 00:04:27.686-FE.LoginFeature-createAccountValidation - Navigated to signup page
+[INFO ] 2022-08-31 00:04:32.161-FE.LoginFeature-createAccountValidation - Selected gender as: Male
+[INFO ] 2022-08-31 00:04:32.259-FE.LoginFeature-createAccountValidation - set firstname as: Raafat
+[INFO ] 2022-08-31 00:04:32.371-FE.LoginFeature-createAccountValidation - set lastName as: Abdelkader
+[INFO ] 2022-08-31 00:04:32.593-FE.LoginFeature-createAccountValidation - set password as: ra@1245
+[INFO ] 2022-08-31 00:04:32.955-FE.LoginFeature-createAccountValidation - Date: 15/10/1993 selected
+[INFO ] 2022-08-31 00:04:33.032-FE.LoginFeature-createAccountValidation - selected news letter
+[INFO ] 2022-08-31 00:04:33.104-FE.LoginFeature-createAccountValidation - selected special offers
+[INFO ] 2022-08-31 00:04:33.271-FE.LoginFeature-createAccountValidation - set companyName as: dL
+[INFO ] 2022-08-31 00:04:33.368-FE.LoginFeature-createAccountValidation - set address as: Madi 2
+[INFO ] 2022-08-31 00:04:33.477-FE.LoginFeature-createAccountValidation - set cityName as: NewYork
+[INFO ] 2022-08-31 00:04:33.586-FE.LoginFeature-createAccountValidation - selected stateName: Montana
+[INFO ] 2022-08-31 00:04:33.978-FE.LoginFeature-createAccountValidation - set mobile phone as: 1028268523
+[INFO ] 2022-08-31 00:04:43.808-FE.LoginFeature-createAccountValidation - submitted account creation 
+[INFO ] 2022-08-31 00:04:48.518-FE.LoginFeature-createAccountValidation -  navigated to myAccount page
+[INFO ] 2022-08-31 00:04:48.672-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation passed  ===========
+[INFO ] 2022-08-31 00:07:58.602-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-08-31 00:08:14.376-FE.LoginFeature-createAccountValidation - Created a new  random email: test26934@gmail.com
+[INFO ] 2022-08-31 00:08:14.898-FE.LoginFeature-createAccountValidation - Set test26934@gmail.com as a new email to create an account
+[INFO ] 2022-08-31 00:08:15.249-FE.LoginFeature-createAccountValidation - Navigated to signup page
+[INFO ] 2022-08-31 00:08:21.248-FE.LoginFeature-createAccountValidation - Selected gender as: Male
+[INFO ] 2022-08-31 00:08:21.476-FE.LoginFeature-createAccountValidation - set firstname as: Raafat
+[INFO ] 2022-08-31 00:08:21.805-FE.LoginFeature-createAccountValidation - set lastName as: Abdelkader
+[INFO ] 2022-08-31 00:08:22.417-FE.LoginFeature-createAccountValidation - set password as: ra@1245
+[INFO ] 2022-08-31 00:08:23.151-FE.LoginFeature-createAccountValidation - Date: 15/10/1993 selected
+[INFO ] 2022-08-31 00:08:23.315-FE.LoginFeature-createAccountValidation - selected news letter
+[INFO ] 2022-08-31 00:08:23.472-FE.LoginFeature-createAccountValidation - selected special offers
+[INFO ] 2022-08-31 00:08:23.840-FE.LoginFeature-createAccountValidation - set companyName as: dL
+[INFO ] 2022-08-31 00:08:24.084-FE.LoginFeature-createAccountValidation - set address as: Madi 2
+[INFO ] 2022-08-31 00:08:24.305-FE.LoginFeature-createAccountValidation - set cityName as: NewYork
+[INFO ] 2022-08-31 00:08:24.536-FE.LoginFeature-createAccountValidation - selected stateName: Montana
+[INFO ] 2022-08-31 00:08:25.324-FE.LoginFeature-createAccountValidation - set mobile phone as: 1028268523
+[INFO ] 2022-08-31 00:08:45.492-FE.LoginFeature-createAccountValidation - submitted account creation 
+[INFO ] 2022-08-31 00:08:49.778-FE.LoginFeature-createAccountValidation -  navigated to myAccount page
+[INFO ] 2022-08-31 00:08:49.971-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation passed  ===========
+[INFO ] 2022-08-31 00:22:35.997-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-08-31 00:22:56.349-FE.LoginFeature-createAccountValidation - Created a new  random email: test45534@gmail.com
+[INFO ] 2022-08-31 00:22:56.904-FE.LoginFeature-createAccountValidation - Set test45534@gmail.com as a new email to create an account
+[INFO ] 2022-08-31 00:22:57.180-FE.LoginFeature-createAccountValidation - Navigated to signup page
+[ERROR] 2022-08-31 00:23:07.268-FE.LoginFeature-createAccountValidation - ===========TC: createAccountValidation failed  ===========
+[WARN ] 2022-08-31 00:23:07.905-FE.LoginFeature-createAccountValidation - Captured a screenshot: C:\projects\E2E_Demo_Project/screenshots/failedTCs/createAccountValidation.png
+[INFO ] 2022-08-31 00:24:39.412-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-08-31 00:24:51.772-FE.LoginFeature-createAccountValidation - Created a new  random email: test54406@gmail.com
+[INFO ] 2022-08-31 00:24:52.288-FE.LoginFeature-createAccountValidation - Set test54406@gmail.com as a new email to create an account
+[INFO ] 2022-08-31 00:24:52.504-FE.LoginFeature-createAccountValidation - Navigated to signup page
+[INFO ] 2022-08-31 00:24:58.517-FE.LoginFeature-createAccountValidation - Selected gender as: Male
+[INFO ] 2022-08-31 00:24:58.687-FE.LoginFeature-createAccountValidation - set firstname as: Raafat
+[INFO ] 2022-08-31 00:24:58.940-FE.LoginFeature-createAccountValidation - set lastName as: Abdelkader
+[INFO ] 2022-08-31 00:24:59.190-FE.LoginFeature-createAccountValidation - set password as: ra@1245
+[INFO ] 2022-08-31 00:24:59.878-FE.LoginFeature-createAccountValidation - Date: 15/10/1993 selected
+[INFO ] 2022-08-31 00:25:00.068-FE.LoginFeature-createAccountValidation - selected news letter
+[INFO ] 2022-08-31 00:25:00.213-FE.LoginFeature-createAccountValidation - selected special offers
+[INFO ] 2022-08-31 00:25:00.549-FE.LoginFeature-createAccountValidation - set companyName as: dL
+[INFO ] 2022-08-31 00:25:00.779-FE.LoginFeature-createAccountValidation - set address as: Madi 2
+[INFO ] 2022-08-31 00:25:01.001-FE.LoginFeature-createAccountValidation - set cityName as: NewYork
+[INFO ] 2022-08-31 00:25:01.224-FE.LoginFeature-createAccountValidation - selected stateName: Montana
+[INFO ] 2022-08-31 00:25:01.879-FE.LoginFeature-createAccountValidation - set mobile phone as: 1028268523
+[INFO ] 2022-08-31 00:25:11.729-FE.LoginFeature-createAccountValidation - submitted account creation 
+[INFO ] 2022-08-31 00:25:16.950-FE.LoginFeature-createAccountValidation -  navigated to myAccount page
+[INFO ] 2022-08-31 00:25:17.147-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation passed  ===========
+[INFO ] 2022-08-31 00:29:04.200-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-08-31 00:29:14.335-FE.LoginFeature-createAccountValidation - Created a new  random email: test72426@gmail.com
+[INFO ] 2022-08-31 00:29:14.733-FE.LoginFeature-createAccountValidation - Set test72426@gmail.com as a new email to create an account
+[INFO ] 2022-08-31 00:29:15.043-FE.LoginFeature-createAccountValidation - Navigated to signup page
+[INFO ] 2022-08-31 00:29:20.474-FE.LoginFeature-createAccountValidation - Selected gender as: Male
+[INFO ] 2022-08-31 00:29:20.770-FE.LoginFeature-createAccountValidation - set firstname as: Raafat
+[INFO ] 2022-08-31 00:29:21.036-FE.LoginFeature-createAccountValidation - set lastName as: Abdelkader
+[INFO ] 2022-08-31 00:29:21.354-FE.LoginFeature-createAccountValidation - set password as: ra@1245
+[INFO ] 2022-08-31 00:29:22.200-FE.LoginFeature-createAccountValidation - Date: 15/10/1993 selected
+[INFO ] 2022-08-31 00:29:22.383-FE.LoginFeature-createAccountValidation - selected news letter
+[INFO ] 2022-08-31 00:29:22.549-FE.LoginFeature-createAccountValidation - selected special offers
+[INFO ] 2022-08-31 00:29:22.873-FE.LoginFeature-createAccountValidation - set companyName as: dL
+[INFO ] 2022-08-31 00:29:23.144-FE.LoginFeature-createAccountValidation - set address as: Madi 2
+[INFO ] 2022-08-31 00:29:23.391-FE.LoginFeature-createAccountValidation - set cityName as: NewYork
+[INFO ] 2022-08-31 00:29:23.632-FE.LoginFeature-createAccountValidation - selected stateName: Montana
+[INFO ] 2022-08-31 00:29:24.346-FE.LoginFeature-createAccountValidation - set mobile phone as: 1028268523
+[INFO ] 2022-08-31 00:29:40.294-FE.LoginFeature-createAccountValidation - submitted account creation 
+[INFO ] 2022-08-31 00:29:40.905-FE.LoginFeature-createAccountValidation -  navigated to myAccount page
+[INFO ] 2022-08-31 00:32:51.839-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-08-31 00:32:58.913-FE.LoginFeature-createAccountValidation - Created a new  random email: test89211@gmail.com
+[ERROR] 2022-08-31 00:32:59.486-FE.LoginFeature-createAccountValidation - ===========TC: createAccountValidation failed  ===========
+[INFO ] 2022-08-31 00:41:28.130-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation started: ===========
+[INFO ] 2022-08-31 00:41:35.799-FE.LoginFeature-createAccountValidation - Created a new  random email: test35945@gmail.com
+[INFO ] 2022-08-31 00:41:49.431-FE.LoginFeature-createAccountValidation - Set test35945@gmail.com as a new email to create an account
+[INFO ] 2022-08-31 00:41:49.680-FE.LoginFeature-createAccountValidation - Navigated to signup page
+[INFO ] 2022-08-31 00:41:57.929-FE.LoginFeature-createAccountValidation - Selected gender as: Male
+[INFO ] 2022-08-31 00:41:58.184-FE.LoginFeature-createAccountValidation - set firstname as: Raafat
+[INFO ] 2022-08-31 00:41:58.562-FE.LoginFeature-createAccountValidation - set lastName as: Abdelkader
+[INFO ] 2022-08-31 00:41:58.861-FE.LoginFeature-createAccountValidation - set password as: ra@1245
+[INFO ] 2022-08-31 00:41:59.572-FE.LoginFeature-createAccountValidation - Date: 15/10/1993 selected
+[INFO ] 2022-08-31 00:41:59.743-FE.LoginFeature-createAccountValidation - selected news letter
+[INFO ] 2022-08-31 00:42:00.068-FE.LoginFeature-createAccountValidation - selected special offers
+[INFO ] 2022-08-31 00:42:00.547-FE.LoginFeature-createAccountValidation - set companyName as: dL
+[INFO ] 2022-08-31 00:42:00.758-FE.LoginFeature-createAccountValidation - set address as: Madi 2
+[INFO ] 2022-08-31 00:42:01.011-FE.LoginFeature-createAccountValidation - set cityName as: NewYork
+[INFO ] 2022-08-31 00:42:01.217-FE.LoginFeature-createAccountValidation - selected stateName: Montana
+[INFO ] 2022-08-31 00:42:01.864-FE.LoginFeature-createAccountValidation - set mobile phone as: 1028268523
+[INFO ] 2022-08-31 00:42:09.209-FE.LoginFeature-createAccountValidation - submitted account creation 
+[INFO ] 2022-08-31 00:42:13.125-FE.LoginFeature-createAccountValidation -  navigated to myAccount page
+[INFO ] 2022-08-31 00:42:13.363-FE.LoginFeature-createAccountValidation - =========== TC: createAccountValidation passed  ===========

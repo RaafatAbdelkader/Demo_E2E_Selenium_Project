@@ -13,3 +13,18 @@
 [INFO ] 2022-08-30 19:05:21.827-FE.ProductPurchase-AddToCartFunctionality - opened shopping cart
 [ERROR] 2022-08-30 19:05:21.883-FE.ProductPurchase-AddToCartFunctionality - ===========TC: AddToCartFunctionality failed  ===========
 [WARN ] 2022-08-30 19:05:22.283-FE.ProductPurchase-AddToCartFunctionality - Captured a screenshot: C:\projects\E2E_Demo_Project/screenshots/failedTCs/AddToCartFunctionality.png
+[INFO ] 2022-08-30 23:56:57.345-FE.ProductPurchase-AddToCartFunctionality - =========== TC: AddToCartFunctionality started: ===========
+[INFO ] 2022-08-30 23:57:05.965-FE.ProductPurchase-AddToCartFunctionality - set username as: test8888@gmail.com
+[INFO ] 2022-08-30 23:57:06.140-FE.ProductPurchase-AddToCartFunctionality - set password as: A1hS#!25
+[INFO ] 2022-08-30 23:57:12.420-FE.ProductPurchase-AddToCartFunctionality - submitted login
+[INFO ] 2022-08-30 23:57:12.681-FE.ProductPurchase-AddToCartFunctionality - opened shopping cart
+[INFO ] 2022-08-30 23:57:17.696-FE.ProductPurchase-AddToCartFunctionality -  navigated to summer dresses page
+[INFO ] 2022-08-30 23:57:22.784-FE.ProductPurchase-AddToCartFunctionality - navigated to view page of the product: Printed Chiffon Dress
+[INFO ] 2022-08-30 23:57:22.909-FE.ProductPurchase-AddToCartFunctionality - clicked add to cart
+[INFO ] 2022-08-30 23:57:31.968-FE.ProductPurchase-AddToCartFunctionality -  clicked on Logout
+[INFO ] 2022-08-30 23:57:41.726-FE.ProductPurchase-AddToCartFunctionality - set username as: test8888@gmail.com
+[INFO ] 2022-08-30 23:57:41.840-FE.ProductPurchase-AddToCartFunctionality - set password as: A1hS#!25
+[INFO ] 2022-08-30 23:57:50.079-FE.ProductPurchase-AddToCartFunctionality - submitted login
+[INFO ] 2022-08-30 23:57:50.280-FE.ProductPurchase-AddToCartFunctionality - opened shopping cart
+[ERROR] 2022-08-30 23:57:50.319-FE.ProductPurchase-AddToCartFunctionality - ===========TC: AddToCartFunctionality failed  ===========
+[WARN ] 2022-08-30 23:57:50.738-FE.ProductPurchase-AddToCartFunctionality - Captured a screenshot: C:\projects\E2E_Demo_Project/screenshots/failedTCs/AddToCartFunctionality.png
