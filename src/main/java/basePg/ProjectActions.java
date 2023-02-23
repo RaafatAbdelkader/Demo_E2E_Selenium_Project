@@ -19,6 +19,8 @@ public class ProjectActions {
     public ProjectActions(WebDriver driver) {
         this.driver = driver;
     }
+
+
     public String getScreenshot(String image_name) throws IOException {
         File screenshot = driver.findElement(By.tagName("Body")).getScreenshotAs(OutputType.FILE);
         String path= System.getProperty("user.dir")+"/screenshots/failedTCs/" + image_name+".png";
